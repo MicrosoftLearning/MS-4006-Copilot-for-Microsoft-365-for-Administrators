@@ -131,7 +131,4 @@ The CTO is anxious to implement Smart Lockout because it will lock out the attac
 
 23. Once your log-in is successful, you can close all open applications. This will be your last lab exercise using the LON-DC1 domain controller.
  
-
-# End of Lab 3
-
-
+# Proceed to Lab 1 - Exercise 3

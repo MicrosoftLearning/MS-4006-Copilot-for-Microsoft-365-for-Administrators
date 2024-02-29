@@ -1,4 +1,4 @@
-# Learning Path 6 - Lab 6 - Exercise 3 - Implement a SharePoint Permission Alert
+# Learning Path 2 - Lab 1 - Exercise 5 - Implement a SharePoint Permission Alert
 
 
 In this exercise you will configure and test an alert that notifies Lynne Robbins when a user is added as a site collection administrator for a SharePoint site collection.
@@ -70,4 +70,4 @@ In the prior task, you configured an alert designed to notify Lynne Robbins when
 6. In your Edge browser, close the **Permissions: Communication site** tab. Leave the other tabs open and proceed to the next exercise.
 
 
-# Proceed to Lab 6 - Exercise 4
+# Proceed to Lab 1 - Exercise 6

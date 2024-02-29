@@ -1,4 +1,4 @@
-# Learning Path 3 - Lab 3 - Exercise 3 - Manage secure user access 
+# Learning Path 2 - Lab 1 - Exercise 2 - Manage secure user access 
 
 As Holly Dickson, Adatum’s Microsoft 365 Administrator, you have been asked by Adatum’s CTO to deploy Microsoft Entra Pass-through Authentication (PTA) and Microsoft Entra Smart Lockout as a means of strengthening password management throughout the organization. 
 

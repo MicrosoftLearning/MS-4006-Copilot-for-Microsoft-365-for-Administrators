@@ -159,11 +159,24 @@ Each user is a key member of your pilot project team. While their user accounts 
 
 As your training indicated, there are three ways to implement MFA - with Conditional Access policies, with security defaults, and with legacy per-user MFA (not recommended). In this exercise, you'll enable MFA for all of Adatum's users through a Conditional Access policy, which is the method that Microsoft recommends.
 
+1. On the LON-CL1 VM, the **Microsoft 365 admin center** should still be open in your Microsoft Edge browser from the prior task. You should be signed into Microsoft 365 as **Holly Dickson**.
+   
+2. In the **Microsoft 365 admin center**, under the **Admin centers** section in the navigation pane, select **Identity**. Doing so opens the Microsoft Entra admin center in a new browsser tab. 
 
-1. You should still be logged into **LON-DC1** as the local **adatum\administrator** from the prior task.
+3. In the **Microsoft Entra admin center**, select **Protection** in the navigation pane, and then select **Conditional Access**.
 
-2. On LON-DC1, 1.	On the device that is connected to the corporate network, sign in to the Microsoft 365 admin center with the global administrator account.
-2.	Go to the Security section and select Conditional access.
+4. On the **Conditional Access | Overview** page, select **+Create new policy**.
+
+5. On the **New** Conditional Access policy window, enter **MFA for all users and external access**.
+
+6. Unders the **Users** group, select **0 users and groups selected**. Doing so displays two tabs - **Include** and **Exclude**.
+
+7. Under the **Include** tab, select **All users**. Note the warning message that appears. You will address this in the next step.
+
+8. Select the **Exlude** tab. Select **Users and groups**.
+
+9. On the **Select excluded users and groups** window that appears, you want to select the Microsoft 365 pilot project team. The **All** tab is displayed by default. To quickly find the pilot project team, select the **Groups** tab.
+
 3.	Click on New policy to create a new conditional access policy.
 4.	Give the policy a name, such as "MFA for external access".
 5.	Select the users and groups that the policy will apply to. For this lab exercise, choose All users.

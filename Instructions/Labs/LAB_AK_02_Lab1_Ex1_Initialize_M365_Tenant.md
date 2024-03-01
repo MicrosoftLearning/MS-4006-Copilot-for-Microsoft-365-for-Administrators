@@ -91,115 +91,10 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
 16. At the top of the **Organization information** pane, note the message indicating the changes have been saved. Select the **X** in the upper right-hand corner to close the pane.
 
-17. Back on the **Organization profile** tab, in the list of organization profile data, select **Release preferences**.  <br/>
-
-    **Note:** One of the benefits of Microsoft 365 is its ability to have the latest features and updates automatically applied to your environment. This process can reduce maintenance costs and overhead for an organization and allow early-adopter users to test new features. By setting up your **Release preferences**, you can control how and when your Microsoft 365 tenant receives these updates. <br/>
-
-18. In the **Release preferences** pane that appears, the **Targeted release for select users** option enables you to create a control group of users who will preview updates so that you can prepare the updates for your entire organization. The **Targeted release for everyone** option is more commonly used in development environments, where you can get updates early for your entire organization. In non-development environments, such as Adatum, targeted release to a select group of users is a more typical preference as it enables an organization to control when it wants to make updates available to everyone once they've been reviewed by the control group. <br/>
-
-	Select the **Targeted release for select users** option and then select **Save**.
-
-19. In the **Release preferences** pane, below the list of release options, select the **Select users** option.
-
-20. In the **Choose users for targeted release** pane that appears, select inside the **Who should receive targeted releases?** field. This displays the list of active users (these are the Microsoft 365 user accounts created for your trial tenant by your lab hosting provider). In this list, select each of the following users. <br/>
-
-    **Note:** You must select each user, one at a time. After selecting a user, you must select inside the **Who should receive targeted releases?** field again to re-display the list so that you can select the next user. 
-
-	- **Alex Wilber**
-	- **Joni Sherman**
-	- **Lynne Robbins**
-	- **MOD Administrator** <br/>
-
-    **Note:** Alex, Joni, and Lynne are part of Holly's Microsoft 365 pilot team. Their accounts will be used throughout the labs for this course.
-    
-21. Select **Save**.
-
-22. At the top of the **Release preferences** pane, note the message indicating the 4 users were added to the targeted release. Select the **X** in the upper right-hand corner to close the pane. 
-
-23. Remain logged into **LON-CL1** with Microsoft Edge open to the **Microsoft 365 admin center** for the next task.
-
-### Task 3- Create a custom theme for Adatum's pilot project team
-
-In the prior task, you learned that when someone is signed into Microsoft 365, the system will either display their photograph (if one is supplied), or their initials if no photograph is provided. Holly Dickson, Adatum's Microsoft 365 Administrator, is not satisfied with just seeing a picture or initials of the signed-in user. She wants to create a custom theme for the members of her pilot project team so that it also displays the signed-in user's name. At the end of the pilot project, if the pilot project team members prefer this design, she will configure this same option in the default theme so that it applies to all users. 
-
-Custom themes must be associated with one or more Microsoft 365 groups. Therefore, to implement this change, Holly must first create a Microsoft 365 group for the members of the pilot project team. She can then create a custom theme associated with this group that enables the setting to display the signed-in user's name. In this task, you will create a Microsoft 365 group for the members of Adatum's Microsoft 365 pilot project team. You will then create a custom theme that displays the signed-in user's name, and you will assign the pilot project team to this theme. You will also review other options that can be configured with custom themes, and you can make any color changes that you wish.
-
-1. You should still be logged into LON-CL1 as the local **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as the **MOD Administrator**. 
-
-2. In the **Microsoft 365 admin center**, select **Teams & groups** in the left-hand navigation pane, and then under it, select **Active teams & groups**. 
-
-3. In the **Active teams and groups** page, there's a tab for viewing each of the group types. The **Teams & Microsoft 365 groups** tab is displayed by default. This tab displays the existing Microsoft 365 groups.  <br/>
-
-    Select the **+Add a Microsoft 365 group** option that appears on the menu bar above the list of Teams and Microsoft 365 groups. This initiates the **Add a group** wizard. 
-
-4. In the **Add a group** wizard, on the **Set up the basics** page, enter **M365 pilot project** in the **Name** field, and then enter **Members of the Microsoft 365 pilot project team** in the **Description** field (Note: even if you don't enter a description, you must still select into this field to enable the **Next** button). Select **Next**.
-
-5. You will now assign the MOD Administrator as owner of the **M365 pilot project** group. In the **Assign owners** window, select **+Assign owners**.
-	
-6. In the **Assign owners** pane that appears, select the check box next to **MOD Administrator**, and then select the **Add (1)** button at the bottom of the pane.
-
-7. On the **Assign owners** page, MOD Administrator should appear as owner of the group. Select **Next**.
-
-8. You will now assign members to the M365 pilot project group. In the **Add members** page, select **+Add members**.
-
-9. In the **Add members** pane that appears, select the check boxes next to the following users: **Alex Wilber**, **Allan Deyoung**, **Diego Siciliani**, **Isaiah Langer**, **Joni Sherman**, **Lynne Robbins**, **Megan Bowen**, **MOD Administrator**, **Nestor Wilke**, and **Patti Fernandez**. Then select the **Add (10)** button at the bottom of the pane.
-
-10. On the **Add members** page, verify these 10 users are listed as members of the group. If you missed a user, select **+Add members** and then add any users that you missed. When all 10 users appear on this page, select **Next**.
-
-11. In the **Edit settings** page, enter the following information: <br/>
-
-	- Enter **m365pilotproject** in the **Group email address** field.
-	- In the **Privacy** field, select **Private**.
-	- Under the **Add Microsoft Teams to your group** section, verify the **Create a team for this group** check box is selected (select it if it's blank), and then select **Next**.
-
-12. In the **Review and finish adding group** page, review the content that you entered. If anything needs to be fixed, select **Edit** under the specific area that needs adjustment, make any necessary corrections, and then select **Next** to continue back to this page. Once everything is correct, select **Create group**.
-
-13. Once the **M365 pilot project group created** window appears, note the comment at the top of the page that it may take 5 minutes for the new group to appear in the list of Active groups.  </br>
-
-	Select **Close**. This returns you to the **Active teams and groups** page, which should display the **Teams & Microsoft 365 groups** tab. Since the M365 pilot project group was a Microsoft 365 group, it should eventually display on this tab. If necessary, select the **Refresh** option on the menu bar until you see the M365 pilot project group in the list of Teams and Microsoft 365 groups.
-
-14. In the **Microsoft 365 admin center**, under the **Settings** group in the navigation pane, select **Org settings**. 
-
-15. On the **Org settings** page, select the **Organization profile** tab.
-
-16. In the list of organization profile data, select **Custom themes**.
-
-17. In the **Customize Microsoft 365 for your organization** pane that appears, you can customize the default theme that users see when signed into Microsoft 365, and you can add additional custom themes. Select the **+Add theme** option.
-
-18. In the **New group theme** pane that appears, the **General** tab is displayed by default. Enter **M365 pilot project theme** in the **Name** field.
-
-19. Select inside the **Groups** field. In the list of groups that appears, select **M365 pilot project** if it appears in the list of groups. <br/>
-
-	**Note:** If **M365 pilot project** doesn't appear in the list of groups, then enter **M365** in the **Groups** field. A search results box should appear that displays the **M365 pilot project** group. Select **M365 pilot project**. 
-
-20. Select the **Show the user's display name** check box. This is the setting that Holly wants to customize for the M365 pilot project team members. This option displays the users name next to their initials in each window heading.
- 
-21. Select the **Logos** tab and take some time to review its options. Do the same for the **Colors** tab. Note the various theme and branding options that are available for you to update. <br/>
-
-	For the purpose of this lab, you can change any of the options or leave the default values as is. For example, in your real-world environment, you can add the logo of your company and set the background image as the default for all your users. For this lab, feel free to change the colors for your navigation pane, text color, icon color, and accent color. <br/>
-
-	**Go ahead and explore the different options for this theme that will be used by the Microsoft 365 pilot project team members. Make any changes that you wish.** <br/>
-
-	**Tip:** Some color patterns aesthetically distract users. If you do change any of the colors, it's recommended that you avoid using high contrasting colors together, such as neon colors and high-resolution colors like bright pink and white.
-
-22. Select **Save**. Close the **M365 pilot project theme** pane once your changes are saved. 
-
-23. Select the **Refresh** icon at the top of the screen, to the left of the address bar. Once the screen refreshes, note how the **MOD Administrator** name appears to the left of the circle with the **MA** initials. The signed-in user's name now appears to the left of their profile picture or initials due to the custom theme that you just created.
-
-24. In the list of organization profile data, select **Custom themes**.
-
-25. In the **Customize Microsoft 365 for your organization** pane that appears, notice how it displays the **Default theme** and the **M365 pilot project theme**. Select the **Default theme**. 
-
-26. On the **Default theme** pane, notice how the **Show the user's display name** option is not selected for the default theme. Select the back arrow at the top of the pane to return to  the **Customize Microsoft 365 for your organization** pane. <br/>
-
-	If Holly later decides to make the **Show the user's display name** option a permanent feature, she will select this option in the **Default theme** pane so that it applies to all Adatum users, and she will delete the **M365 Pilot project theme**. <br/>
-
-	Close the **Customize Microsoft 365 for your organization** pane.
-
-27. Remain logged into **LON-CL1** with Microsoft Edge open to the **Microsoft 365 admin center** for the next task.
+17. Remain logged into **LON-CL1** with Microsoft Edge open to the **Microsoft 365 admin center** for the next task.
 
 
-### Task 4 – Install Microsoft Graph PowerShell 
+### Task 3 – Install Microsoft Graph PowerShell 
 
 Microsoft Graph PowerShell is required to perform several configuration tasks when installing Microsoft 365. Because future lab exercises will perform several of these tasks using Windows PowerShell, you should begin by installing the Microsoft Graph PowerShell module. This module allows you to perform many of the Microsoft 365 user and organization administration tasks through PowerShell. It’s great for bulk tasks such as password resets, password policies, license management and reporting, and so on.  
 
@@ -239,7 +134,7 @@ Microsoft Graph PowerShell is required to perform several configuration tasks wh
 
 7. Leave your PowerShell window open as you will use it in the next task.
 
-### Task 5 – Turn on Audit Logging to enable Alert Policies
+### Task 4 – Turn on Audit Logging to enable Alert Policies
 
 In Lab 1, Exercise 3, you will create Alert Policies using the Microsoft Defender portal. However, before you can implement alerts, an administrator must first turn on Audit Logging for the organization. Since it can take an hour or so for audit logging to become fully enabled once you turn it on, you will turn it on in this lab so that it's fully enabled by the time you get to Lab 1, Exercise 3.
 
@@ -272,7 +167,7 @@ In Lab 1, Exercise 3, you will create Alert Policies using the Microsoft Defende
 8. Do **NOT** close your PowerShell window. Leave the Windows PowerShell window open but minimize it for now. Remain logged into LON-CL1 and keep your Edge browser open.
 
 
-### Task 6 - Run a PowerShell script to create and publish a sensitivity label
+### Task 5 - Run a PowerShell script to create and publish a sensitivity label
 
 In this task, you will run a lab setup script that creates a sensitivity label and sensitivity label policy for future use in this lab series. Running this script is necessary to support the lab that you will perform on the last day of class to create a sensitivity label and label policy. The sensitivity label lab basically consists of two parts: 1) Creating a label and publishing a label policy, and 2) Testing the published label policy. The problem with the sensitivity label lab is that once you publish a label policy, it takes 24 hours for the published label policy to propagate through Microsoft 365. As such, you won't be able to test the label and policy that you create and publish on the last day of class. 
 
@@ -302,4 +197,4 @@ To address this timing issue, you will run a PowerShell script in this task that
 
 Congratulations! You have completed all the steps to initialize your lab tenant. You are now ready to perform the remaining lab exercises.
 
-# Proceed to Lab 1 - Exercise 2 
+# End of Lab 1

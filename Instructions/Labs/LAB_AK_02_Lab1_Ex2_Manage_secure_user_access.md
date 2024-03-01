@@ -1,14 +1,56 @@
 # Learning Path 2 - Lab 1 - Exercise 2 - Manage secure user access 
 
-As Holly Dickson, Adatum’s Microsoft 365 Administrator, you have been asked by Adatum’s CTO to deploy Microsoft Entra Pass-through Authentication (PTA) and Microsoft Entra Smart Lockout as a means of strengthening password management throughout the organization. 
+As Holly Dickson, Adatum’s Microsoft 365 Administrator, you have been asked by Adatum’s CTO to deploy Microsoft Entra Multifactor Authentication (MFA), Pass-through Authentication (PTA), and Microsoft Entra Smart Lockout as a means of strengthening password management throughout the organization. You will create a Conditional Access policy to deploy MFA for all of Adatum's users. You will modify it to exclude selected users from MFA, which will be Holly and the other users who will sign-in throughout these labs. That will save you from having to use MFA when signing in with them, as well as provide you with experience on how to exclude users in a Conditional Access policy. For PTA, you will deploy it using Microsoft Entra Cloud Sync. And for Smart Lockout, you will deploy it using Group Policy Management.
 
-### Task 1: Deploy Microsoft Entra Pass-Through Authentication 
+### Task 1: Deploy Microsoft Entra Multifactor Authentication 
+
+As your training indicated, there are three ways to implement MFA - with Conditional Access policies, with security defaults, and with legacy per-user MFA (not recommended). In this exercise, you'll enable MFA for all of Adatum's users through a Conditional Access policy, which is the method that Microsoft recommends.
+
+
+1. You should still be logged into **LON-DC1** as the local **adatum\administrator** from the prior task.
+
+2. On LON-DC1, 1.	On the device that is connected to the corporate network, sign in to the Microsoft 365 admin center with the global administrator account.
+2.	Go to the Security section and select Conditional access.
+3.	Click on New policy to create a new conditional access policy.
+4.	Give the policy a name, such as "MFA for external access".
+5.	Select the users and groups that the policy will apply to. For this lab exercise, choose All users.
+6.	Select the cloud apps and actions that the policy will apply to. For this lab exercise, choose All cloud apps.
+7.	Select the conditions that the policy will check for. For this lab exercise, choose Location and click on Configure.
+8.	Under Include, choose Any location.
+9.	Under Exclude, choose Trusted locations and click on Done.
+10.	Select the access controls that the policy will enforce. For this lab exercise, choose Grant access and check the box for Require multi-factor authentication.
+11.	Review the settings and click on Create to save the policy.
+12.	On the device that is not connected to the corporate network, sign in to the Microsoft 365 portal with the user account.
+13.	Verify that you are prompted to perform multi-factor authentication, such as entering a verification code or approving a notification on your phone.
+14.	Complete the multi-factor authentication and verify that you can access the Microsoft 365 portal and the cloud apps.
+15.	On the device that is connected to the corporate network, sign in to the Microsoft 365 portal with the same user account.
+16.	Verify that you are not prompted to perform multi-factor authentication and that you can access the Microsoft 365 portal and the cloud apps.
+
+
+
+
+
+### Task 2: Disable Microsoft Entra Multifactor Authentication for selected users
+
+To turn off MFA for the user who had to sign in using MFA because of the conditional access policy, follow these steps:
+1.	On the device that is connected to the corporate network, sign in to the Microsoft 365 admin center with the global administrator account.
+2.	Go to the Security section and select Conditional access.
+3.	Click on the policy that you created, such as "MFA for external access".
+4.	Under Assignments, click on Users and groups.
+5.	Under Exclude, click on Select excluded users and choose the user account that you want to exclude from the policy.
+6.	Click on Done and then Save.
+7.	On the device that is not connected to the corporate network, sign in to the Microsoft 365 portal with the same user account.
+8.	Verify that you are not prompted to perform multi-factor authentication and that you can access the Microsoft 365 portal and the cloud apps.
+
+
+
+### Task 3: Deploy Microsoft Entra Pass-Through Authentication 
 
 Pass-through Authentication allows users to sign-in to cloud-based services using their on-premises passwords. All user passwords are only stored locally in the on-premises domains and NEVER synchronized to the cloud. When a user signs-in, the PTA agent takes the credentials to the user's on-premises environment to verify whether the password is correct. It then sends the result back to Microsoft Entra ID (formerly Azure AD).   
 
 ‎Adatum's CTO wants to provide the company's users with a better sign-in experience (since PTA requires one less password to remember), as well as reduce Adatum’s IT helpdesk costs because with PTA their users are less likely to forget how to sign in. While this can also be achieved by employing Password Hash Synchronization as well as Active Directory Federation Services, Adatum has chosen to test PTA in its Microsoft 365 pilot project.
 
-1.  You should still be logged into **LON-DC1** as the local **adatum\administrator** from the prior task.
+1. You should still be logged into **LON-DC1** as the local **adatum\administrator** from the prior task.
 
 2. On LON-DC1, select the **Start** button on the taskbar, and then in the **Start** menu, select the **All Apps** icon to display the list of all installed applications. Select the **Azure AD Connect** program group and then select **Azure AD Connect**. This will initiate the **Microsoft Azure Active Directory Connect** wizard.
 
@@ -45,7 +87,7 @@ Pass-through Authentication allows users to sign-in to cloud-based services usin
 21. Leave the **Microsoft Entra admin center** open as you will use it in the next task.
    
 
-### Task 2: Deploy Micrsoft Entra Smart Lockout
+### Task 4: Deploy Micrsoft Entra Smart Lockout
 
 Adatum’s CTO has asked you to deploy Microsoft Entra Smart Lockout, which assists in locking out bad actors who are trying to guess your users’ passwords or use brute-force methods to get admitted into your network. Smart Lockout can recognize sign-ins coming from valid users and treat them differently than sign-ins from attackers and other unknown sources. 
 

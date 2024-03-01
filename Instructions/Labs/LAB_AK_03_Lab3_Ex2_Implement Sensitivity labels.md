@@ -344,4 +344,4 @@ In the prior task, you created a Word document and protected it with a sensitivi
 ## Congratulations! You have just completed the final lab in this course.
 
 
-# End of Lab 2
+# End of Lab 3

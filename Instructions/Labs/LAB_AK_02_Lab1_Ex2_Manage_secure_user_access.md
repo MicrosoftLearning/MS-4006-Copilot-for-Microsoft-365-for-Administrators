@@ -167,20 +167,24 @@ As your training indicated, there are three ways to implement MFA - with Conditi
 
 4. On the **Conditional Access | Overview** page, select **+Create new policy**.
 
-5. On the **New** Conditional Access policy window, enter **MFA for all users and external access**.
+5. On the **New** Conditional Access policy window, enter **MFA for all Adatum users + external access**.
 
 6. Unders the **Users** group, select **0 users and groups selected**. Doing so displays two tabs - **Include** and **Exclude**.
 
-7. Under the **Include** tab, select **All users**. Note the warning message that appears. You will address this in the next step.
+7. Under the **Include** tab, select **All users**. Note the warning message that appears. You will address this in the next two steps.
 
-8. Select the **Exlude** tab. Select **Users and groups**.
+8. Select the **Exlude** tab. To avoid system lockout, as the prior warning message indicated, you want to exclude your Global administrators - in this case, Holly. Holly also wants to exclude the other pilot project team members for the sake of expediency when testing. Once Microsoft 365 goes live, Holly will remove the pilot project team from the Exclude list in this Conditional Access policy and simply exclude herself and several other administrators. But for now, Holly wants to simply exclude the entire project team. Select **Users and groups**. 
 
-9. On the **Select excluded users and groups** window that appears, you want to select the Microsoft 365 pilot project team. The **All** tab is displayed by default. To quickly find the pilot project team, select the **Groups** tab.
+9. On the **Select excluded users and groups** window that appears, you want to select the Microsoft 365 pilot project team. The **All** tab is displayed by default. To quickly find the pilot project team, select the **Groups** tab. In the list of active groups, select the **M365 pilot project** group, and then select the **Select** button at the bottom of the window. Note the message that appears under the **Users** group. 
 
-3.	Click on New policy to create a new conditional access policy.
-4.	Give the policy a name, such as "MFA for external access".
-5.	Select the users and groups that the policy will apply to. For this lab exercise, choose All users.
-6.	Select the cloud apps and actions that the policy will apply to. For this lab exercise, choose All cloud apps.
+10. Under **Target resources**, select **No target resources selected**. Doing so displays two tabs - **Include** and **Exclude**.
+
+11. Under the **Include** tab, select **All cloud apps**. For this lab exercise, select **All cloud apps**. No cloud apps will be excluded from MFA authentication.
+
+12. 
+
+3.	
+6.	
 7.	Select the conditions that the policy will check for. For this lab exercise, choose Location and click on Configure.
 8.	Under Include, choose Any location.
 9.	Under Exclude, choose Trusted locations and click on Done.

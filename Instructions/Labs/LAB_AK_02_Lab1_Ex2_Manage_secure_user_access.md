@@ -181,15 +181,27 @@ As your training indicated, there are three ways to implement MFA - with Conditi
 
 11. Under the **Include** tab, select **All cloud apps**. For this lab exercise, select **All cloud apps**. No cloud apps will be excluded from MFA authentication.
 
-12. 
+12. Under **Conditions**, select **0 conditions selected**. Doing so displays a list of potential conditions the policy will check for. For this lab exercise, under the **Locations** condition, select **Not configured**. Doing so displays a **Configure** toggle switch and two tabs - **Include** and **Exclude**.
 
-3.	
-6.	
-7.	Select the conditions that the policy will check for. For this lab exercise, choose Location and click on Configure.
-8.	Under Include, choose Any location.
-9.	Under Exclude, choose Trusted locations and click on Done.
-10.	Select the access controls that the policy will enforce. For this lab exercise, choose Grant access and check the box for Require multi-factor authentication.
-11.	Review the settings and click on Create to save the policy.
+13. Set the **Configure** toggle switch to **Yes**, which enables the **Include** and **Exclude** tabs. 
+
+14. Under the **Include** tab, select **Any location**. Select the **Exclude** tab, select **All trusted locations**. You may be asking - what's the purpose of excluding trusted locations? The answer is that when you exclude trusted locations, it means that even if a user signs in from a location considered safe, or "trusted" (such as their corporate network), they will still be required to complete MFA. The purpose of excluding trusted locations is to ensure that MFA is enforced consistently for all users, regardless of where they sign in from. It prevents any exceptions based on location.
+
+15. Under **Access controls**, select **0 controls selected**. Doing so displays a **Grant** pane.
+
+16. In the **Grant** pane, verify the **Grant access** option is selected (select it if necessary). Then select **Require multifactor authentication**. Note all the other access controls that are available that can be enabled with this policy. For this policy, you will only require MFA. Select the **Select** button at the bottom of the **Grant** pane, which closes the pane. 
+
+17. At the bottom of the **New** window, in the **Enable policy** field, select **On**.
+
+18. Note the options that appear at the bottom of the pane. Since Holly is a member of the M365 pilot project team that was excluded from this policy, select **I understand that my account will be impacted by this policy. Proceed anyway.**
+
+19. Select the **Create** button to create the policy.
+
+20. Once the policy is created, the **Conditional Access | Overview** window is displayed. In the middle navigation pane for this page, the **Overview** page is selected. Select **Policies**. Verify the **MFA for all Adatum users + external access** policy appears and that its **State** is set to **On**.
+
+21. To test the policy, you will sign-out of Microsoft 365 as Holly, and then you will sign back in as 
+
+
 12.	On the device that is not connected to the corporate network, sign in to the Microsoft 365 portal with the user account.
 13.	Verify that you are prompted to perform multi-factor authentication, such as entering a verification code or approving a notification on your phone.
 14.	Complete the multi-factor authentication and verify that you can access the Microsoft 365 portal and the cloud apps.

@@ -150,7 +150,9 @@ Each user is a key member of your pilot project team. While their user accounts 
 
 21. Select **Reset Password**. If a **Save password** dialog box appears at the top of the screen, select **Never**. Then select **Close** on the **Password has been reset** pane.
 
-22. Repeat steps 17-21 for **Joni Sherman**, **Lynne Robbins**, and **Patti Fernandez**. For these three accounts, reset each of their passwords to the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account). In step 19, don't forget to show the password you entered to verify it's the correct value.
+22. Repeat steps 17-21 for **Adele Vance**, **Joni Sherman**, **Lynne Robbins**, and **Patti Fernandez**. For these three accounts, reset each of their passwords to the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account). In step 19, don't forget to show the password you entered to verify it's the correct value.
+
+	**Note:** You will use Adele's account to test Multifactor Authentication in the next task, so make sure change her password so that you can sign in as Adele with the Microsoft 365 Tenant password provided by your lab hosting provider.
 
 23. Remain logged into LON-CL1 with the **Microsoft 365 admin center** open in your browser for the next task.
 
@@ -199,32 +201,55 @@ As your training indicated, there are three ways to implement MFA - with Conditi
 
 20. Once the policy is created, the **Conditional Access | Overview** window is displayed. In the middle navigation pane for this page, the **Overview** page is selected. Select **Policies**. Verify the **MFA for all Adatum users + external access** policy appears and that its **State** is set to **On**.
 
-21. To test the policy, you will sign-out of Microsoft 365 as Holly, and then you will sign back in as 
+23. Remain logged into LON-CL1 with the **Microsoft 365 admin center** open in your browser for the next task.
 
+### Task 4: Test Microsoft Entra Multifactor Authentication
 
-12.	On the device that is not connected to the corporate network, sign in to the Microsoft 365 portal with the user account.
-13.	Verify that you are prompted to perform multi-factor authentication, such as entering a verification code or approving a notification on your phone.
-14.	Complete the multi-factor authentication and verify that you can access the Microsoft 365 portal and the cloud apps.
-15.	On the device that is connected to the corporate network, sign in to the Microsoft 365 portal with the same user account.
-16.	Verify that you are not prompted to perform multi-factor authentication and that you can access the Microsoft 365 portal and the cloud apps.
+To test the Conditional Access policy that you just created, you will sign-out of Microsoft 365 as Holly, and then you'll sign back in as Adele Vance. Adele is not part of the M365 pilot project team, so Microsoft Entra should require that she use MFA when signing in. Once you sign-in as Adele and verify that MFA works, you will sign-out as Adele and then sign back in as Holly. Since Holly is part of the M365 pilot project team that was excluded from using MFA in the Conditional Access policy, you should not have to use MFA to sign in as Holly. 
 
+1. On the LON-CL1 VM, the **Microsoft 365 admin center** should still be open in your Microsoft Edge browser from the prior task. You should be signed into Microsoft 365 as **Holly Dickson**. You will begin by signing out of Microsoft 365. On the **Microsoft 365 admin center** tab, select Holly's name in the upper right corner of your browser. In the **Holly Dickson** window that appears, select **Sign out.** <br/>
+	
+	**Important:** Once you are signed out, close your browser session to clear your cache, and then open a new Microsoft Edge browser session. 
+	
+2. Select the **Edge** icon on your taskbar to open a new browser session. In your browser go to the **Microsoft Office Home** page by entering the following URL in the address bar: **https://portal.office.com/** 
 
+3. In the **Pick an account** window, select **Use another account**. 
 
+4. In the **Sign in** window, enter **AdeleV@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**. In the **Enter password** window, enter the same Microsoft 365 Tenant Password provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and select **Sign in**.
 
+5. Because MFA is enabled for all users except for the M365 pilot project team members (of which, Adele is not a member), a **More information required** window appears. Select **Next**.
 
-### Task 4: Disable Microsoft Entra Multifactor Authentication for selected users
+6. On the **Microsoft Authenticator** page that appears, you can download this mobile app or use a different method for MFA verification. For the purposes of this lab, we recommend you use your mobile phone so that you do not have to take time installing the Microsoft Authenticator app that you may not use again after this training class. Select the **I want to set up a different method** option at the bottom of the page (**Important:** Do NOT confuse this link with the **I want to use a different authenticator app** that appears above it). 
 
-To turn off MFA for the user who had to sign in using MFA because of the conditional access policy, follow these steps:
-1.	On the device that is connected to the corporate network, sign in to the Microsoft 365 admin center with the global administrator account.
-2.	Go to the Security section and select Conditional access.
-3.	Click on the policy that you created, such as "MFA for external access".
-4.	Under Assignments, click on Users and groups.
-5.	Under Exclude, click on Select excluded users and choose the user account that you want to exclude from the policy.
-6.	Click on Done and then Save.
-7.	On the device that is not connected to the corporate network, sign in to the Microsoft 365 portal with the same user account.
-8.	Verify that you are not prompted to perform multi-factor authentication and that you can access the Microsoft 365 portal and the cloud apps.
+7. On the **Choose a different method** dialog box that appears, select the drop-down arrow in the **Which method would you like to use?** field, select **Phone**, and then select **Confirm**. 
 
+8. In the **Phone** window that appears, under **What phone number would you like to use?** field, select your country or region, and then in the field next to it, enter your phone number (in the format **nnn-nnn-nnnn**). Verify the **Receive a code** option is selected and then select **Next**.
 
+9. Retrieve the verification code from the text message that is sent to your phone.
+
+10. In the **Phone** window, enter the 6-digit verification code in the code field and then select **Next**. When the **Phone** window displays a message indicating your phone was registered successfully, select **Next**.
+
+11. On the **Success!** page, select **Done**.
+
+12. If a **Stay signed in?** dialog box appears, select the **Don’t show this again** check box and then select **Yes.** 
+
+13. On the **Home | Microsoft 365** tab, select the **Word** icon that appears in the column of app icons on the left-side of the screen. This opens **Microsoft Word** in a new browser tab. Doing so validates that you can access a Microsoft 365 app after signing in using MFA.  <br/>
+
+	**Important:** You have now verified that the first part of the Conditional Access policy that you created works. The policy requires that a user who is not a member of the Microsoft 365 pilot project team must sign-in using MFA. You verified this works when you signed in as Adele. You will now sign out as Adele and sign back in as Holly, during which you will verify that the second part of the Conditional Access policy also works. You should NOT have to sign in using MFA, since Holly is a member of the M365 pilot project team, which is excluded from the MFA requirement in the Conditional Access policy.
+
+14. On the **Microsoft 365 admin center** tab, select the icon for Adele's account in the upper right corner of your browser. In the **Adele Vance** window that appears, select **Sign out.** <br/>
+	
+	**Important:** Once you are signed out, close your browser session to clear your cache, and then open a new Microsoft Edge browser session. 
+	
+15. Select the **Edge** icon on your taskbar to open a new browser session. In your browser go to the **Microsoft Office Home** page by entering the following URL in the address bar: **https://portal.office.com/** 
+
+16. In the **Pick an account** window, select **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**. In the **Enter password** window, enter the same Microsoft 365 Tenant Password provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and select **Sign in**.
+
+17. Because MFA is required for all users except for the M365 pilot project team members (of which, Holly is a member), MFA will not be required. Since MFA is not required, the system displays the **Microsoft 365 Home** page. Select the **Admin** icon to navigate to the **Microsoft 365 admin center**. <br/>
+
+	**Important:** You have now verified that the second part of the Conditional Access policy that you created works. The policy excludes members of the Microsoft 365 pilot project team from signing-in using MFA. Holly is a member of this team, and she did not have to sign in using MFA.
+
+18. Remain logged into LON-CL1 with the **Microsoft 365 admin center** open in your browser for the next task.
 
 ### Task 5: Deploy Microsoft Entra Pass-Through Authentication 
 

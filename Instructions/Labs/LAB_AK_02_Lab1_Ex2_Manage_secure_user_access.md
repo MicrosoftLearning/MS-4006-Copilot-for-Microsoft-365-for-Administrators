@@ -157,7 +157,7 @@ Each user is a key member of your pilot project team. While their user accounts 
 23. Remain logged into LON-CL1 with the **Microsoft 365 admin center** open in your browser for the next task.
 
 
-### Task 3: Deploy Microsoft Entra Multifactor Authentication 
+### Task 3: Deploy MFA using a Conditional Access policy
 
 As your training indicated, there are three ways to implement MFA - with Conditional Access policies, with security defaults, and with legacy per-user MFA (not recommended). In this exercise, you'll enable MFA for all of Adatum's users through a Conditional Access policy, which is the method that Microsoft recommends.
 
@@ -203,7 +203,7 @@ As your training indicated, there are three ways to implement MFA - with Conditi
 
 23. Remain logged into LON-CL1 with the **Microsoft 365 admin center** open in your browser for the next task.
 
-### Task 4: Test Microsoft Entra Multifactor Authentication
+### Task 4: Test MFA for both an included and excluded user
 
 To test the Conditional Access policy that you just created, you will sign-out of Microsoft 365 as Holly, and then you'll sign back in as Adele Vance. Adele is not part of the M365 pilot project team, so Microsoft Entra should require that she use MFA when signing in. Once you sign-in as Adele and verify that MFA works, you will sign-out as Adele and then sign back in as Holly. Since Holly is part of the M365 pilot project team that was excluded from using MFA in the Conditional Access policy, you should not have to use MFA to sign in as Holly. 
 

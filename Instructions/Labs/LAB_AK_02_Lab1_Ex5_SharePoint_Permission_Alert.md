@@ -53,7 +53,7 @@ You have now configured an additional alert policy that monitors when a user is 
 
 ### Task 2 – Test the SharePoint Permissions Alert
 
-In the prior task, you configured an alert designed to notify Lynne Robbins when a user is added as a site collection administrator for a site collection. In this task, you will test this alert by adding Alex Wilber as a site collection admin to the global SharePoint Communication site. This activity should trigger the alert policy that you created, which should send an alert notification email to Lynne Robbins’ mailbox. You will validate whether Lynne received this alert notification email in Exercise 5, task 2.
+In the prior task, you configured an alert designed to notify Lynne Robbins when a user is added as a site collection administrator for a site collection. In this task, you will test this alert by adding Alex Wilber as a site collection admin to the global SharePoint Communication site. This activity should trigger the alert policy that you created, which should send an alert notification email to Lynne Robbins’ mailbox. You will validate whether Lynne received this alert notification email in Exercise 7, task 2.
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
 

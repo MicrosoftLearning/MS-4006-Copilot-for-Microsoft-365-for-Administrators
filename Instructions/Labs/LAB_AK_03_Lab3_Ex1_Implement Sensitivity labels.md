@@ -1,12 +1,10 @@
 # Learning Path 3 - Lab 2 - Exercise 1 - Implement Sensitivity labels with Microsoft Entra ID Protection
 
-In your role as Holly Dickson, Adatum’s new Microsoft 365 Administrator, you have Microsoft 365 deployed in a virtualized lab environment. As you proceed with your Microsoft 365 pilot project, your next steps are to implement Sensitivity Labels with Microsoft Entra ID Protection at Adatum. In this lab, you will create and publish a label, and you will test a published label. However, in doing so, you won't test the label that you create in this lab. You will test a different label.
+In your role as Holly Dickson, Adatum’s new Microsoft 365 Administrator, you have Microsoft 365 deployed in a virtualized lab environment. As you proceed with your Microsoft 365 pilot project, your next steps are to implement Sensitivity Labels with Microsoft Entra ID Protection at Adatum. In this lab, you will create and publish a label, and you will test a published label. However, in doing so, you won't test the label that you create in this lab. Instead, you will test a different label.
 
-**IMPORTANT:** If you recall, back on the first day of this class, you ran a lab setup script that created and published a sensitivity label and sensitivity label policy. Running that script was necessary to support this lab due to a timing issue with sensitivity labels. Once you publish a label policy, it takes 24 hours for the published label policy to propagate through Microsoft 365. As such, you won't be able to test the label and label policy that you create and publish in this lab.
+**Important:** To address the timing issue with sensitivity labels, where once a label policy is published it takes 24 hours for the published label policy to propagate through Microsoft 365, you will work with a pre-existing sensitivity label named **Project - Falcon**.
 
-To address this timing issue, you ran that PowerShell script back on day 1 to create and publish a sensitivity label and label policy. Now that you've reached this lab, that label policy will have propagated through the system, and you'll be able to test it.
-
-Because we want you to gain experience creating and publishing a label and label policy using the Microsoft 365 UI, you will still create a sensitivity label and label policy in this lab. However, when you perform the tasks to test the label and label policy, you won't test the ones that you created and published in the UI, since that label and label policy won't be available to test for 24 hours. Instead, you will test the label and label policy that you created and published using the script that you ran back on day 1 of this class.
+Because we want you to gain experience creating and publishing a label and label policy using the Microsoft 365 UI, you will still create a sensitivity label and label policy in this lab. However, when you perform the tasks to test the label and label policy, you won't test the ones that you created and published in the UI, since that label and label policy won't be available to test for 24 hours. Instead, you will test the label and label policy associated with Project - Falcon that we will modify in Task 3 of this lab.
 
 
 ### Task 1 – Install the Microsoft Entra ID Protection Unified Labeling client
@@ -178,25 +176,29 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 45. On the **New policy created** page, select **Done**.
 
+### task 3 - Edit a Sensitivtiy Label
 
-### Task 3 – Assign a Sensitivity Label to a document
+As outlined in the instructions at the start of this lab, it is not possible to test the sensitivity label and label policy you created in the previous task immediately. This is because it takes up to 24 hours for the new label policy to propagate through Microsoft 365 and for its label to become visible in applications like Microsoft Word and Outlook.
 
-As the instructions at the start of this lab indicated, you can't test the sensivity label and label policy that you just created in the prior task. It will take up to 24 hours for that label policy to propagate through Microsoft 365 before its label appears in Microsft Word, Outlook, and so on. 
+Instead, in this exercise, we will modify a pre-existing sensitivity label to closely match the label we just created. By editing an existing label, we circumvent the 24-hour waiting period required for new labels to become active. This approach ensures immediate applicability and testing within the lab environment.
 
-**Important:** The label and label policy that you will test in these next two tasks will be the label and label policy that were created when you ran the PowerShell script in Lab 1 on the first day of class. 
+1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson.
+2. In your Edge browser, you should still have a tab open for the **Microsoft Purview** portal. If not, open a new tab and enter the following URL: https://compliance.microsoft.com.
+3. In the **Microsoft Purview** portal, if necessary, in the left-hand navigation pane, select **Information protection** and then select **Labels**. 
+4. On the **Labels** page, expand the pre-existing sensitivity label **Highly Confidential** and then select **Project - Falcon**.
+5. In the new **Project - Falcon** pane that appears, select **Edit label**.
+6. In the **Edit sensitivity label** wizard that appears, select **Next** until you reach the **Choose protection settings for labeled items** page .
+7. On the **Choose protection settings for labeled items** page, check the box next to **Apply or remove encryption** and then select **Next**.
+8. On the **Encryption** page, you will define who can access items that have this label applied. Select the **Remove encryption if the file or email or calendar event is encrypted** option and then select **Next**.
+9. Select **Next** until you reach the **Review your settings and finish** page, then select **Save label**.
 
-**Note:** The label and label policy that you created in the prior task  have the same exact settings as the label and label policy that were created when you ran the PowerShell script in Lab 1. The only difference between the two labels and the two label policies should be their names. The names of these labels and label policies are:
+### Task 4 – Assign a Sensitivity Label to a document
 
-- The label that you created in the prior task was titled **PII**. 
-- The label that was created by the script that you ran in Lab 1 was titled **PII - V1**. 
-- The label policy that you created in the prior task was titled **PII Policy**. 
-- The label policy that was created by the script that you ran in Lab 1 was titled **PII Policy - V1**. 
-
-As you test the **PII - V1** label and the **PII Policy - V1** label policy in these next two tasks, you should see the same results that you configured in the **PII** label and **PII Policy** label policy. 
+After modifying the **Project - Falcon** sensitivity label, it's crucial to test its real-world application. You'll transition from your role as Holly Dickson to that of Alex Wilber. In this new role, you'll create a document and apply the recently adjusted **Project - Falcon** label to assess its functionality. This step is essential to verify that the sensitivity label is properly configured and fully operational, ensuring it meets the organization's security and compliance standards.
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
 
-2. To validate the sensitivity label that you created and published when you ran the PowerShell script in Lab 1 on the first day of class, you must first sign out of Microsoft 365 as Holly and sign back in as Alex Wilber. <br/>
+2. To validate the sensitivity label that we just edited in the prior task, you must first sign out of Microsoft 365 as Holly and sign back in as Alex Wilber. <br/>
 
 	In your Edge browser, select the **Microsoft 365 admin center** tab, and then select the circle with Holly Dickson's HD initials in the upper right corner of the screen. In the **Holly Dickson** window, select **Sign out**.
 
@@ -224,23 +226,23 @@ As you test the **PII - V1** label and the **PII Policy - V1** label policy in t
 
 13. In the **Word** document, type **Testing personally identifiable information (PII).**
 
-14. Because you enabled Sensitivity labels at the start of this exercise, and since the label you created by running the script on day 1 of the course has fully propagated through Microsoft 365, Word should display a **Sensitivity** group on the ribbon at the top of the page. 
+14. Because you enabled Sensitivity labels at the start of this exercise, Word should display a **Sensitivity** group on the ribbon at the top of the page. 
 
-	Select the down arrow in the **Sensitivity** group. In the drop-down menu that appears, it should display the **PII - V1** label the script created and published. Since the **PII - V1** label is enabled for this document, a check mark is displayed next to **PII - V1**. <br/>
+	Select the down arrow in the **Sensitivity** group. In the drop-down menu that appears, it should display the **Highly Confidential** > **Project - Falcon** label that we just edited. Select **Project - Falcon** to apply the label. <br/>
 	
-	In this first validation test, you're going to attempt to remove this sensitivity label from being applied to this document. When you created the **PII Policy - V1** policy and **PII** label in the prior task, the same options you selected were applied to the **PII Policy - V1** policy and **PII - V1** label by the Lab 1 script. One of the label policy options requires users to provide justification to remove a label or to select a lower classification label. You will now verify whether this setting is functioning properly. <br/>
+	In this first validation test, you're going to remove this sensitivity label from being applied to this document. One of the label policy options requires users to provide justification to remove a label or to select a lower classification label. You will now verify whether this setting is functioning properly. <br/>
 	
-	To remove the label from this document, select the **PII - V1** label that appears in this drop-down menu.
+	To remove the label from this document, select the **Project - Falcon** label that appears in this drop-down menu.
 	
 15. In the **Justification Required** window that appears, select the **Other (explain)** option. In the **Explain why you're changing this label** field, enter **Testing what happens when a label is removed** and then select **Change**.
 
-16. In the **Sensitivity** group in the Word ribbon, select the down arrow. In the drop-down menu that appears, note that while **PII - V1** is displayed, it no longer has a check mark displayed next to it. This indicates the **PII - V1** sensitivity label is no longer being applied to this document.  
+16. In the **Sensitivity** group in the Word ribbon, select the down arrow. In the drop-down menu that appears, note that while **Highly Confidential** > **Project - Falcon** is displayed, it no longer has a check mark displayed next to it. This indicates the sensitivity label is no longer being applied to this document.  
 
-17. To re-apply the sensitivity label to the document, select **PII - V1** in the drop-down menu. Once again select the drop-down arrow in the **Sensitivity** group. The drop-down menu that appears should display the **PII - V1** label, and it should display a check mark next to it that indicates it is being applied to this document.
+17. To re-apply the sensitivity label to the document, select **Highly Confidential** > **Project - Falcon** in the drop-down menu. 
 
 18. In the Word document, enter **111-11-1111** below the previous line of text that you entered. This number is the same format as a U.S. Social Security Number.
 
-	**Note**: In Word for the Web, the custom header, footer, and watermark specificed in the **PII - V1** policy do not display by default. To view the custom header, footer, and watermark, select the **View** tab and then in the menu select **Reading View**. Alternatively, in the real world, you could use the Word Desktop App which would display these by default.
+	**Note**: In Word for the Web, the custom watermark specificed in the **Project - Falcon** policy does not display by default. To view the custom watermark, select the **View** tab and then in the menu select **Reading View**. Alternatively, in the real world, you could use the Word Desktop App which would display these by default.
 
 	To exit reading view, select the **Edit Document** drop-down menu and then select **Edit**.
 
@@ -250,22 +252,27 @@ As you test the **PII - V1** label and the **PII Policy - V1** label policy in t
 
 20. On the right-side of the menu bar, select the **Share** button. In the drop-down menu that appears, select **Share**.
 
-21. In the **Send link** window that appears, select **Anyone with the link can edit**. <br/>
+21. In the **Share ProtectedDocument1.docx** window that opens, select the **Gear icon** next to **Copy link.**
 
-	On the **Sharing settings** page that appears, select **People you choose**. Under **More settings**, select **Can edit**. In the menu that appears, select **Can view**, and then select **Apply**. <br/>
+22. On the **Link settings** page that appears, select **People you choose**. 
+	
+	Under **More settings** select the drop down menu next to **Can edit**. Change the option to **Can view**.
 
-	On the **Send link** window, enter **Joni** in the **To: Name, group or email** field. A list of users whose name starts with **joni** should appear. Select **Joni Sherman**. <br/>
+	Select **Apply**.
 
-	Under the **Copy link** section, select the **Copy** button. 
+23. Back on the **Share ProtectedDocument1.docx** window, enter **Joni** in the **Add a name, group, or email** Field. A list of users whose name starts with **joni** should appear. Select **Joni Sherman**<br/>
 
-22. Close the **Link to 'ProtectedDocument1' copied** window that appears.
+	To the right of the **Add a name, group, or email** field, select the **pencil icon**. The option **Can edit** should be selected. In the menu that appears, select **Can view**. <br/>
+
+	Select the **Copy link** button. 
+
+24. Close the **Share ProtectedDocument1.docx** window that appears.
 
 You have just successfully created a Word document that is read-only protected using Microsoft Entra ID Protection. The document is accessible only by its creator, Alex Wilber, and by Joni Sherman (with Read-only permission), to whom the document was shared.
 
+### Task 5 – Verify your Sensitivity Label policy
 
-### Task 4 – Verify your Sensitivity Label policy
-
-In the prior task, you created a Word document and protected it with a sensitivity label. The **PII - V1** label should have inserted a watermark in the document, and it should have restricted permissions on the document. To verify whether the protection that you assigned to the document works, you will first email the document to Joni Sherman and to your own personal email address. You will then test what functionality is possible for both Joni and Alex Wilber.
+In the prior task, you created a Word document and protected it with a sensitivity label. The **Project - Falcon** label should have inserted a watermark in the document, and it should have restricted permissions on the document. To verify whether the protection that you assigned to the document works, you will first email the document to Joni Sherman and to your own personal email address. You will then test what functionality is possible for both Joni and Alex Wilber.
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Alex Wilber** from the prior task with the **Word** tab open. 
 
@@ -289,57 +296,57 @@ In the prior task, you created a Word document and protected it with a sensitivi
 
 6. In the body of the message, under the text you added in the previous step, paste the link copied to your clipboard from the prior task. A link for the file named **ProtectedDocument1.docx** should appear.
 
-8. Select **Send**.
+7. Select **Send**.
 
-9. Switch to **LON-CL2**. 
+8. Switch to **LON-CL2**. 
 
-10. On **LON-CL2**, you should be logged into **Outlook on the Web** as **Lynne Robbins** from a previous lab exercise. Sign out as Lynne.
+9. On **LON-CL2**, you should be logged into **Outlook on the Web** as **Lynne Robbins** from a previous lab exercise. Sign out as Lynne.
 
-11. In your Edge browser, close all tabs except for the **Sign out** tab. In this tab, enter the following URL in the address bar: **https://outlook.office365.com** 
+10. In your Edge browser, close all tabs except for the **Sign out** tab. In this tab, enter the following URL in the address bar: **https://outlook.office365.com** 
 
-12. In the **Pick an account** window, select **Use another account**.
+11. In the **Pick an account** window, select **Use another account**.
 
-13. In the **Sign in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**.
+12. In the **Sign in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**.
 
-14. On the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in**.
+13. On the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in**.
 
-15. If a **Welcome** window appears, select the X to close it.
+14. If a **Welcome** window appears, select the X to close it.
 
-16. In Joni’s **Inbox** in **Outlook on the web**, open the email that Alex just sent her by selecting the email in the Inbox. Note the **Sensitive - Do Not Share** watermark that appears in the message. These are the header and footer watermarks were entered in the PII - V1 label created by the PowerShell script, which are the same watermarks that you configured for the label that you created in the prior task.
+15. In Joni’s **Inbox** in **Outlook on the web**, open the email that Alex just sent her by selecting the email in the Inbox. 
 
-17. Select the attached file to open it.
+16. Select the attached file to open it.
 
-18. In the **Your privacy option** dialog box that appears, select **Close**. Review the document, note the custom header, footer, and watermark specificed in the **PII - V1** policy do not display by default. To view the custom header, footer, and watermark, select the **View** tab and then in the menu select **Reading View**. Alternatively, in the real world, you could use the Word Desktop App which would display these by default. <br/>
+17. In the **Your privacy option** dialog box that appears, select **Close**. Review the document, note the watermark specificed in the **Project - Falcon** policy do not display by default. To view the custom watermark, select the **View** tab and then in the menu select **Reading View**. Alternatively, in the real world, you could use the Word Desktop App which would display these by default. <br/>
 
 	Once you have finished reviewing the document, close the document window. 
 
-19. This will return you to **Outlook on the web** with the email still displayed in the right-hand pane. In the body of the email, the document appears in a tile. You want to download the document. Select the down arrow that appears on the right-side of the tile, and in the menu that appears, select **Download**.
+18. This will return you to **Outlook on the web** with the email still displayed in the right-hand pane. In the body of the email, the document appears in a tile. You want to download the document. Select the down arrow that appears on the right-side of the tile, and in the menu that appears, select **Download**.
 
-20. Once the file has finished downloading, in the notification bar, select **Open file** that appears below the file name.
+19. Once the file has finished downloading, in the notification bar, select **Open file** that appears below the file name.
 
-21. **Microsoft Word** should open along with a **Sign in** window (it may open behind the Outlook window, in which case select the **Word** icon on the taskbar to bring it forward). 
+20. **Microsoft Word** should open along with a **Sign in** window (it may open behind the Outlook window, in which case select the **Word** icon on the taskbar to bring it forward). 
 
-22. If a **Microsoft Office Activation Wizard** window appears, select **Close** and proceed to the next step. <br/>
+21. If a **Microsoft Office Activation Wizard** window appears, select **Close** and proceed to the next step. <br/>
 
 	However, if a **Sign in** window appears, it's because the file is RMS protected and no Azure Information Protection unified labeling client is installed on LON-CL2. In this case, you need to use the native RMS features of Word Microsoft Apps and register this installation to Joni’s account. <br/>
 
-	‎In the **Sign in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft.com** and then select **Next.** In the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in.** <br/>
+	In the **Sign in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft.com** and then select **Next.** In the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in.** <br/>
 
 	In the **Use this account everywhere on your device** window that appears, select **This app only** to register this Office 365 ProPlus installation to **Joni Sherman’s** Microsoft 365 account.
 
-23. The file should open in Word, since you assigned Joni with Read-only permission. Review the three notification bars that appear above the document. 
+22. The file should open in Word, since you assigned Joni with Read-only permission. Review the three notification bars that appear above the document. 
 
-24. Try to change the file. Word should not recognize any keystrokes, and it should display the following message above the taskbar: **This modification is not allowed because the document is open for viewing only.** <br/>  
+23. Try to change the file. Word should not recognize any keystrokes, and it should display the following message above the taskbar: **This modification is not allowed because the document is open for viewing only.** <br/>  
 
-	‎**Note:** You have just verified that the permissions assigned to the file are working properly. Joni can read the file (since she was assigned Read-only permission), but she is unable to change it (no one was assigned Edit permission).
+	**Note:** You have just verified that the permissions assigned to the file are working properly. Joni can read the file (since she was assigned Read-only permission), but she is unable to change it (no one was assigned Edit permission).
 
-25. Close Word.
+24. Close Word.
 
-26. You will now test what happens when you attempt to open the document that was sent to your personal email address. Use your phone or classroom PC to access your personal email address. Open the email that you (in the role of Holly) just sent to your personal email address, and then attempt to open the attached file. 
+25. You will now test what happens when you attempt to open the document that was sent to your personal email address. Use your phone or classroom PC to access your personal email address. Open the email that you (in the role of Holly) just sent to your personal email address, and then attempt to open the attached file. 
 
-27. You should receive a message indicating that you are not signed into Office with an account that has permission to access the document. You can optionally sign in with an account that has permission to access the file, or request access from the **AlexW@xxxxxZZZZZZ.onmicrosoft.com** account, or Cancel out of the operation. Select **Cancel**.  <br/>
+26. You should receive a message indicating that you are not signed into Office with an account that has permission to access the document. You can optionally sign in with an account that has permission to access the file, or request access from the **AlexW@xxxxxZZZZZZ.onmicrosoft.com** account, or Cancel out of the operation. Select **Cancel**.  <br/>
 
-	‎Since only Joni was assigned permission to read the document, you just verified that Microsoft Entra ID Protection protected the document based on the PII policy parameters that you configured.
+	Since only Joni was assigned permission to read the document, you just verified that Microsoft Entra ID Protection protected the document based on the PII policy parameters that you configured.
 
 ## Congratulations! You have just completed the final lab in this course.
 

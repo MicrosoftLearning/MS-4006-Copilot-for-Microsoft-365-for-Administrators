@@ -1,4 +1,4 @@
-# Learning Path 2 - Lab 1 - Exercise 3 - Prepare for Alert Policies
+# Learning Path 2 - Lab 2 - Exercise 3 - Prepare for Alert Policies
 
 Alerts are policies designed to automatically notify administrators when key actions have occurred in their Microsoft 365 tenant. Alerts can be an easy way to ensure that change logs are up-to-date and that business policies are being followed inside your Microsoft 365 tenant.
 

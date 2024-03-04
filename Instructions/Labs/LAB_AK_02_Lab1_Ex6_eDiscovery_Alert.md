@@ -84,4 +84,4 @@ To test this default alert, Holly Dickson will create an eDiscovery search. This
 	
 13.  Leave your browser open in LON-CL1 and do not close any of the tabs.
     
-# End of Lab 1
+# Proceed to Lab 1 - Exercise 7

@@ -2,7 +2,7 @@
 
 In this exercise you will configure and test an alert that will notify Lynne Robbins when FullAccess permissions are granted to any mailbox within Adatum.
 
-**Important:** This lab includes three exercises in which you will create alert notifications (Exercises 2 through 4). In each of these excercises, you must perform a final task to validate whether the alert was created or an email was received. In all three exercises, it can take up to 15 minutes for the system to create the corresponding alert or email. Rather than having to wait up to 15 minutes after having created each alert or simulated attack to validate whether the task worked (which is 45 minutes of wait time; 3 exercises x 15 minutes each), the validation tasks for all three exercises have been moved to the final exercise in this lab (Lab 2, Exercise 5). By the time you get to the final exercise, hopefully all alerts and emails for these three exercises have been generated and you will not have to endure any wait time.
+**Important:** This lab includes three exercises in which you will create alert notifications (Exercises 4 through 6). In each of these excercises, you must perform a final task to validate whether the alert was created or an email was received. In all three exercises, it can take up to 15 minutes for the system to create the corresponding alert or email. Rather than having to wait up to 15 minutes after having created each alert or simulated attack to validate whether the task worked (which is 45 minutes of wait time; 3 exercises x 15 minutes each), the validation tasks for all three exercises have been moved to the final exercise in this lab (Lab 2, Exercise 7). By the time you get to the final exercise, hopefully all alerts and emails for these three exercises have been generated and you will not have to endure any wait time.
 
 ### Task 1 – Create a Mailbox Permission Alert
 
@@ -81,7 +81,7 @@ In the prior task, you configured an alert designed to notify Lynne Robbins when
 
 7. Once you have assigned Joni to each of the three permissions on the **Delegation** tab, select the **X** in the upper right-hand corner to close the **Alex Wilber** pane. <br/>
 
-	**Note:** This activity should trigger the alert policy that you created, which should send an alert notification email to Lynne Robbins’ mailbox. Rather than waiting up to 15 minutes for the email notification to be generated to validate this mailbox permission alert, you will validate this alert in Exercise 5, task 1 of this lab.
+	**Note:** This activity should trigger the alert policy that you created, which should send an alert notification email to Lynne Robbins’ mailbox. Rather than waiting up to 15 minutes for the email notification to be generated to validate this mailbox permission alert, you will validate this alert in Exercise 7, task 1 of this lab.
    
 8. In your Edge browswer, close the **Exchange admin center** tab. Leave the other tabs open and proceed to the next exercise.
 

@@ -1,4 +1,4 @@
-# Learning Path 2 - Lab 1 - Exercise 2 - Manage secure user access 
+# Learning Path 2 - Lab 2 - Exercise 2 - Manage secure user access 
 
 In this exercise, you will perform several user management functions within Microsoft 365. You will begin by creating a Microsoft 365 user account for Holly, who will be assigned the Microsoft 365 Global Administrator role. 
 

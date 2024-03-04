@@ -1,4 +1,4 @@
-# Learning Path 2 - Lab 2 - Exercise 6 - Validate alert nofications and simulated attacks
+# Learning Path 2 - Lab 2 - Exercise 6 - Validate alert nofications
 
 This lab included two exercises in which you configured Microsoft 365 to create alert notifications (Exercises 4 and 5). Both exercises generated an email notification, which have to be validated to ensure the alerts and simulated attacks are working properly. 
 

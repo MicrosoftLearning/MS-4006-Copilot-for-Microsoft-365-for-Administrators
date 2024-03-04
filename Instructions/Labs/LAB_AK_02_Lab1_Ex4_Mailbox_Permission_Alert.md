@@ -2,7 +2,7 @@
 
 In this exercise you will configure and test an alert that will notify Lynne Robbins when FullAccess permissions are granted to any mailbox within Adatum.
 
-**Important:** This lab includes three exercises in which you will create alert notifications (Exercises 4 through 6). In each of these excercises, you must perform a final task to validate whether the alert was created or an email was received. In all three exercises, it can take up to 15 minutes for the system to create the corresponding alert or email. Rather than having to wait up to 15 minutes after having created each alert or simulated attack to validate whether the task worked (which is 45 minutes of wait time; 3 exercises x 15 minutes each), the validation tasks for all three exercises have been moved to the final exercise in this lab (Lab 2, Exercise 7). By the time you get to the final exercise, hopefully all alerts and emails for these three exercises have been generated and you will not have to endure any wait time.
+**Important:** This lab includes two exercises in which you will create alert notifications (Exercises 4 and 5). In each of these excercises, you must perform a final task to validate whether the alert was created or an email was received. In both exercises, it can take up to 15 minutes for the system to create the corresponding alert or email. Rather than having to wait up to 15 minutes after having created each alert or simulated attack to validate whether the task worked (which is 30 minutes of wait time; 2 exercises x 15 minutes each), the validation tasks for both exercises have been moved to the final exercise in this lab (Lab 2, Exercise 6). By the time you get to the final exercise, hopefully all alerts and emails for these two exercises have been generated and you will not have to endure any wait time.
 
 ### Task 1 – Create a Mailbox Permission Alert
 
@@ -58,7 +58,7 @@ You have now created an activity alert in Microsoft Defender XDR that is trigger
 
 ### Task 2 – Test the Mailbox Permission Alert
 
-In the prior task, you configured an alert designed to notify Lynne Robbins when FullAccess permissions are granted to any mailbox within Adatum. In this task, you will test this alert by changing the permission on Alex Wilber’s mailbox by granting Joni Sherman FullAccess to his mailbox. This activity should trigger the alert that you created, which should send an alert notification email to Lynne Robbins’ mailbox. You will validate whether the email is generated in Exercise 7.
+In the prior task, you configured an alert designed to notify Lynne Robbins when FullAccess permissions are granted to any mailbox within Adatum. In this task, you will test this alert by changing the permission on Alex Wilber’s mailbox by granting Joni Sherman FullAccess to his mailbox. This activity should trigger the alert that you created, which should send an alert notification email to Lynne Robbins’ mailbox. You will validate whether the email is generated in Exercise 6.
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
 

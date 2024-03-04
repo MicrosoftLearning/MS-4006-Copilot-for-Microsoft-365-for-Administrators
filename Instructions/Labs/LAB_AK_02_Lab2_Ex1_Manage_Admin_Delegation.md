@@ -1,9 +1,9 @@
-# Learning Path 2 - Lab 2 - Exercise 1 - Manage Administration Delegation
+# Learning Path 2 - Lab 2 - Exercise 1 - Manage roles and role groups
 
-In this exercise, you will continue in your role as Holly Dickson, Adatum's new Microsoft 365 Administrator. As part of Adatum's Microsoft 365 pilot project, you will manage administration delegation by assigning Microsoft 365 administrator roles to several of the Microsoft 365 user accounts that were created by your lab hosting provider. You will assign these roles using both the Microsoft 365 admin center and Windows PowerShell; this will give you the added experience of using PowerShell to perform these administrative functions. Once you have assigned Microsoft 365 admin roles to several of the existing user accounts, you will then test those assignments by verifying the users have the permissions to act in accordance with their roles. 
+In this exercise, you will continue in your role as Holly Dickson, Adatum's new Microsoft 365 Administrator. As part of Adatum's Microsoft 365 pilot project, you will manage administration delegation by assigning Microsoft 365 administrator roles to several of the Microsoft 365 user accounts that were created by your lab hosting provider. You will assign these roles using both the Microsoft 365 admin center and Windows PowerShell; this will give you the added experience of using PowerShell to perform these administrative functions. Once you have assigned Microsoft 365 admin roles to several of the existing user accounts, you will then test those assignments by verifying the users have the permissions to act in accordance with their roles. You will begin by creating a custom role group and you will assign two existing administrator roles to it. You'll then assign the role group to one of the existing user accounts. 
 
 
-### ‎Task 1 - Assign Delegated Administrators in the Microsoft 365 Admin Center
+### ‎Task 1 - Assign Administrator roles in the Microsoft 365 Admin Center
 
 Holly Dickson has been assigned the Microsoft 365 Global Administrator role. As you continue in your role as Holly, you will use the Microsoft 365 admin center to assign administrator rights to several Adatum users. 
 
@@ -42,7 +42,7 @@ Holly Dickson has been assigned the Microsoft 365 Global Administrator role. As 
 14. Remain logged into LON-CL1 and the Microsoft 365 admin center as Holly Dickson.
 
 
-### Task 2 - Assign Delegated Administrators with Windows PowerShell  
+### Task 2 - Assign Administrator roles using Windows PowerShell  
 
 This task is similar to the prior one in that you will assign administrator rights to users; however, in this case, you will use Windows PowerShell to perform this function rather than the Microsoft 365 admin center. This will give you experience performing this management function in PowerShell, since some administrators prefer performing maintenance such as this using PowerShell.  
 
@@ -147,7 +147,7 @@ PowerShell also enables you to display all the users assigned to a specific role
 19. Leave your Windows PowerShell session open for future lab exercises, but minimize it before going on to the next task.
 
 
-### Task 3 - Verify Delegated Administration  
+### Task 3 - Verify role management  
 
 In this task, you will begin by examining the administrative properties of two users, Joni Sherman and Lynne Robbins. You will then log into the Microsoft 365 home page on the Client 2 VM (LON-CL2) as each user to confirm several of the changes that you made when managing their administrative delegation in the prior tasks. Finally, as Lynne Robbins, you will perform two important user account maintenance tasks - resetting passwords and blocking user accounts.
 
@@ -268,6 +268,11 @@ In this task, you will begin by examining the administrative properties of two u
 	**IMPORTANT:** A warning message is displayed indicating it can take up to 15 minutes before Alex can sign in again. Given the time constraints with the training, you will **NOT** try to verify whether Alex can log back in. If you want, you can try logging in as Alex at a later time if you're on a break or have spare time and you want to test this out. For now, remain on LON-CL1 and simply close the **Unblock sign-in** window.
 	
 48. On LON-CL1, leave your browser and all tabs open and proceed to the next exercise. 
+
+
+### Task 4 - Verify role management  
+
+In this task, you will begin by examining the administrative properties of two users, Joni Sherman and Lynne Robbins. You will then log into the Microsoft 365 home page on the Client 2 VM (LON-CL2) as each user to confirm several of the changes that you made when managing their administrative delegation in the prior tasks. Finally, as Lynne Robbins, you will perform two important user account maintenance tasks - resetting passwords and blocking user accounts.
 
 
 # Proceed to Lab 1 - Exercise 2

@@ -1,11 +1,11 @@
 # Learning Path 2 - Lab 2 - Exercise 1 - Manage roles and role groups
 
-In this exercise, you will continue in your role as Holly Dickson, Adatum's new Microsoft 365 Administrator. As part of Adatum's Microsoft 365 pilot project, you will manage administration delegation by assigning Microsoft 365 administrator roles to several of the Microsoft 365 user accounts that were created by your lab hosting provider. You will assign these roles in three different mannersusing both the Microsoft 365 admin center and Windows PowerShell; this will give you the added experience of using PowerShell to perform these administrative functions. Once you have assigned Microsoft 365 admin roles to several of the existing user accounts, you will then test those assignments by verifying the users have the permissions to act in accordance with their roles. You will begin by creating a custom role group and you will assign two existing administrator roles to it. You'll then assign the role group to one of the existing user accounts. 
+In this exercise, you will continue in your role as Holly Dickson, Adatum's new Microsoft 365 Administrator. As part of Adatum's Microsoft 365 pilot project, you will manage administration delegation by assigning Microsoft 365 administrator roles to several of the Microsoft 365 user accounts that were created by your lab hosting provider. This exercise will provide you with experience in using three different methods to assign these roles: 1) by assigning a role directly to a user account in the Microsoft 365 admin center, 2) by creating a role group, assigning roles to the role group, and then assigning the role group to a user in the Microsoft 365 admin center, and 3) by assigning a role to a user using Windows PowerShell. Once you have assigned Microsoft 365 admin roles to several of the existing user accounts, you will then test those assignments by verifying the users have the permissions to act in accordance with their roles. 
 
 
 ### ‎Task 1 - Assign an administrator role in the Microsoft 365 Admin Center
 
-Holly Dickson has been assigned the Microsoft 365 Global Administrator role. As you continue in your role as Holly, you will use the Microsoft 365 admin center to assign administrator rights to several Adatum users. 
+Holly Dickson has been assigned the Microsoft 365 Global Administrator role. As you continue in your role as Holly, you will use the Microsoft 365 admin center to assign administrator rights to one of the Adatum users. In this task, you will assign the Billing Administrator role to Diego Siciliani's user account.
 
 1. In the prior lab exercise, you created a new domain for Adatum on LON-DC1. You should now switch back to **LON-CL1** to perform the Microsoft 365 administrative tasks in this lab exercise. As a best practice, typical Microsoft 365 administrative tasks should be performed on a client PC rather than the company's domain controller.  <br/>
 
@@ -33,7 +33,7 @@ Holly Dickson has been assigned the Microsoft 365 Global Administrator role. As 
 
 ### ‎Task 2 - Assign an administrator role using a role group in the Microsoft 365 admin center
 
-In the prior task, you assigned an administrator role directly to a user's account in the Microsoft 365 admin center. In this task, you will create a Security role group, assign roles to it, and then assign the role group to a user in the Microsoft 365 admin center.
+In the prior task, you assigned an administrator role directly to Diego Siciliani's user account in the Microsoft 365 admin center. In this task, you will assign roles using a role group instead. You will create a Security role group, assign user management roles to it, and then assign the role group to Lynne Robbin's user account in the Microsoft 365 admin center.
 
 1. On LON-CL1, you should still be logged into the Microsoft 365 admin center as Holly Dickson. If not, then do so now.
 
@@ -81,9 +81,9 @@ In the prior task, you assigned an administrator role directly to a user's accou
 
 23. Remain logged into LON-CL1 and the Microsoft 365 admin center as Holly Dickson.
 
-### Task 3 - Assign Administrator roles using Windows PowerShell  
+### Task 3 - Assign an administrator role using Windows PowerShell  
 
-This task is similar to the prior one in that you will assign administrator rights to users; however, in this case, you will use Windows PowerShell to perform this function rather than the Microsoft 365 admin center. This will give you experience performing this management function in PowerShell, since some administrators prefer performing maintenance such as this using PowerShell.  
+In this task, you will use Windows PowerShell to assign a role to a user account. Doing so will give you experience performing this management function in PowerShell, since some administrators prefer performing maintenance such as this using PowerShell.  
 
 In this task, Holly wants to assign Patti Fernandez to the Service Support Administrator role. To add a user to an admin role using the Microsoft Graph PowerShell module, you must first obtain the object ID of the user and the object ID of the role. If the role has not yet been enabled (meaning that it hasn't been assigned to a user or it hasn't been physically enabled), then you must enable the role first before you can assign it to a user using PowerShell. In this task, you will enable the Service Support Administrator role first before assigning it to Patti Fernandez.
 

@@ -55,7 +55,7 @@ In the prior task, you assigned an administrator role directly to a user's accou
 
 10. On the **User management role group** pane, the **General** tab is displayed by default. Under the **Roles** section, select **Manage roles**.
 
-11. On the **Manage admin roles** pane that appears, select the **Admin center access** option. In the list of common administrator roles that appears directly below this option, select the **User Administrator** and **User Experience Success Manasger** role check box. Then select the **Show all by category** option. Scroll down to the **Identity** category. Note how the **User Administrator** role is already selected, since you selected this earlier in the list of most commonly used roles. Select the **Helpdesk Administrator** role and then select **Save changes**. 
+11. On the **Manage admin roles** pane that appears, select the **Admin center access** option. In the list of common administrator roles that appears directly below this option, select the **User Administrator** and **User Experience Success Manager** role check box. Then select the **Show all by category** option. Scroll down to the **Identity** category. Note how the **User Administrator** role is already selected, since you selected this earlier in the list of commonly used roles. Select the **Helpdesk Administrator** role and then select **Save changes**. 
 
 12. In the **Manage admin roles** pane, the three selected roles should appear under the **Admin center access** option. Select the **X** in the upper-right corner of the pane to close it.
 
@@ -65,7 +65,7 @@ In the prior task, you assigned an administrator role directly to a user's accou
 
 15. On the **Active users** page, select **Lynne Robbins**. 
 
-16. In the **Lynne Robbins** pane that appears, the **Account** tab is displayed by default. In the prior task, when you assigned the Billing Administrator role to Diego Siciliani's accout, you selected the **Manage roles** option under the **Roles** section. However, since you will be assigning Lynn'es roles through a role group, you must assign Lynne as a member of the Security role group that you just created. Therefore, under the **Groups** section, select **Manage groups**. 
+16. In the **Lynne Robbins** pane that appears, the **Account** tab is displayed by default. In the prior task, when you assigned the Billing Administrator role to Diego Siciliani's account, you selected the **Manage roles** option under the **Roles** section. However, since you will be assigning Lynne's roles through a role group, you must assign Lynne as a member of the Security role group that you just created. It's through the group assignment that Lynne will inherit the roles assigned to the role group. Therefore, under the **Groups** section, select **Manage groups**. 
 
 17. On the **Manage groups** pane, select **+Assign memberships**.
 
@@ -73,11 +73,11 @@ In the prior task, you assigned an administrator role directly to a user's accou
 
 19. Once a **Saved** notification appears at the top of the page, close this pane. 
 
-20. To verify that Lynnes inherits the roles that were assigned to the User management role group, select **Lynne Robbins** from the list of active users. 
+20. To verify that Lynne inherited the roles that were assigned to the User management role group, select **Lynne Robbins** from the list of active users. 
 
-21. In the Lyne Robbins pane that appears, in the **Account** tab that is displayed by default, you should see the three User management roles that were assigned to the Lynne. Under the **Roles** section**, select **Manage roles**.
+21. In the **Lynne Robbins** pane that appears, in the **Account** tab that is displayed by default, you should see the three User management roles that were assigned to the Lynne. Under the **Roles** section**, select **Manage roles**.
 
-22. In the **Manage admin roles** pane that appears, under the **Admin center access** option, note the three roles that are selected and the name of the group from which they were assigned to Lynne. Also note how the three roles are grayed out. This indicates that you can't unselect the roles from this window. Because the roles were assigned to Lynne from a role group that contained these roles, you can only unassign the roles by removing Lynne as a member of the role group. Close this **Manage admin roles** pane.
+22. In the **Manage admin roles** pane that appears, under the **Admin center access** option, note the three roles that are selected and the name of the group from which they were assigned to Lynne. Also note how the three roles are grayed out. This indicates that you can't unselect the roles from this window. Because the roles were assigned to Lynne from a role group that contained these roles, you can only unassign the roles by removing Lynne as a member of the role group. You have just verified that Lynne is assigned these roles. Close this **Manage admin roles** pane.
 
 23. Remain logged into LON-CL1 and the Microsoft 365 admin center as Holly Dickson.
 

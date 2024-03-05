@@ -1,6 +1,6 @@
 # Learning Path 2 - Lab 2 - Exercise 1 - Manage roles and role groups
 
-In this exercise, you will continue in your role as Holly Dickson, Adatum's new Microsoft 365 Administrator. As part of Adatum's Microsoft 365 pilot project, you will manage administration delegation by assigning Microsoft 365 administrator roles to several of the Microsoft 365 user accounts that were created by your lab hosting provider. You will assign these roles using both the Microsoft 365 admin center and Windows PowerShell; this will give you the added experience of using PowerShell to perform these administrative functions. Once you have assigned Microsoft 365 admin roles to several of the existing user accounts, you will then test those assignments by verifying the users have the permissions to act in accordance with their roles. You will begin by creating a custom role group and you will assign two existing administrator roles to it. You'll then assign the role group to one of the existing user accounts. 
+In this exercise, you will continue in your role as Holly Dickson, Adatum's new Microsoft 365 Administrator. As part of Adatum's Microsoft 365 pilot project, you will manage administration delegation by assigning Microsoft 365 administrator roles to several of the Microsoft 365 user accounts that were created by your lab hosting provider. You will assign these roles in three different mannersusing both the Microsoft 365 admin center and Windows PowerShell; this will give you the added experience of using PowerShell to perform these administrative functions. Once you have assigned Microsoft 365 admin roles to several of the existing user accounts, you will then test those assignments by verifying the users have the permissions to act in accordance with their roles. You will begin by creating a custom role group and you will assign two existing administrator roles to it. You'll then assign the role group to one of the existing user accounts. 
 
 
 ### ‎Task 1 - Assign an administrator role in the Microsoft 365 Admin Center
@@ -31,7 +31,7 @@ Holly Dickson has been assigned the Microsoft 365 Global Administrator role. As 
 
 9. Remain logged into LON-CL1 and the Microsoft 365 admin center as Holly Dickson.
 
-### ‎Task 2 - Assign an administrator role using a Security role group
+### ‎Task 2 - Assign an administrator role using a role group in the Microsoft 365 admin center
 
 In the prior task, you assigned an administrator role directly to a user's account in the Microsoft 365 admin center. In this task, you will create a Security role group, assign roles to it, and then assign the role group to a user in the Microsoft 365 admin center.
 
@@ -81,8 +81,7 @@ In the prior task, you assigned an administrator role directly to a user's accou
 
 23. Remain logged into LON-CL1 and the Microsoft 365 admin center as Holly Dickson.
 
-
-### Task 2 - Assign Administrator roles using Windows PowerShell  
+### Task 3 - Assign Administrator roles using Windows PowerShell  
 
 This task is similar to the prior one in that you will assign administrator rights to users; however, in this case, you will use Windows PowerShell to perform this function rather than the Microsoft 365 admin center. This will give you experience performing this management function in PowerShell, since some administrators prefer performing maintenance such as this using PowerShell.  
 
@@ -187,7 +186,7 @@ PowerShell also enables you to display all the users assigned to a specific role
 19. Leave your Windows PowerShell session open for future lab exercises, but minimize it before going on to the next task.
 
 
-### Task 3 - Validate role assignments 
+### Task 4 - Validate role assignments 
 
 In this task, you will begin by examining the administrative properties of two users, Joni Sherman and Lynne Robbins. You will then log into the Microsoft 365 home page on the Client 2 VM (LON-CL2) as each user to confirm several of the changes that you made when managing their administrative delegation in the prior tasks. Finally, as Lynne Robbins, you will perform two important user account maintenance tasks - resetting passwords and blocking user accounts.
 

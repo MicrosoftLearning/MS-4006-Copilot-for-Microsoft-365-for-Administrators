@@ -1,10 +1,10 @@
-# Learning Path 3 - Lab 2 - Exercise 1 - Implement Sensitivity labels with Microsoft Entra ID Protection
+# Learning Path 3 - Lab 3 - Exercise 1 - Implement Sensitivity labels with Microsoft Entra ID Protection
 
 In your role as Holly Dickson, Adatum’s new Microsoft 365 Administrator, you have Microsoft 365 deployed in a virtualized lab environment. As you proceed with your Microsoft 365 pilot project, your next steps are to implement Sensitivity Labels with Microsoft Entra ID Protection at Adatum. In this lab, you will create and publish a label, and you will test a published label. However, in doing so, you won't test the label that you create in this lab. Instead, you will test a different label.
 
-**Important:** To address the timing issue with sensitivity labels, where once a label policy is published it takes 24 hours for the published label policy to propagate through Microsoft 365, you will work with a pre-existing sensitivity label named **Project - Falcon**.
+**Important:** When you publish a new sensitivity label and label policy, it can take up to 24 hours for them to propagate through Microsoft 365. As such, you won't be able to test the label that you create in this lab. Instead, you will test a pre-existing sensitivity label named **Project - Falcon**.
 
-Because we want you to gain experience creating and publishing a label and label policy using the Microsoft 365 UI, you will still create a sensitivity label and label policy in this lab. However, when you perform the tasks to test the label and label policy, you won't test the ones that you created and published in the UI, since that label and label policy won't be available to test for 24 hours. Instead, you will test the label and label policy associated with Project - Falcon that we will modify in Task 3 of this lab.
+Because we want you to gain experience creating and publishing a label and label policy using the Microsoft 365 UI, you will still create a sensitivity label and label policy in this lab. However, when you perform the tasks to test the label and label policy, you won't test the ones that you created and published, since they won't be available to test for 24 hours. Instead, you will test the label and label policy associated with Project - Falcon that we will modify in Task 3 of this lab.
 
 
 ### Task 1 – Install the Microsoft Entra ID Protection Unified Labeling client
@@ -44,9 +44,9 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 2. In your Edge browser, you should still have a tab open for the **Microsoft 365 admin center**. If not, open a new tab and enter the following URL: **https://admin.microsoft.com**.
 
-3. On the **Microsoft 365 admin center**, if necessary, select **... Show all**. Select **Compliance** under the **Admin centers** group.
+3. On the **Microsoft 365 admin center**, if necessary, select **... Show all** in the navigation pane. Select **Compliance** under the **Admin centers** group.
 
-4. On the **Microsoft Purview** portal, in the left-hand navigation pane, select **Information protection** and then select **Labels**. 
+4. On the **Microsoft Purview** portal, select **Information protection** in the navigation pane and then select **Labels**. 
 
 5. On the **Labels** page, a warning message is displayed in a light yellow shaded box in the middle of the page indicating: **Your organization has not turned on the ability to process content in Office online files that have encrypted sensitivity labels applied and are stored in OneDrive and SharePoint. You can turn on here, but note that additional configuration is required for Multi-Geo environments.** <br/>
 
@@ -176,25 +176,33 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 45. On the **New policy created** page, select **Done**.
 
-### task 3 - Edit a Sensitivtiy Label
+### Task 3 - Edit a Sensitivtiy Label
 
-As outlined in the instructions at the start of this lab, it is not possible to test the sensitivity label and label policy you created in the previous task immediately. This is because it takes up to 24 hours for the new label policy to propagate through Microsoft 365 and for its label to become visible in applications like Microsoft Word and Outlook.
+As outlined in the instructions at the start of this lab, it isn't possible to immediately test the sensitivity label and label policy you created in the previous task. This is because it takes up to 24 hours for the new label policy to propagate through Microsoft 365 and for its label to become visible in applications like Microsoft Word and Outlook.
 
-Instead, in this exercise, we will modify a pre-existing sensitivity label to closely match the label we just created. By editing an existing label, we circumvent the 24-hour waiting period required for new labels to become active. This approach ensures immediate applicability and testing within the lab environment.
+Instead, in this task, you will modify a pre-existing sensitivity label to closely match the label you just created. By editing an existing label, we circumvent the 24-hour waiting period required for new labels to become active. 
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson.
-2. In your Edge browser, you should still have a tab open for the **Microsoft Purview** portal. If not, open a new tab and enter the following URL: https://compliance.microsoft.com.
-3. In the **Microsoft Purview** portal, if necessary, in the left-hand navigation pane, select **Information protection** and then select **Labels**. 
-4. On the **Labels** page, expand the pre-existing sensitivity label **Highly Confidential** and then select **Project - Falcon**.
+
+2. In your Edge browser, you should still have a tab open for the **Microsoft Purview** portal. If not, open a new tab and enter the following URL: **https://compliance.microsoft.com**
+
+3. In the **Microsoft Purview** portal, select **Information protection** in the navigation pane and then select **Labels**. 
+
+4. On the **Labels** page, expand the pre-existing sensitivity label that's titled **Highly Confidential** and then select **Project - Falcon**.
+
 5. In the new **Project - Falcon** pane that appears, select **Edit label**.
-6. In the **Edit sensitivity label** wizard that appears, select **Next** until you reach the **Choose protection settings for labeled items** page .
+
+6. In the **Edit sensitivity label** wizard that appears, select **Next** until you reach the **Choose protection settings for labeled items** page.
+
 7. On the **Choose protection settings for labeled items** page, check the box next to **Apply or remove encryption** and then select **Next**.
+
 8. On the **Encryption** page, you will define who can access items that have this label applied. Select the **Remove encryption if the file or email or calendar event is encrypted** option and then select **Next**.
+
 9. Select **Next** until you reach the **Review your settings and finish** page, then select **Save label**.
 
 ### Task 4 – Assign a Sensitivity Label to a document
 
-After modifying the **Project - Falcon** sensitivity label, it's crucial to test its real-world application. You'll transition from your role as Holly Dickson to that of Alex Wilber. In this new role, you'll create a document and apply the recently adjusted **Project - Falcon** label to assess its functionality. This step is essential to verify that the sensitivity label is properly configured and fully operational, ensuring it meets the organization's security and compliance standards.
+After modifying the **Project - Falcon** sensitivity label, it's crucial to test its real-world application. You'll transition from your role as Holly Dickson to that of Alex Wilber. In this new role, you'll create a document and apply the recently adjusted **Project - Falcon** label to assess its functionality. This step is essential to verify that the sensitivity label is properly configured and fully operational, ensuring it meets Adatum's security and compliance standards.
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
 
@@ -276,9 +284,9 @@ In the prior task, you created a Word document and protected it with a sensitivi
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Alex Wilber** from the prior task with the **Word** tab open. 
 
-	**Note**: If the copied link from the prior exercise is no longer in your clipboard, you will need to re-copy the link. To do so, select the **Word** tab, and then on the right-side of the menu bar select the **Share** button. In the drop-down menu that appears, select **Manage Access**. Under **Links giving access** you can copy the link created in the previous task.
+	**Note**: If the copied link from the prior exercise is no longer in your clipboard, you will need to re-copy the link. To do so, select the **Word** tab, and then on the right-side of the menu bar select the **Share** button. In the drop-down menu that appears, select **Manage Access**. Under **Links giving access**, you can copy the link created in the previous task.
 
-2.  In your Edge browser, select the **Word** tab and then select the **Back** arrow. This should display the **Microsoft Office Home** tab. 
+2. In your Edge browser, select the **Word** tab and then select the **Back** arrow. This should display the **Microsoft Office Home** tab. 
 
 3. In the **Microsoft Office Home** tab, select the **Outlook** icon in the column of app icons on the left-side of the screen. This opens Outlook on the web in a new tab. 
 

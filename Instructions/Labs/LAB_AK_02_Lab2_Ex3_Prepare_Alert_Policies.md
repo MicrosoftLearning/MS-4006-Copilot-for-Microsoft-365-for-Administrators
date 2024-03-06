@@ -56,4 +56,4 @@ Perform the following steps to assign Lynne Robbins the Compliance Data Administ
 You have now added Lynne Robbins to the Compliance Data Administrator role group.
 
 
-# Proceed to Lab 1 - Exercise 4
+# Proceed to Lab 2 - Exercise 4

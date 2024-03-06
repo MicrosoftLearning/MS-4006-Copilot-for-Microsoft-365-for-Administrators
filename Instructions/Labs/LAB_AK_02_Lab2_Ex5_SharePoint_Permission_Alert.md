@@ -70,4 +70,4 @@ In the prior task, you configured an alert designed to notify Lynne Robbins when
 6. In your Edge browser, close the **Permissions: Communication site** tab. Leave the other tabs open and proceed to the next exercise.
 
 
-# Proceed to Lab 1 - Exercise 6
+# Proceed to Lab 2 - Exercise 6

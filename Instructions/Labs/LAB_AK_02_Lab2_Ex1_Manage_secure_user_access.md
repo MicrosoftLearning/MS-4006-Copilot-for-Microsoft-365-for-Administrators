@@ -1,4 +1,4 @@
-# Learning Path 2 - Lab 2 - Exercise 2 - Manage secure user access 
+# Learning Path 2 - Lab 2 - Exercise 1 - Manage secure user access 
 
 In this exercise, you will perform several user management functions within Microsoft 365. You will begin by creating a Microsoft 365 user account for Holly, who will be assigned the Microsoft 365 Global Administrator role. 
 
@@ -390,4 +390,4 @@ The CTO is anxious to implement Smart Lockout because it will lock out the attac
 
 23. Once your log-in is successful, you can close all open applications. This will be your last lab exercise using the LON-DC1 domain controller.
  
-# Proceed to Lab 1 - Exercise 3
+# Proceed to Lab 2 - Exercise 2

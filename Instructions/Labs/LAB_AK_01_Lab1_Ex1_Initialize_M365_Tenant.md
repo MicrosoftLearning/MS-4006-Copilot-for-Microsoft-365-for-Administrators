@@ -63,7 +63,7 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
 	On the **Welcome to Microsoft 365** page, in the list of application icons that appear in the left-hand pane, select **Admin**; this opens the **Microsoft 365 admin center** in a new browser tab. 
 
-11. In the **Microsoft 365 admin center**, select **Show all** in the left-hand navigation pane and then select **Settings**. In the **Settings** group, select **Org settings**. 
+11. In the **Microsoft 365 admin center**, select **Show all** in the navigation pane and then select **Settings**. In the **Settings** group, select **Org settings**. 
 
 12. On the **Org settings** page, the **Services** tab is displayed by default. Select the **Organization profile** tab.
 
@@ -103,7 +103,7 @@ Custom themes must be associated with one or more Microsoft 365 groups. Therefor
 
 1. You should still be logged into LON-CL1 as the local **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as the **MOD Administrator**. 
 
-2. In the **Microsoft 365 admin center**, select **Teams & groups** in the left-hand navigation pane, and then under it, select **Active teams & groups**. 
+2. In the **Microsoft 365 admin center**, select **Teams & groups** in the navigation pane, and then under it, select **Active teams & groups**. 
 
 3. In the **Active teams and groups** page, there's a tab for viewing each of the group types. The **Teams & Microsoft 365 groups** tab is displayed by default. This tab displays the existing Microsoft 365 groups.  <br/>
 
@@ -240,6 +240,6 @@ In Lab 2, Exercise 3, you will create Alert Policies using the Microsoft Defende
 8. Do **NOT** close your PowerShell window. Leave the Windows PowerShell window open but minimize it for now. Remain logged into LON-CL1 and keep your Edge browser open.
 
 
-Congratulations! You have completed all the steps to initialize your lab tenant. You are now ready to perform the remaining lab exercises.
+**Congratulations! You have completed all the steps to initialize your lab tenant. You are now ready to perform the remaining lab exercises.**
 
 # End of Lab 1

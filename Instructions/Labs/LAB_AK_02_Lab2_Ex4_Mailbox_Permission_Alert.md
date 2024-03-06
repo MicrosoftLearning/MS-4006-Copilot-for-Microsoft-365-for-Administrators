@@ -86,4 +86,4 @@ In the prior task, you configured an alert designed to notify Lynne Robbins when
 8. In your Edge browswer, close the **Exchange admin center** tab. Leave the other tabs open and proceed to the next exercise.
 
 
-# Proceed to Lab 1 - Exercise 5
+# Proceed to Lab 2 - Exercise 5

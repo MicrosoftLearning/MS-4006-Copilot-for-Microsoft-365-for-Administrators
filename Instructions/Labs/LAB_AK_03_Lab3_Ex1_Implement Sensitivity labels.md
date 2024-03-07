@@ -178,7 +178,7 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 As outlined in the instructions at the start of this lab, it isn't possible to immediately test the sensitivity label and label policy you created in the previous task. This is because it takes up to 24 hours for the new label policy to propagate through Microsoft 365 and for its label to become visible in applications like Microsoft Word and Outlook.
 
-Instead, in this task, you will modify a pre-existing sensitivity label to closely match the label you just created. By editing an existing label, we circumvent the 24-hour waiting period required for new labels to become active. 
+You will instead modify a pre-existing sensitivity label to closely match the label you just created. By editing an existing label, you can continue working with a sensitivity label, just as if the label that you created and published was available. 
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson.
 
@@ -186,11 +186,11 @@ Instead, in this task, you will modify a pre-existing sensitivity label to close
 
 3. In the **Microsoft Purview** portal, select **Information protection** in the navigation pane and then select **Labels**. 
 
-4. On the **Labels** page, expand the pre-existing sensitivity label that's titled **Highly Confidential** and then select **Project - Falcon**.
+4. On the **Labels** page, scroll down to the list of label types and select the **forward arrow (>)** that appears next to **Highly Confidential** (don't select Highly Confidential itself, which will open a detail pane for it). Selecting the forward arrow displays the pre-existing labels that are flagged as Highly Confidential. In the list of Highly Confidential labels, select **Project - Falcon**.
 
-5. In the new **Project - Falcon** pane that appears, select **Edit label**.
+5. In the **Project - Falcon** pane that appears, select **Edit label** in the menu bar at the top of the pane. Doing so initiates the **Edit sensitivity label** wizard. 
 
-6. In the **Edit sensitivity label** wizard that appears, select **Next** until you reach the **Choose protection settings for labeled items** page.
+6. In the **Edit sensitivity label** wizard, on the **Provide basic details for this label** page, select **Next** until you reach the **Choose protection settings for labeled items** page.
 
 7. On the **Choose protection settings for labeled items** page, check the box next to **Apply or remove encryption** and then select **Next**.
 

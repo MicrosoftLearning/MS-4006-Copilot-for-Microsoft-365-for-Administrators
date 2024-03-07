@@ -174,37 +174,16 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 45. On the **New policy created** page, select **Done**.
 
-### Task 3 - Edit a Sensitivtiy Label
 
-As outlined in the instructions at the start of this lab, it isn't possible to immediately test the sensitivity label and label policy you created in the previous task. This is because it takes up to 24 hours for the new label policy to propagate through Microsoft 365 and for its label to become visible in applications like Microsoft Word and Outlook.
+### Task 3 – Assign a pre-existing sensitivity label to a document
 
-You will instead modify a pre-existing sensitivity label to closely match the label you just created. By editing an existing label, you can continue working with a sensitivity label, just as if the label that you created and published was available. 
+As outlined in the instructions at the start of this lab, it isn't possible to immediately test the sensitivity label and label policy you created in the previous task. This is because it takes up to 24 hours for a new label policy to propagate through Microsoft 365 and for its label to become visible in applications like Microsoft Word and Outlook.
 
-1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson.
-
-2. In your Edge browser, you should still have a tab open for the **Microsoft Purview** portal. If not, open a new tab and enter the following URL: **https://compliance.microsoft.com**
-
-3. In the **Microsoft Purview** portal, select **Information protection** in the navigation pane and then select **Labels**. 
-
-4. On the **Labels** page, scroll down to the list of label types and select the **forward arrow (>)** that appears next to **Highly Confidential** (don't select Highly Confidential itself, which will open a detail pane for it). Selecting the forward arrow displays the pre-existing labels that are flagged as Highly Confidential. In the list of Highly Confidential labels, select **Project - Falcon**.
-
-5. In the **Project - Falcon** pane that appears, select **Edit label** in the menu bar at the top of the pane. Doing so initiates the **Edit sensitivity label** wizard. 
-
-6. In the **Edit sensitivity label** wizard, on the **Provide basic details for this label** page, select **Next** until you reach the **Choose protection settings for labeled items** page.
-
-7. On the **Choose protection settings for labeled items** page, check the box next to **Apply or remove encryption** and then select **Next**.
-
-8. On the **Encryption** page, you will define who can access items that have this label applied. Select the **Remove encryption if the file or email or calendar event is encrypted** option and then select **Next**.
-
-9. Select **Next** until you reach the **Review your settings and finish** page, then select **Save label**.
-
-### Task 4 – Assign a Sensitivity Label to a document
-
-After modifying the **Project - Falcon** sensitivity label, it's crucial to test its real-world application. You'll transition from your role as Holly Dickson to that of Alex Wilber. In this new role, you'll create a document and apply the recently adjusted **Project - Falcon** label to assess its functionality. This step is essential to verify that the sensitivity label is properly configured and fully operational, ensuring it meets Adatum's security and compliance standards.
+Instead, you will test one of Microsoft 365's pre-existing sensitivity labels. For this lab, you will use the **Project - Falcon** sensitivity label, which is a Highly Confidential label. In fact, this label is very similar to the label that you created in the prior task - the one exception being that it doesn't include a header or footer. All other controls are the same as the label that you created. Using this pre-exsiting label will give you a very good idea as to how the label that you created would work at Adatum.
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
 
-2. To validate the sensitivity label that we just edited in the prior task, you must first sign out of Microsoft 365 as Holly and sign back in as Alex Wilber. <br/>
+2. To validate the **Project-Falcon** sensitivity label, you must first sign out of Microsoft 365 as Holly and sign back in as **Alex Wilber**. <br/>
 
 	In your Edge browser, select the **Microsoft 365 admin center** tab, and then select the circle with Holly Dickson's HD initials in the upper right corner of the screen. In the **Holly Dickson** window, select **Sign out**.
 
@@ -276,7 +255,7 @@ After modifying the **Project - Falcon** sensitivity label, it's crucial to test
 
 You have just successfully created a Word document that is read-only protected using Microsoft Entra ID Protection. The document is accessible only by its creator, Alex Wilber, and by Joni Sherman (with Read-only permission), to whom the document was shared.
 
-### Task 5 – Verify your Sensitivity Label policy
+### Task 4 – Verify the pre-existing sensitivity label policy
 
 In the prior task, you created a Word document and protected it with a sensitivity label. The **Project - Falcon** label should have inserted a watermark in the document, and it should have restricted permissions on the document. To verify whether the protection that you assigned to the document works, you will first email the document to Joni Sherman and to your own personal email address. You will then test what functionality is possible for both Joni and Alex Wilber.
 

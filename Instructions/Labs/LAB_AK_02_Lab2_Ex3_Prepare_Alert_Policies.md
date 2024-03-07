@@ -25,33 +25,29 @@ The three alerts that you will create in this lab are assigned to two Alert cate
 
 Perform the following steps to assign Lynne Robbins the Compliance Data Administrator role group, which includes the Compliance Administrator role.
 
-1. At the end of the prior lab, you were logged into LON-DC1. This lab will use LON-CL1.  <br/>
+1. On **LON-CL1**, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
 
-    Switch to **LON-CL1**. 
+2. If necessary, select the **Microsoft 365 admin center** tab in your browser. In the left-hand navigation pane, under the **Admin centers** group, select **Security**. This opens the Microsoft Defender portal in a new tab.
 
-2. On **LON-CL1**, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
+3. In the **Microsoft Defender** portal, scroll down towards the bottom of the left-hand navigation pane and select **Permissions**.
 
-3. If necessary, select the **Microsoft 365 admin center** tab in your browser. In the left-hand navigation pane, under the **Admin centers** group, select **Security**. This opens the Microsoft Defender portal in a new tab.
+4. On the **Permissions** page, there are four sections - Microsoft Defender XDR, Microsoft Entra ID, Email & collaboration roles, and Cloud Apps. Under the **Email & collaboration roles** section, select **Roles**. 
 
-4. In the **Microsoft Defender** portal, scroll down towards the bottom of the left-hand navigation pane and select **Permissions**.
+5. In the list of roles that appears, select the **Name** column heading to sort the roles in ascending alphabetical name order. Select the **Compliance Data Administrator** role group (select the name of the role group and not the check box). 
 
-5. On the **Permissions** page, there are four sections - Microsoft Defender XDR, Microsoft Entra ID, Email & collaboration roles, and Cloud Apps. Under the **Email & collaboration roles** section, select **Roles**. 
+6. In the **Compliance Data Administrator** pane that appears, note the list of roles that have been assigned to this role group. Scroll to the bottom of the pane and note that there are no members in this role group. Scroll back to the top of the pane and select the **Edit** option. 
 
-6. In the list of roles that appears, select the **Name** column heading to sort the roles in ascending alphabetical name order. Select the **Compliance Data Administrator** role group (select the name of the role group and not the check box). 
+7. In the **Edit members of the role group** window, select the **Choose users** button. 
 
-7. In the **Compliance Data Administrator** pane that appears, note the list of roles that have been assigned to this role group. Scroll to the bottom of the pane and note that there are no members in this role group. Scroll back to the top of the pane and select the **Edit** option. 
+8. In the **Choose users** window, a partial, unsorted list of users appears. Enter **Lynne** in the **Search** field and hit Enter. A list of users appears whose name includes Lynne. Select the check box next to **Lynne Robbins** and then select the **Select** button at the bottom of the pane.
 
-8. In the **Edit members of the role group** window, select the **Choose users** button. 
+9. In the **Edit members of the role group** window, Lynne's name should appear. Select **Next**.
 
-9. In the **Choose users** window, a partial, unsorted list of users appears. Enter **Lynne** in the **Search** field and hit Enter. A list of users appears whose name includes Lynne. Select the check box next to **Lynne Robbins** and then select the **Select** button at the bottom of the pane.
+10. In the **Review the role group and finish** window that appears, note that Lynne also appear here as a member of the role group. Select **Save.**
 
-10. In the **Edit members of the role group** window, Lynne's name should appear. Select **Next**.
+11. In the **You successfully updated the role group** pane, select **Done**.
 
-11. In the **Review the role group and finish** window that appears, note that Lynne also appear here as a member of the role group. Select **Save.**
-
-12. In the **You successfully updated the role group** pane, select **Done**.
-
-13. Leave all tabs in your Edge browser open for the next lab exercise.
+12. Leave all tabs in your Edge browser open for the next lab exercise.
 
 You have now added Lynne Robbins to the Compliance Data Administrator role group.
 

@@ -7,7 +7,7 @@ In this exercise, you will continue in your role as Holly Dickson, Adatum's new 
 
 Holly Dickson has been assigned the Microsoft 365 Global Administrator role. As you continue in your role as Holly, you will use the Microsoft 365 admin center to assign administrator rights to one of the Adatum users. In this task, you will assign the Billing Administrator role to Diego Siciliani's user account.
 
-1. In the prior lab exercise, you created a new domain for Adatum on LON-DC1. You should now switch back to **LON-CL1** to perform the Microsoft 365 administrative tasks in this lab exercise. As a best practice, typical Microsoft 365 administrative tasks should be performed on a client PC rather than the company's domain controller.  <br/>
+1. You finished the prior lab exercise working on LON-DC1. You should now switch back to **LON-CL1** to perform the Microsoft 365 administrative tasks in this lab exercise. As a best practice, typical Microsoft 365 administrative tasks should be performed on a client PC rather than the company's domain controller.  <br/>
 
 	Switch to **LON-CL1**. 
 

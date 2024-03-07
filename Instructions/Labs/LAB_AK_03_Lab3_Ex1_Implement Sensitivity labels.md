@@ -253,19 +253,19 @@ Instead, you will test one of Microsoft 365's pre-existing sensitivity labels. F
 
 25. Once the **Link copied** message appears at the bottom of the **Share ProtectedDocument1.docx** window, then select the X in the upper-right corner of the window to close it.
 
+26. Leave the **ProtectedDocument1** tab open displaying the document. You may need to reference this document in the next exercise if you need to recopy its link.
+
 You have just successfully created a Word document that is read-only protected using Microsoft Entra ID Protection. The document is accessible only by its creator, Alex Wilber, and by Joni Sherman (with Read-only permission), to whom the document was shared.
 
 ### Task 4 – Verify the pre-existing sensitivity label policy
 
-In the prior task, you created a Word document and protected it with a sensitivity label. The **Project - Falcon** label should have inserted a watermark in the document, and it should have restricted permissions on the document. To verify whether the protection that you assigned to the document works, you will first email the document to Joni Sherman and to your own personal email address. You will then test what functionality is possible for both Joni and Alex Wilber.
+In the prior task, you created a Word document and protected it with the **Project - Falcon** sensitivity label. This label should have inserted a watermark in the document, and it should have restricted permissions on the document. To verify whether the protection that you assigned to the document works, you will first email the document to Joni Sherman and to your own personal email address. You will then test what functionality is possible for both Joni and Alex Wilber.
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Alex Wilber** from the prior task with the **Word** tab open. 
 
-	**Note**: If the copied link from the prior exercise is no longer in your clipboard, you will need to re-copy the link. To do so, select the **Word** tab, and then on the right-side of the menu bar select the **Share** button. In the drop-down menu that appears, select **Manage Access**. Under **Links giving access**, you can copy the link created in the previous task.
+2. In your Edge browser, select the **Word | Microsoft 365** tab and then select the **Back** arrow. This should return you to the **Welcome to Microsoft 365** home page.
 
-2. In your Edge browser, select the **Word** tab and then select the **Back** arrow. This should display the **Microsoft Office Home** tab. 
-
-3. In the **Microsoft Office Home** tab, select the **Outlook** icon in the column of app icons on the left-side of the screen. This opens Outlook on the web in a new tab. 
+3. In the **Welcome to Microsoft 365** page, select the **Outlook** icon in the column of app icons on the left-side of the screen. This opens Alex Wilber's mailbox in Outlook on the web in a new tab. 
 
 4. In **Outlook on the web**, select **New Mail** in the upper left part of the screen.
 
@@ -279,7 +279,9 @@ In the prior task, you created a Word document and protected it with a sensitivi
 
 	- Body of the message: enter **If you can open the protected and restricted document attached to this email, then try to change it.**
 
-6. In the body of the message, under the text you added in the previous step, paste the link copied to your clipboard from the prior task. A link for the file named **ProtectedDocument1.docx** should appear.
+6. In the body of the message, under the text you added in the previous step, paste the link copied to your clipboard from the prior task. A link for the file named **ProtectedDocument1.docx** should appear. <br/>
+
+	**Note**: If the copied link from the prior exercise is no longer in your clipboard, you will need to re-copy the link. To do so, select the **ProtectedDocument1** tab, and then on the right-side of the menu bar select the **Share** button. In the drop-down menu that appears, select **Share**. In the **Share "ProtectedDocument1"** window, enter **Joni** in the **Add a name, group, or email** field and then select **Joni Sherman**. To the right of Joni's name, select the pencil icon, and then select **Can view** from the menu. Select the **Copy link** button, and then paste the link into the body of the message back in your email. 
 
 7. Select **Send**.
 
@@ -303,7 +305,7 @@ In the prior task, you created a Word document and protected it with a sensitivi
 
 17. In the **Your privacy option** dialog box that appears, select **Close**. Review the document, note the watermark specificed in the **Project - Falcon** policy do not display by default. To view the custom watermark, select the **View** tab and then in the menu select **Reading View**. Alternatively, in the real world, you could use the Word Desktop App which would display these by default. <br/>
 
-	Once you have finished reviewing the document, close the document window. 
+	Once you have finished reviewing the document, close the **ProtectedDocument1** tab. 
 
 18. This will return you to **Outlook on the web** with the email still displayed in the right-hand pane. In the body of the email, the document appears in a tile. You want to download the document. Select the down arrow that appears on the right-side of the tile, and in the menu that appears, select **Download**.
 
@@ -334,6 +336,3 @@ In the prior task, you created a Word document and protected it with a sensitivi
 	Since only Joni was assigned permission to read the document, you just verified that Microsoft Entra ID Protection protected the document based on the PII policy parameters that you configured.
 
 ## Congratulations! You have just completed the final lab in this course.
-
-
-# End of Lab 3

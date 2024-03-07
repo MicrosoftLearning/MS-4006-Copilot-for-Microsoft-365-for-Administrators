@@ -44,7 +44,7 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 3. On the **Microsoft 365 admin center**, if necessary, select **... Show all** in the navigation pane. Select **Compliance** under the **Admin centers** group.
 
-4. On the **Microsoft Purview** portal, select **Information protection** in the navigation pane and then select **Labels**. 
+4. On the **Microsoft Purview** compliance portal, select **Information protection** in the navigation pane and then select **Labels**. 
 
 5. On the **Labels** page, a warning message is displayed in a light yellow shaded box in the middle of the page indicating: **Your organization has not turned on the ability to process content in Office online files that have encrypted sensitivity labels applied and are stored in OneDrive and SharePoint. You can turn on here, but note that additional configuration is required for Multi-Geo environments.** <br/>
 
@@ -197,13 +197,13 @@ Instead, you will test one of Microsoft 365's pre-existing sensitivity labels. F
 
 7. On the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in**.
 
-8. If a **Get your work done with Office 365** window appears, select the X to close it.
+8. If a **Welcome to Microsoft 365** window appears, select the **forward arrow (>)** twice and then the check mark to close it. If a **Get your work done with Office 365** window appears, select the **X** to close it. 
 
-9. On the **Microsoft Office Home** tab, select the **Word** icon in the column of app icons on the left-side of the screen. This will override the **Microsoft Office Home** tab by opening Microsoft Word Online in this same tab. <br/>
+9. On the **Welcome to Microsoft 365** home page (on the **Home | Microsoft 365** tab), select the **Word** icon in the column of app icons on the left-side of the screen. This will override the **Home | Microsoft 365** tab by opening Microsoft Word Online in this same tab. <br/>
 
-	**Note:** In the next task, you will return back to the **Microsoft Office Home** tab by selecting the **Back** arrow at the top of this **Word** tab.
+	**Note:** In the next task, you will return back to the **Home | Microsoft 365** tab by selecting the **Back** arrow at the top of this **Word | Microsoft 365** tab.
 
-10. In the **Word** tab, under the **Create new** section at the top of the page, select **Blank document**.
+10. In the **Word | Microsoft 365** tab, under the **Create new** section at the top of the page, select **Blank document**.
 
 11. If a **Your privacy option** window appears, select **Close**.
 
@@ -211,47 +211,47 @@ Instead, you will test one of Microsoft 365's pre-existing sensitivity labels. F
 
 13. In the **Word** document, type **Testing personally identifiable information (PII).**
 
-14. Because you enabled Sensitivity labels at the start of this exercise, Word should display a **Sensitivity** group on the ribbon at the top of the page. 
+14. Because you enabled Sensitivity labels at the start of this exercise, Word should display a **Sensitivity** group on the ribbon at the top of the page. Select the down arrow in the **Sensitivity** group. In the drop-down menu that appears, it should display the list of sensitivity label types. Select **Highly Confidential**, and then in the sub-menu that appears, select **Project - Falcon**. <br/>
 
-	Select the down arrow in the **Sensitivity** group. In the drop-down menu that appears, it should display the **Highly Confidential** > **Project - Falcon** label that we just edited. Select **Project - Falcon** to apply the label. <br/>
-	
-	In this first validation test, you're going to remove this sensitivity label from being applied to this document. One of the label policy options requires users to provide justification to remove a label or to select a lower classification label. You will now verify whether this setting is functioning properly. <br/>
-	
+15. In the document, note how the sensitivity label applied a **CONFIDENTIAL - ProjectFalcon** watermark across the top of the document. </br>
+
+	**Note:** This watermark is displayed at the top of the document while you're editing the document. This is not the official watermark that appears when the document is viewed in "Reading View" (i.e. as it would appear to a person reading the document). You will test how this watermark appears in Reading View in a later step. 	
+
+16. In this first validation test, you're going to remove this sensitivity label from being applied to this document. One of the label policy options requires users to provide justification to remove a label or to select a lower classification label. You will now verify whether this setting is functioning properly. <br/>
+
+	In the **Sensitivity** group in the Word ribbon, select the down arrow. In the drop-down menu that appears, note that a check mark appears next to **Highly Confidential**. Hold your mouse over **Highly Confidential** to display the sub-menu. Notice how a check mark appears next to **Project - Falcon**. The check marks identify the current label being applied to the document.  <br/>
+ 
 	To remove the label from this document, select the **Project - Falcon** label that appears in this drop-down menu.
 	
-15. In the **Justification Required** window that appears, select the **Other (explain)** option. In the **Explain why you're changing this label** field, enter **Testing what happens when a label is removed** and then select **Change**.
+17. In the **Justification Required** window that appears, select the **Other (explain)** option. In the **Explain why you're changing this label** field, enter **Testing what happens when a label is removed from a document** and then select **Change**.
 
-16. In the **Sensitivity** group in the Word ribbon, select the down arrow. In the drop-down menu that appears, note that while **Highly Confidential** > **Project - Falcon** is displayed, it no longer has a check mark displayed next to it. This indicates the sensitivity label is no longer being applied to this document.  
+18. Note how the watermark in the document has disappeared. In the **Sensitivity** group in the Word ribbon, select the down arrow. In the drop-down menu that appears, note that while **Highly Confidential** > **Project - Falcon** is displayed, neither display a check mark next to them. This indicates the sensitivity label is no longer being applied to this document.  
 
-17. To re-apply the sensitivity label to the document, select **Highly Confidential** > **Project - Falcon** in the drop-down menu. 
+19. To re-apply the sensitivity label to the document, select **Highly Confidential** > **Project - Falcon** in the drop-down menu. Note how the watermark reappears in the document.
 
-18. In the Word document, enter **111-11-1111** below the previous line of text that you entered. This number is the same format as a U.S. Social Security Number.
+20. In the Word document, enter **111-11-1111** below the previous line of text that you entered. This number is the same format as a U.S. Social Security Number.
 
 	**Note**: In Word for the Web, the custom watermark specificed in the **Project - Falcon** policy does not display by default. To view the custom watermark, select the **View** tab and then in the menu select **Reading View**. Alternatively, in the real world, you could use the Word Desktop App which would display these by default.
 
 	To exit reading view, select the **Edit Document** drop-down menu and then select **Edit**.
 
-19. You will now save the document. On the title bar, to the right of Word, select **Document1**.  In the drop-down menu that appears, confirm the file **Location** says **Alex Wilber > Documents**. <br/>
+21. You will now save the document. On the title bar, to the right of Word, select **Document1**.  In the drop-down menu that appears, confirm the file **Location** says **Alex Wilber > Documents**. <br/>
 
 	In the **File Name** field, rename the file to **ProtectedDocument1** and then select outside of this file name menu (select inside the document). Note the new name assigned to the file in the title bar.
 
-20. On the right-side of the menu bar, select the **Share** button. In the drop-down menu that appears, select **Share**.
+22. On the right-side of the menu bar, select the **Share** button. In the drop-down menu that appears, select **Share**.
 
 21. In the **Share ProtectedDocument1.docx** window that opens, select the **Gear icon** next to **Copy link.**
 
 22. On the **Link settings** page that appears, select **People you choose**. 
 	
-	Under **More settings** select the drop down menu next to **Can edit**. Change the option to **Can view**.
+	Under **More settings**, the current option is **Can edit**. You want to change this so that Joni can only view the document. Select **Can edit**. In the menu that appears, you can see that **Can edit** has a check mark next to it, which indicates this is the current setting. To limit Joni to read-only permission, select **Can view** and then select **Apply**.
 
-	Select **Apply**.
+23. Back on the **Share ProtectedDocument1.docx** window, enter **Joni** in the **Add a name, group, or email** Field. A list of users whose name starts with **joni** should appear. Select **Joni Sherman**.
 
-23. Back on the **Share ProtectedDocument1.docx** window, enter **Joni** in the **Add a name, group, or email** Field. A list of users whose name starts with **joni** should appear. Select **Joni Sherman**<br/>
+24. On the **Share ProtectedDocument1.docx** window, hover your mouse over the "eye" icon that appears to the right of Joni's name. Doing so should display **Can view**, which is the current setting that you assigned to her for this docuyment. Select the **Copy link** button. 
 
-	To the right of the **Add a name, group, or email** field, select the **pencil icon**. The option **Can edit** should be selected. In the menu that appears, select **Can view**. <br/>
-
-	Select the **Copy link** button. 
-
-24. Close the **Share ProtectedDocument1.docx** window that appears.
+25. Once the **Link copied** message appears at the bottom of the **Share ProtectedDocument1.docx** window, then select the X in the upper-right corner of the window to close it.
 
 You have just successfully created a Word document that is read-only protected using Microsoft Entra ID Protection. The document is accessible only by its creator, Alex Wilber, and by Joni Sherman (with Read-only permission), to whom the document was shared.
 

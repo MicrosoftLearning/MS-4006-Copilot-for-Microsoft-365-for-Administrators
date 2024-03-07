@@ -253,7 +253,7 @@ To test the Conditional Access policy that you just created, you will sign-out o
 
 	**Important:** You have now verified that the second part of the Conditional Access policy that you created works. The policy excludes members of the Microsoft 365 pilot project team from signing-in using MFA. Holly is a member of this team, and she did not have to sign in using MFA.
 
-18. Remain logged into LON-CL1 with the **Microsoft 365 admin center** open in your browser for the next task.
+18. Remain logged into LON-CL1 with the **Microsoft 365 admin center** open in your browser.
 
 ### Task 5: Deploy Microsoft Entra Pass-Through Authentication 
 

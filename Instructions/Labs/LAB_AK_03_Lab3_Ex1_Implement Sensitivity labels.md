@@ -2,9 +2,7 @@
 
 In your role as Holly Dickson, Adatum’s new Microsoft 365 Administrator, you have Microsoft 365 deployed in a virtualized lab environment. As you proceed with your Microsoft 365 pilot project, your next steps are to implement Sensitivity Labels with Microsoft Entra ID Protection at Adatum. In this lab, you will create and publish a label, and you will test a published label. However, in doing so, you won't test the label that you create in this lab. Instead, you will test a different label.
 
-**Important:** When you publish a new sensitivity label and label policy, it can take up to 24 hours for them to propagate through Microsoft 365. As such, you won't be able to test the label that you create in this lab. Instead, you will test a pre-existing sensitivity label named **Project - Falcon**.
-
-Because we want you to gain experience creating and publishing a label and label policy using the Microsoft 365 UI, you will still create a sensitivity label and label policy in this lab. However, when you perform the tasks to test the label and label policy, you won't test the ones that you created and published, since they won't be available to test for 24 hours. Instead, you will test the label and label policy associated with Project - Falcon that we will modify in Task 3 of this lab.
+**Important:** When you publish a new sensitivity label and label policy, it can take up to 24 hours for them to propagate through Microsoft 365. As such, you won't be able to test the label that you create in this lab. Instead, you will test a pre-existing sensitivity label named **Project - Falcon**. This pre-existing label is almost identical to the label that you will create, so you'll be able to see the same results had you been able to test the label that you created. 
 
 
 ### Task 1 – Install the Microsoft Entra ID Protection Unified Labeling client

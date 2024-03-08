@@ -1,10 +1,12 @@
 # Learning Path 2 - Lab 2 - Exercise 1 - Manage secure user access 
 
-In this exercise, you will perform several user management functions within Microsoft 365. You will begin by creating a Microsoft 365 user account for Holly, who will be assigned the Microsoft 365 Global Administrator role. 
+Organizations must ensure that access to their company data on Microsoft 365 is always secure. Microsoft 365 - and int turn, Copilot for Microsoft 365 - often displays sensitive and confidential data, including emails, documents, customer information, and intellectual property. Unauthorized access to Microsoft 365 can lead to data breaches, identity theft, and other malicious activities. By securing user access, organizations can prevent unauthorized individuals from accessing and potentially misusing or leaking company data when working in Microsoft 365 and Copilot for Microsoft 365.
+
+In the following lab exercise, you will continue in your role as Holly Dickson, Adatum's new Microsoft 365 Administrator. You will perform several user management functions to prepare Adatum for its upcoming Copilot for Microsoft 365 deployment. You will begin by creating a Microsoft 365 user account for Holly, who will be assigned the Microsoft 365 Global Administrator role. 
 
 **Note:** The VM environment provided by your lab hosting provider comes with over 20 existing Microsoft 365 user accounts, as well as a large number of existing on-premises user accounts. Several of the existing Microsoft 365 user accounts will be used throughout the labs in this course. Even though the MOD Administrator account has been created by your lab hosting provider, you will still create Holly Dickson's user account, since having more than one user who's assigned the Microsoft 365 Global Administrator role is a best practice. It will also provide you with the experience of creating a Microsoft 365 user account in case you're not familiar with the process.
 
-Once you create Holly's Microsoft 365 account, you'll then perform password management on the four users that Holly selected as members of her Microsoft 365 pilot project team: Alex Wilber, Joni Sherman, Lynne Robbins, and Patti Fernandez.
+Once you create Holly's Microsoft 365 account, you'll then perform password management on four users that Holly selected as members of her Microsoft 365 pilot project team: Alex Wilber, Joni Sherman, Lynne Robbins, and Patti Fernandez.
 
 Holly has then been asked by Adatum’s CTO to deploy Microsoft Entra Multifactor Authentication (MFA), Pass-through Authentication (PTA), and Microsoft Entra Smart Lockout as a means of strengthening password management throughout the organization. For PTA, you will deploy it using Microsoft Entra Cloud Sync. And for Smart Lockout, you will deploy it using Group Policy Management. 
 

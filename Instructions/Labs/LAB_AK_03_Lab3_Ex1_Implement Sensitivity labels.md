@@ -195,11 +195,11 @@ Instead, you will test one of Microsoft 365's pre-existing sensitivity labels. F
 
 6. In the **Sign in** window, enter **AlexW@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**.
 
-7. On the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in**.
+7. On the **Enter password** window, enter the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in**.
 
-8. If a **Welcome to Microsoft 365** window appears, select the **forward arrow (>)** twice and then the check mark to close it. If a **Get your work done with Office 365** window appears, select the **X** to close it. 
+8. If a **Welcome to Microsoft 365** window appears, select the **forward arrow (>)** twice and then the check mark to close it. If a **Get your work done with Office 365** window appears, or a **Create with Microsoft 365** window, select the **X** to close them. 
 
-9. On the **Welcome to Microsoft 365** home page (on the **Home | Microsoft 365** tab), select the **Word** icon in the column of app icons on the left-side of the screen. This will override the **Home | Microsoft 365** tab by opening Microsoft Word Online in this same tab. <br/>
+9. On the **Welcome to Microsoft 365** home page, in the column of app icons on the left-side of the screen, . This will override the **Home | Microsoft 365** tab by opening Microsoft Word Online in this same tab. <br/>
 
 	**Note:** In the next task, you will return back to the **Home | Microsoft 365** tab by selecting the **Back** arrow at the top of this **Word | Microsoft 365** tab.
 

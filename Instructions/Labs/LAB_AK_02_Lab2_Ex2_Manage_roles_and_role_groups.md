@@ -51,11 +51,11 @@ In the prior task, you assigned an administrator role directly to Diego Sicilian
 
 8. Once the **User management role group** is created, select **Close**.
 
-9. Now that you created the role group, you must assign the corresponding roles to it. On the **Active teams & groups** page, the **Security groups** tab is displayed. Select the **User management role group** to open its details pane.
+9. Now that you created the role group, you must assign the corresponding roles to it. On the **Active teams and groups** page, the **Security groups** tab is displayed. Select the **User management role group** to open its details pane.
 
 10. On the **User management role group** pane, the **General** tab is displayed by default. Under the **Roles** section, select **Manage roles**.
 
-11. On the **Manage admin roles** pane that appears, select the **Admin center access** option. In the list of common administrator roles that appears directly below this option, select the **User Administrator** and **User Experience Success Manager** role check box. Then select the **Show all by category** option. Scroll down to the **Identity** category. Note how the **User Administrator** role is already selected, since you selected this earlier in the list of commonly used roles. Select the **Helpdesk Administrator** role and then select **Save changes**. 
+11. On the **Manage admin roles** pane that appears, select the **Admin center access** option. In the list of common administrator roles that appears directly below this option, select the **User Administrator** and **User Experience Success Manager** check boxes. Then select the **Show all by category** option. Scroll down to the **Identity** category. Note how the **User Administrator** role is already selected, since you selected this earlier in the list of commonly used roles. In this **Identity** category, select the **Helpdesk Administrator** role and then select **Save changes**. 
 
 12. In the **Manage admin roles** pane, the three selected roles should appear under the **Admin center access** option. Select the **X** in the upper-right corner of the pane to close it.
 

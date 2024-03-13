@@ -259,7 +259,7 @@ You have just successfully created a Word document that is read-only protected u
 
 ### Task 4 – Verify the pre-existing sensitivity label policy
 
-In the prior task, you created a Word document and protected it with the **Project - Falcon** sensitivity label. This label inserted a watermark in the document, and you restricted permissions on the document to Joni Sherman. To verify whether the protection that you assigned to the document works, you will first email the document to two persons - to Joni Sherman and to your own personal email address. You will then test what functionality is possible for Joni Sherman, Alex Wilber, and yourself.
+In the prior task, you created a Word document and protected it with the **Project - Falcon** sensitivity label. This label inserted a watermark in the document, and you restricted permissions on the document to Joni Sherman. To verify whether the protection that you assigned to the document works, you will first email the document to two persons - to Joni Sherman and to your own personal email address. Note that you will send a second email to Joni that includes a link to the document that allows Joni to edit it. The purpose of the two emails, one with document link that provides read-only access and another with a document link that provides the ability to edit the document, is to allow you to see how the functionality differs depending on the permissions assigned to the link. You will then test what functionality is possible for Joni Sherman, Alex Wilber, and yourself. 
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Alex Wilber** from the prior task with the **Word** tab open. 
 
@@ -275,7 +275,7 @@ In the prior task, you created a Word document and protected it with the **Proje
 
 	- CC: Enter your own personal email address (do NOT enter Holly's email address; instead, enter your own personal email address), and then select the **Use this address: <your email address>** message that appears
 
-	- Add a subject: **Protected Document Test**
+	- Add a subject: **Protected Document Test - View only permission**
 
 	- Body of the message: enter **If you can open the protected and restricted document attached to this email, then try to change it.**
 
@@ -295,6 +295,18 @@ In the prior task, you created a Word document and protected it with the **Proje
 
 8. A **Recipients can't access links** message should appear. This is due to the fact that you CC'd your personal email address in the email, but you don't have permission to access the document. Let's continue testing the permissions, so select **Send anyway**.
 
+9. Create another email to Joni Sherman that is similar to the last one (although do not CC your personal email address on this message). In this message, you want to include a link to the document that allows Joni to edit it. Enter **Protected Document Test - Edit permission** in the **Subject** field to differentiate this email from the prior one. You will need to create a new link to the document that provides Edit permission to Joni. To do so, perform the following steps: <br/>
+
+	- Select the **ProtectedDocument1** tab, and then on the right-side of the menu bar select the **Share** button. In the drop-down menu that appears, select **Share**. 
+	- In the **Share "ProtectedDocument1"** window, enter **Joni** in the **Add a name, group, or email** field and then select **Joni Sherman**. 
+	- At the bottom of the window, select the **Gear icon** (Link settings) next to the **Copy link** button. 
+	- On the **Link settings** window that appears, select the **People you choose** option. 
+	- Under **More settings**, if it already says **Can edit**, then select **Apply**. However, if it says **Can view**, then select **Can view**, and in the menu that appears, select **Can edit** and then select **Apply**.
+	- In the **Share "ProtectedDocument1"** window, select the **Copy link** button.
+	- Select the **Mail - Alex Wilber - Outlook** tab in your browser and then paste the link into the body of the email message. 
+
+7. Select **Send**.
+
 8. Switch to **LON-CL2**. 
 
 9. On **LON-CL2**, you should be logged into **Outlook on the Web** as **Lynne Robbins** from the previous lab exercise. Sign out as Lynne.
@@ -309,7 +321,7 @@ In the prior task, you created a Word document and protected it with the **Proje
 
 14. If a **Welcome** window appears, select the X to close it.
 
-15. In Joni’s **Inbox** in **Outlook on the Web**, open the email that Alex just sent her by selecting the email in the Inbox. 
+15. In Joni’s **Inbox** in **Outlook on the Web**, you should see the two emails that Alex sent - one whose Subject line indicate the document has View only permission and a second whose Subject indicates the document has Edit permission. Open the email that provides **View only permission**. 
 
 16. Select the attached file to open it.
 

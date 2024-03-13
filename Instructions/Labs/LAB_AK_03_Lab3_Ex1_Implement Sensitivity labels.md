@@ -297,7 +297,7 @@ In the prior task, you created a Word document and protected it with the **Proje
 
 8. Switch to **LON-CL2**. 
 
-9. On **LON-CL2**, you should be logged into **Outlook on the Web** as **Lynne Robbins** from a previous lab exercise. Sign out as Lynne.
+9. On **LON-CL2**, you should be logged into **Outlook on the Web** as **Lynne Robbins** from the previous lab exercise. Sign out as Lynne.
 
 10. In your Edge browser, close all tabs except for the **Sign out** tab. In this tab, enter the following URL in the address bar: **https://outlook.office365.com** 
 
@@ -305,19 +305,22 @@ In the prior task, you created a Word document and protected it with the **Proje
 
 12. In the **Sign in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**.
 
-13. On the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in**.
+13. On the **Enter password** window, enter the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in**.
 
 14. If a **Welcome** window appears, select the X to close it.
 
-15. In Joni’s **Inbox** in **Outlook on the web**, open the email that Alex just sent her by selecting the email in the Inbox. 
+15. In Joni’s **Inbox** in **Outlook on the Web**, open the email that Alex just sent her by selecting the email in the Inbox. 
 
 16. Select the attached file to open it.
 
-17. In the **Your privacy option** dialog box that appears, select **Close**. Review the document, note the watermark specificed in the **Project - Falcon** policy do not display by default. To view the custom watermark, select the **View** tab and then in the menu select **Reading View**. Alternatively, in the real world, you could use the Word Desktop App which would display these by default. <br/>
+17. In the **Your privacy option** dialog box that appears, select **Close**. Note how the document appears in the Reading View in **Word on the Web**. Review the document, noting the watermark specificed in the **Project - Falcon** policy. <br/>
 
 	Once you have finished reviewing the document, close the **ProtectedDocument1** tab. 
 
-18. This will return you to **Outlook on the web** with the email still displayed in the right-hand pane. In the body of the email, the document appears in a tile. You want to download the document. Select the down arrow that appears on the right-side of the tile, and in the menu that appears, select **Download**.
+18. This will return you to Joni's mailbox in **Outlook on the Web** with the email still displayed in the right-hand pane. In the body of the email, the document appears in a tile. You want to download the document. Select the down arrow that appears on the right-side of the tile, and in the menu that appears, select **Download**.
+
+after downloading, select the Windows Start icon on the bottom left corner of the taskbar. In the list of apps, select Office (or select the Office tile that appears on the Start window). In the Welcom to the Microsoft 365 app window that appears, select Sign in. In the Let's get you signed in window, select Work or school account and then select Continue. 
+
 
 19. Once the file has finished downloading, in the notification bar, select **Open file** that appears below the file name.
 
@@ -339,9 +342,9 @@ In the prior task, you created a Word document and protected it with the **Proje
 
 24. Close Word.
 
-25. You will now test what happens when you attempt to open the document that was sent to your personal email address. Use your phone or classroom PC to access your personal email address. Open the email that you (in the role of Holly) just sent to your personal email address, and then attempt to open the attached file. 
+25. You will now test what happens when you attempt to open the document that was sent to your personal email address. Use your phone or classroom PC to access your personal email address. Open the email that you (in the role of Alex) just sent to your personal email address, and then attempt to open the attached file. 
 
-26. You should receive a message indicating that you are not signed into Office with an account that has permission to access the document. You can optionally sign in with an account that has permission to access the file, or request access from the **AlexW@xxxxxZZZZZZ.onmicrosoft.com** account, or Cancel out of the operation. Select **Cancel**.  <br/>
+26. Since you don't have permission to access to the document, a **Pick an account** window should appear. In a real-world scenario, you could optionally sign in with an account that has permission to access the file, or request access from the **AlexW@xxxxxZZZZZZ.onmicrosoft.com** account. At this point, you have verified that you can't access the file.   <br/>
 
 	Since only Joni was assigned permission to read the document, you just verified that Microsoft Entra ID Protection protected the document based on the PII policy parameters that you configured.
 

@@ -197,11 +197,11 @@ Instead, you will test one of Microsoft 365's pre-existing sensitivity labels. F
 
 6. In the **Word** document, type **Testing a sensitivity label on a document with personally identifiable information (PII).**
 
-7. Because you enabled Sensitivity labels at the start of this exercise, Word should display a **Sensitivity** group on the ribbon at the top of the page. Select the down arrow in the **Sensitivity** group. In the drop-down menu that appears, it should display the list of sensitivity label types. Select **Highly Confidential**, and then in the sub-menu that appears, select **Project - Falcon**. <br/>
+7. Because you enabled Sensitivity labels at the start of this exercise, **Word** should display a **Sensitivity** group on the ribbon at the top of the page. Select the down arrow in the **Sensitivity** group. In the drop-down menu that appears, it should display the list of sensitivity label types. Select **Highly Confidential**, and then in the sub-menu that appears, select **Project - Falcon**. <br/>
 
-	**Note:** After 24 hours, the label that you created in the prior task will appear in the Highly Confidential sub-manu, next to the Project-Falcon label. 
+	**Note:** After 24 hours, the label that you created in the prior task will appear in the Highly Confidential sub-manu, next to the Project-Falcon label. But for now, you will use the **Project - Falcon** label in its place.
 
-8. In the document, note how the sensitivity label applied a **CONFIDENTIAL - ProjectFalcon** watermark across the top of the document. </br>
+8. In the document, note how the label applied a **CONFIDENTIAL - ProjectFalcon** watermark across the top of the document. </br>
 
 	**Note:** This watermark is displayed at the top of the document while you're editing the document. This is not the official watermark that appears when the document is viewed in "Reading View" (i.e. as it would appear to a person reading the document). You will test how this watermark appears in Reading View in a later step. 	
 
@@ -219,11 +219,11 @@ Instead, you will test one of Microsoft 365's pre-existing sensitivity labels. F
 
 13. In the Word document, enter **111-11-1111** below the previous line of text that you entered. This number is the same format as a U.S. Social Security Number. <br/>
 
-	**Note**: In Word for the Web, the custom watermark specificed in the **Project - Falcon** policy does not display by default. To view the custom watermark, select the **View** tab and then in the Word ribbon, select **Reading View**. Note how the watermark appears diagonally across the middle of the document. This is how the watermark will appear to someone reading the document. Alternatively, in the real world, you could use the Word Desktop App which would display the watermark in this format by default. <br/>
+	**Note**: You're using **Word for the Web**, which does not display the custom watermark specificed in the **Project - Falcon** policy by default. To view the custom watermark, select the **View** tab and then in the Word ribbon, select **Reading View**. Note how the watermark appears diagonally across the middle of the document. This is how the watermark will appear to someone reading the document. Alternatively, in the real world, you could use the Word Desktop App which would display the watermark in this format by default. <br/>
 
-	To exit Reading View, select the **Edit Document** drop-down menu and then select **Edit**.
+	To exit Reading View, select **Edit Document** on the menu bar at the top of the page. In the drop-down menu that appears, select **Edit**.
 
-14. You will now save the document. On the title bar, to the right of Word, select **Document** (or **Document1**, whichever default name Word applies to the document). In the drop-down menu that appears, confirm the file **Location** says **Holly Dickson > Documents**. <br/>
+14. You will now save the document so that you can email it to Joni Sherman and yourself. A document name field that contains a drop-down arrow appears at the top-left corner of the page, to the right of the Word icon (Word may display **Document** or **Document1** as the temporary file name). Select the drop-down arrow. In the drop-down menu that appears, confirm the file **Location** says **Holly Dickson > Documents**. <br/>
 
 	In the **File Name** field, rename the file to **ProtectedDocument1** and then select outside of this file name menu (select inside the document). Note the new name assigned to the file appears in the title bar. 
 
@@ -247,7 +247,7 @@ You have just successfully created a Word document that is read-only protected u
 
 ### Task 4 – Verify the pre-existing sensitivity label policy
 
-In the prior task, you created a Word document and protected it with the **Project - Falcon** sensitivity label. This label inserted a watermark in the document, and you restricted permissions on the document to Joni Sherman. To verify whether the protection that you assigned to the document works, you will first email the document to two persons - to Joni Sherman and to your own personal email address. Note that you will send a second email to Joni that includes a link to the document that allows Joni to edit it. The purpose of the two emails, one with document link that provides read-only access and another with a document link that provides the ability to edit the document, is to allow you to see how the functionality differs depending on the permissions assigned to the link. You will then test what functionality is possible for Joni Sherman, Alex Wilber, and yourself. 
+In the prior task, you created a Word document and protected it with the **Project - Falcon** sensitivity label. This label inserted a watermark in the document, and you restricted permissions on the document to Joni Sherman. To verify whether the protection that you assigned to the document works, you will first email the document to two persons - to Joni Sherman and to your own personal email address. Note that you will send a second email to Joni that includes a link to the document that allows Joni to edit it. The purpose of the two emails, one with document link that provides read-only access and another with a document link that provides the ability to edit the document, is to allow you to see how the functionality differs depending on the permissions assigned to the link. You will then test what functionality is possible for Joni Sherman and yourself. 
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson** from the prior task with the **Word** tab open. 
 
@@ -299,7 +299,7 @@ In the prior task, you created a Word document and protected it with the **Proje
 
 16. If a **Welcome** window appears, select the X to close it.
 
-17. In Joni’s **Inbox** in **Outlook on the Web**, you should see the email that Alex sent whose Subject line indicates the document has View only permission. Open this email.
+17. In Joni’s **Inbox** in **Outlook on the Web**, you should see the email that Holly sent whose Subject line indicates the document has View only permission. Open this email.
 
 18. In the email, select the attached file to open it.
 
@@ -307,9 +307,9 @@ In the prior task, you created a Word document and protected it with the **Proje
 
 	Once you have finished reviewing the document, close the **ProtectedDocument1** tab. 
 
-20. You will now test what happens when you attempt to open the document that was sent to your personal email address. Use your phone or classroom PC to access your personal email address. Open the email that Alex just sent to your personal email address, and then attempt to open the attached file. 
+20. You will now test what happens when you attempt to open the document that was sent to your personal email address. Use your phone or classroom PC to access your personal email address. Open the email that Holly just sent to your personal email address, and then attempt to open the attached file. 
 
-21. Since you don't have permission to access to the document, a **Pick an account** window should appear. In a real-world scenario, you could optionally sign in with an account that has permission to access the file, or request access from the **AlexW@xxxxxZZZZZZ.onmicrosoft.com** account. <br/>
+21. Since you don't have permission to access to the document, a **Pick an account** window should appear. In a real-world scenario, you could optionally sign in with an account that has permission to access the file, or request access from the **Holly@xxxxxZZZZZZ.onmicrosoft.com** account. <br/>
 
 	At this point, you verified that you can't access the file because it was only shared with Joni Sherman. You also verified that Joni was only able to view the file, but not edit it. You will now change the Share permissions on the file by allowing Joni to edit it. You will do so to see how this experience differs from the one you just completed. 
 

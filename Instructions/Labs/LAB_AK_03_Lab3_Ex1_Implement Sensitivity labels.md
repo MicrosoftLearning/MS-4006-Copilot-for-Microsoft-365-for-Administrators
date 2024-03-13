@@ -295,69 +295,71 @@ In the prior task, you created a Word document and protected it with the **Proje
 
 8. A **Recipients can't access links** message should appear. This is due to the fact that you CC'd your personal email address in the email, but you don't have permission to access the document. Let's continue testing the permissions, so select **Send anyway**.
 
-9. Create another email to Joni Sherman that is similar to the last one (although do not CC your personal email address on this message). In this message, you want to include a link to the document that allows Joni to edit it. Enter **Protected Document Test - Edit permission** in the **Subject** field to differentiate this email from the prior one. You will need to create a new link to the document that provides Edit permission to Joni. To do so, perform the following steps: <br/>
+9. Select **Send**.
+
+10. Switch to **LON-CL2**. 
+
+11. On **LON-CL2**, you should be logged into **Outlook on the Web** as **Lynne Robbins** from the previous lab exercise. Sign out as Lynne.
+
+12. In your Edge browser, close all tabs except for the **Sign out** tab. In this tab, enter the following URL in the address bar: **https://outlook.office365.com** 
+
+13. In the **Pick an account** window, select **Use another account**.
+
+14. In the **Sign in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**.
+
+15. On the **Enter password** window, enter the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in**.
+
+16. If a **Welcome** window appears, select the X to close it.
+
+17. In Joni’s **Inbox** in **Outlook on the Web**, you should see the email that Alex sent whose Subject line indicates the document has View only permission. Open this email.
+
+18. In the email, select the attached file to open it.
+
+19. In the **Your privacy option** dialog box that appears, select **Close**. The document opens in **Word on the Web** in a new browser tab titled **ProtectedDocument1** tab. Note how the document appears in the Reading View in **Word on the Web**. This is Joni's indication that she has View only permission and can't edit the document. Review the document, noting the watermark specificed in the **Project - Falcon** policy. <br/>
+
+	Once you have finished reviewing the document, close the **ProtectedDocument1** tab. 
+
+20. You will now test what happens when you attempt to open the document that was sent to your personal email address. Use your phone or classroom PC to access your personal email address. Open the email that Alex just sent to your personal email address, and then attempt to open the attached file. 
+
+21. Since you don't have permission to access to the document, a **Pick an account** window should appear. In a real-world scenario, you could optionally sign in with an account that has permission to access the file, or request access from the **AlexW@xxxxxZZZZZZ.onmicrosoft.com** account. <br/>
+
+	At this point, you have verified that you can't access the file. You also verified that Joni was only able to view the file, but not edit it. You will now change the Share permissions by allowing Joni to edit the file. You will do so to see how this experience differs from the one you just completed. 
+
+22. Switch to **LON-CL1**. 
+
+23. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Alex Wilber**, and you should have tabs open for both **Word** and **Outlook**.
+
+24. Select the **Mail - Alex Wilber - Outlook** tab. In Alex's mailbox, create another email to Joni Sherman. Do NOT include your personal email address in the CC line. Enter the following information in the email form:
+
+	- To: Enter **Joni** and then select **Joni Sherman** from the user list. 
+
+	- CC: leave blank
+
+	- Add a subject: **Protected Document Test - Edit permission**
+
+	- Body of the message: enter **If you can open the protected and restricted document attached to this email, then try to change it.**
+
+25. Before you copy in the link to the document, you should change the permission by sharing it to Joni, but this time with Edit permission. To do so, perform the following steps: <br/>
 
 	- Select the **ProtectedDocument1** tab, and then on the right-side of the menu bar select the **Share** button. In the drop-down menu that appears, select **Share**. 
 	- In the **Share "ProtectedDocument1"** window, enter **Joni** in the **Add a name, group, or email** field and then select **Joni Sherman**. 
 	- At the bottom of the window, select the **Gear icon** (Link settings) next to the **Copy link** button. 
 	- On the **Link settings** window that appears, select the **People you choose** option. 
-	- Under **More settings**, if it already says **Can edit**, then select **Apply**. However, if it says **Can view**, then select **Can view**, and in the menu that appears, select **Can edit** and then select **Apply**.
+	- Under **More settings**, if **Can edit** appears, then select **Apply**. However, if **Can view** appears, then select **Can view**, and in the menu that appears, select **Can edit** and then select **Apply**.
 	- In the **Share "ProtectedDocument1"** window, select the **Copy link** button.
 	- Select the **Mail - Alex Wilber - Outlook** tab in your browser and then paste the link into the body of the email message. 
 
-7. Select **Send**.
+26. Select **Send**.
 
-8. Switch to **LON-CL2**. 
+27. Switch to **LON-CL2**. 
 
-9. On **LON-CL2**, you should be logged into **Outlook on the Web** as **Lynne Robbins** from the previous lab exercise. Sign out as Lynne.
+28. On **LON-CL2**, you should still be logged into **Outlook on the Web** as **Joni Sherman**. In Joni’s **Inbox**, you should see the email that Alex just sent whose Subject line indicates the document has Edit permission. Open this email.
 
-10. In your Edge browser, close all tabs except for the **Sign out** tab. In this tab, enter the following URL in the address bar: **https://outlook.office365.com** 
+29. In the email, select the attached file to open it.
 
-11. In the **Pick an account** window, select **Use another account**.
+30. When Joni had View only permission, the document opened in the Reading View pane. As such, Joni could not edit the document. This document provides Joni with Edit permission, so this time the document should open in Word in normal edit mode. Verify that you can enter something into the document. 
 
-12. In the **Sign in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**.
+	**Note:**  In this task, you just verified that Microsoft Entra ID Protection protected the document based on the PII policy parameters that you configured. When Joni was assigned View only permission, the document opened in the Reading view and she was unable to change it. When Joni was assigned Edit permission, the document opened in Word and she was able to change it. And since Alex didn't share the document with you, you couldn't open it when Alex sent the document to you in an email. 
 
-13. On the **Enter password** window, enter the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in**.
-
-14. If a **Welcome** window appears, select the X to close it.
-
-15. In Joni’s **Inbox** in **Outlook on the Web**, you should see the two emails that Alex sent - one whose Subject line indicate the document has View only permission and a second whose Subject indicates the document has Edit permission. Open the email that provides **View only permission**. 
-
-16. Select the attached file to open it.
-
-17. In the **Your privacy option** dialog box that appears, select **Close**. Note how the document appears in the Reading View in **Word on the Web**. Review the document, noting the watermark specificed in the **Project - Falcon** policy. <br/>
-
-	Once you have finished reviewing the document, close the **ProtectedDocument1** tab. 
-
-18. This will return you to Joni's mailbox in **Outlook on the Web** with the email still displayed in the right-hand pane. In the body of the email, the document appears in a tile. You want to download the document. Select the down arrow that appears on the right-side of the tile, and in the menu that appears, select **Download**.
-
-after downloading, select the Windows Start icon on the bottom left corner of the taskbar. In the list of apps, select Office (or select the Office tile that appears on the Start window). In the Welcom to the Microsoft 365 app window that appears, select Sign in. In the Let's get you signed in window, select Work or school account and then select Continue. 
-
-
-19. Once the file has finished downloading, in the notification bar, select **Open file** that appears below the file name.
-
-20. **Microsoft Word** should open along with a **Sign in** window (it may open behind the Outlook window, in which case select the **Word** icon on the taskbar to bring it forward). 
-
-21. If a **Microsoft Office Activation Wizard** window appears, select **Close** and proceed to the next step. <br/>
-
-	However, if a **Sign in** window appears, it's because the file is RMS protected and no Azure Information Protection unified labeling client is installed on LON-CL2. In this case, you need to use the native RMS features of Word Microsoft Apps and register this installation to Joni’s account. <br/>
-
-	In the **Sign in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft.com** and then select **Next.** In the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in.** <br/>
-
-	In the **Use this account everywhere on your device** window that appears, select **This app only** to register this Office 365 ProPlus installation to **Joni Sherman’s** Microsoft 365 account.
-
-22. The file should open in Word, since you assigned Joni with Read-only permission. Review the three notification bars that appear above the document. 
-
-23. Try to change the file. Word should not recognize any keystrokes, and it should display the following message above the taskbar: **This modification is not allowed because the document is open for viewing only.** <br/>  
-
-	**Note:** You have just verified that the permissions assigned to the file are working properly. Joni can read the file (since she was assigned Read-only permission), but she is unable to change it (no one was assigned Edit permission).
-
-24. Close Word.
-
-25. You will now test what happens when you attempt to open the document that was sent to your personal email address. Use your phone or classroom PC to access your personal email address. Open the email that you (in the role of Alex) just sent to your personal email address, and then attempt to open the attached file. 
-
-26. Since you don't have permission to access to the document, a **Pick an account** window should appear. In a real-world scenario, you could optionally sign in with an account that has permission to access the file, or request access from the **AlexW@xxxxxZZZZZZ.onmicrosoft.com** account. At this point, you have verified that you can't access the file.   <br/>
-
-	Since only Joni was assigned permission to read the document, you just verified that Microsoft Entra ID Protection protected the document based on the PII policy parameters that you configured.
 
 ## Congratulations! You have just completed the final lab in this course.

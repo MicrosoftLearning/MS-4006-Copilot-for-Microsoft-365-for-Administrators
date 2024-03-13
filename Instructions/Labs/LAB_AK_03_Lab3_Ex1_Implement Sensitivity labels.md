@@ -259,21 +259,21 @@ You have just successfully created a Word document that is read-only protected u
 
 ### Task 4 – Verify the pre-existing sensitivity label policy
 
-In the prior task, you created a Word document and protected it with the **Project - Falcon** sensitivity label. This label inserted a watermark in the document, and you restricted permissions on the document. To verify whether the protection that you assigned to the document works, you will first email the document to two persons - to Joni Sherman and to your own personal email address. You will then test what functionality is possible for Joni Sherman, Alex Wilber, and yourself.
+In the prior task, you created a Word document and protected it with the **Project - Falcon** sensitivity label. This label inserted a watermark in the document, and you restricted permissions on the document to Joni Sherman. To verify whether the protection that you assigned to the document works, you will first email the document to two persons - to Joni Sherman and to your own personal email address. You will then test what functionality is possible for Joni Sherman, Alex Wilber, and yourself.
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Alex Wilber** from the prior task with the **Word** tab open. 
 
-2. In your Edge browser, select the **Word | Microsoft 365** tab and then select the **Back** arrow. This should return you to the **Welcome to Microsoft 365** home page.
+2. In your Edge browser, select the **Home | Microsoft 365** tab. Doing so returns to the **Welcome to Microsoft 365** home page.
 
-3. In the **Welcome to Microsoft 365** page, select the **Outlook** icon in the column of app icons on the left-side of the screen. This opens Alex Wilber's mailbox in Outlook on the web in a new tab. 
+3. In the **Welcome to Microsoft 365** page, select the **Outlook** icon in the column of app icons on the left-side of the screen. This opens Alex Wilber's mailbox in Outlook on the web in a new browser tab. 
 
-4. In **Outlook on the web**, select **New Mail** in the upper left part of the screen.
+4. In **Outlook on the Web**, select **New Mail** in the upper left part of the screen.
 
-5. In the right-hand pane, enter the following information in the message form:
+5. In the right-hand pane, enter the following information in the email form:
 
 	- To: Enter **Joni** and then select **Joni Sherman** from the user list. 
 
-	- CC: Enter your own personal email address (do NOT enter Holly's email address; instead, enter your own personal email address)
+	- CC: Enter your own personal email address (do NOT enter Holly's email address; instead, enter your own personal email address), and then select the **Use this address: <your email address>** message that appears
 
 	- Add a subject: **Protected Document Test**
 
@@ -281,9 +281,19 @@ In the prior task, you created a Word document and protected it with the **Proje
 
 6. In the body of the message, under the text you added in the previous step, paste the link copied to your clipboard from the prior task. A link for the file named **ProtectedDocument1.docx** should appear. <br/>
 
-	**Note**: If the copied link from the prior exercise is no longer in your clipboard, you will need to re-copy the link. To do so, select the **ProtectedDocument1** tab, and then on the right-side of the menu bar select the **Share** button. In the drop-down menu that appears, select **Share**. In the **Share "ProtectedDocument1"** window, enter **Joni** in the **Add a name, group, or email** field and then select **Joni Sherman**. To the right of Joni's name, select the pencil icon, and then select **Can view** from the menu. Select the **Copy link** button, and then paste the link into the body of the message back in your email. 
+	**Note**: If the copied link from the prior exercise is no longer in your clipboard, you will need to re-copy the link. To do so, perform the following steps: <br/>
+
+	- Select the **ProtectedDocument1** tab, and then on the right-side of the menu bar select the **Share** button. In the drop-down menu that appears, select **Share**. 
+	- In the **Share "ProtectedDocument1"** window, enter **Joni** in the **Add a name, group, or email** field and then select **Joni Sherman**. 
+	- At the bottom of the window, select the **Gear icon** (Link settings) next to the **Copy link** button. 
+	- On the **Link settings** window that appears, select the **People you choose** option. 
+	- Under **More settings**, select **Can edit**. In the menu that appears, select **Can view** and then select **Apply**.
+	- In the **Share "ProtectedDocument1"** window, select the **Copy link** button.
+	- Select the **Mail - Alex Wilber - Outlook** tab in your browser and then paste the link into the body of the email message. 
 
 7. Select **Send**.
+
+8. A **Recipients can't access links** message should appear. This is due to the fact that you CC'd your personal email address in the email, but you don't have permission to access the document. Let's continue testing the permissions, so select **Send anyway**.
 
 8. Switch to **LON-CL2**. 
 

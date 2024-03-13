@@ -177,9 +177,9 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 ### Task 3 – Assign a pre-existing sensitivity label to a document
 
-As outlined in the instructions at the start of this lab, it isn't possible to immediately test the sensitivity label and label policy you created in the previous task. This is because it takes up to 24 hours for a new label policy to propagate through Microsoft 365 and for its label to become visible in applications like Microsoft Word and Outlook.
+As outlined in the instructions at the start of this lab, it isn't possible to immediately test the sensitivity label and label policy that you created in the previous task. This is because it takes up to 24 hours for a new label policy to propagate through Microsoft 365 and for its label to become visible in applications like Microsoft Word and Outlook.
 
-Instead, you will test one of Microsoft 365's pre-existing sensitivity labels. For this lab, you will use the **Project - Falcon** sensitivity label, which is a Highly Confidential label. In fact, this label is very similar to the label that you created in the prior task - the one exception being that it doesn't include a header or footer. All other controls are the same as the label that you created. Using this pre-exsiting label will give you a very good idea as to how the label that you created would work at Adatum.
+Instead, you will test one of Microsoft 365's pre-existing sensitivity labels. For this lab, you will use the **Project - Falcon** sensitivity label, which is a Highly Confidential label. In fact, this label is similar to the label that you created in the prior task - the one exception being that it doesn't include a header or footer. Using this pre-exsiting label will give you a good idea as to how the label that you created would work at Adatum.
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
 
@@ -199,9 +199,7 @@ Instead, you will test one of Microsoft 365's pre-existing sensitivity labels. F
 
 8. If a **Welcome to Microsoft 365** window appears, select the **forward arrow (>)** twice and then the check mark to close it. If a **Get your work done with Office 365** window appears, or a **Create with Microsoft 365** window, select the **X** to close them. 
 
-9. On the **Welcome to Microsoft 365** home page, in the column of app icons on the left-side of the screen, . This will override the **Home | Microsoft 365** tab by opening Microsoft Word Online in this same tab. <br/>
-
-	**Note:** In the next task, you will return back to the **Home | Microsoft 365** tab by selecting the **Back** arrow at the top of this **Word | Microsoft 365** tab.
+9. On the **Welcome to Microsoft 365** home page, in the column of app icons on the left-side of the screen, right-click on the **Word** icon and select **Open in new tab**. This will open a new tab titled **Word | Microsoft 365**.
 
 10. In the **Word | Microsoft 365** tab, under the **Create new** section at the top of the page, select **Blank document**.
 
@@ -209,9 +207,11 @@ Instead, you will test one of Microsoft 365's pre-existing sensitivity labels. F
 
 12. If the Word ribbon displays icons for each feature but does not break the icons out by group, then select the down-arrow on the far right-side of the ribbon, and then under **Ribbon layout**, select **Classic ribbon**. This will switch the ribbon to the traditional ribbon style that is broken out by feature group (such as Undo, Clipboard, Font, Paragraph, Styles, and so forth).
 
-13. In the **Word** document, type **Testing personally identifiable information (PII).**
+13. In the **Word** document, type **Testing a sensitivity label on a document with personally identifiable information (PII).**
 
 14. Because you enabled Sensitivity labels at the start of this exercise, Word should display a **Sensitivity** group on the ribbon at the top of the page. Select the down arrow in the **Sensitivity** group. In the drop-down menu that appears, it should display the list of sensitivity label types. Select **Highly Confidential**, and then in the sub-menu that appears, select **Project - Falcon**. <br/>
+
+	**Note:** After 24 hours, the label that you created in the prior task will appear in the Highly Confidential sub-manu, next to the Project-Falcon label. 
 
 15. In the document, note how the sensitivity label applied a **CONFIDENTIAL - ProjectFalcon** watermark across the top of the document. </br>
 
@@ -225,33 +225,33 @@ Instead, you will test one of Microsoft 365's pre-existing sensitivity labels. F
 	
 17. In the **Justification Required** window that appears, select the **Other (explain)** option. In the **Explain why you're changing this label** field, enter **Testing what happens when a label is removed from a document** and then select **Change**.
 
-18. Note how the watermark in the document has disappeared. In the **Sensitivity** group in the Word ribbon, select the down arrow. In the drop-down menu that appears, note that while **Highly Confidential** > **Project - Falcon** is displayed, neither display a check mark next to them. This indicates the sensitivity label is no longer being applied to this document.  
+18. Note how the watermark in the document has disappeared. In the **Sensitivity** group in the Word ribbon, select the down arrow. In the drop-down menu that appears, note that while **Highly Confidential** > **Project - Falcon** is displayed, no check marks appear next to them. This indicates the sensitivity label is no longer being applied to this document.  
 
 19. To re-apply the sensitivity label to the document, select **Highly Confidential** > **Project - Falcon** in the drop-down menu. Note how the watermark reappears in the document.
 
-20. In the Word document, enter **111-11-1111** below the previous line of text that you entered. This number is the same format as a U.S. Social Security Number.
+20. In the Word document, enter **111-11-1111** below the previous line of text that you entered. This number is the same format as a U.S. Social Security Number. 
 
-	**Note**: In Word for the Web, the custom watermark specificed in the **Project - Falcon** policy does not display by default. To view the custom watermark, select the **View** tab and then in the menu select **Reading View**. Alternatively, in the real world, you could use the Word Desktop App which would display these by default.
+	**Note**: In Word for the Web, the custom watermark specificed in the **Project - Falcon** policy does not display by default. To view the custom watermark, select the **View** tab and then in the Word ribbon, select **Reading View**. Note how the watermark appears diagonally across the middle of the document. This is how the watermark will appear to someone reading the document. Alternatively, in the real world, you could use the Word Desktop App which would display the watermark in this format by default.
 
-	To exit reading view, select the **Edit Document** drop-down menu and then select **Edit**.
+	To exit Reading View, select the **Edit Document** drop-down menu and then select **Edit**.
 
-21. You will now save the document. On the title bar, to the right of Word, select **Document1**.  In the drop-down menu that appears, confirm the file **Location** says **Alex Wilber > Documents**. <br/>
+21. You will now save the document. On the title bar, to the right of Word, select **Document** (or **Document1**, whichever default name Word applies to the document). In the drop-down menu that appears, confirm the file **Location** says **Alex Wilber > Documents**. <br/>
 
-	In the **File Name** field, rename the file to **ProtectedDocument1** and then select outside of this file name menu (select inside the document). Note the new name assigned to the file in the title bar.
+	In the **File Name** field, rename the file to **ProtectedDocument1** and then select outside of this file name menu (select inside the document). Note the new name assigned to the file appears in the title bar. 
 
-22. On the right-side of the menu bar, select the **Share** button. In the drop-down menu that appears, select **Share**.
+22. At the top-right side of the page, below Alex Wilber's name and picture, select the **Share** button. In the drop-down menu that appears, select **Share**.
 
-21. In the **Share ProtectedDocument1.docx** window that opens, select the **Gear icon** next to **Copy link.**
+21. In the **Share "ProtectedDocument1"** window that appears, select the **Gear icon** (Link settings) next to the **Copy link** button. 
 
-22. On the **Link settings** page that appears, select **People you choose**. 
+22. On the **Link settings** window that appears, select **People you choose**. 
 	
-	Under **More settings**, the current option is **Can edit**. You want to change this so that Joni can only view the document. Select **Can edit**. In the menu that appears, you can see that **Can edit** has a check mark next to it, which indicates this is the current setting. To limit Joni to read-only permission, select **Can view** and then select **Apply**.
+	Under **More settings**, the current option is **Can edit**. You plan to share this document with Joni Sherman, but you only want Joni to be able to view the document. To make this permissions change, select **Can edit**. In the menu that appears, you can see that **Can edit** has a check mark next to it, which indicates this is the current setting. To limit Joni to read-only permission, select **Can view** and then select **Apply**.
 
-23. Back on the **Share ProtectedDocument1.docx** window, enter **Joni** in the **Add a name, group, or email** Field. A list of users whose name starts with **joni** should appear. Select **Joni Sherman**.
+23. Back on the **Share "ProtectedDocument1"** window, enter **Joni** in the **Add a name, group, or email** Field. A list of users whose name starts with **joni** should appear. Select **Joni Sherman**.
 
-24. On the **Share ProtectedDocument1.docx** window, hover your mouse over the "eye" icon that appears to the right of Joni's name. Doing so should display **Can view**, which is the current setting that you assigned to her for this docuyment. Select the **Copy link** button. 
+24. On the **Share "ProtectedDocument1"** window, hover your mouse over the "eye" icon that appears to the right of Joni's name. Doing so should display **Can view**, which is the current setting that you assigned to her for this docuyment. The "eye" icon is the designation for "Can view". Select the **Copy link** button. 
 
-25. Once the **Link copied** message appears at the bottom of the **Share ProtectedDocument1.docx** window, then select the X in the upper-right corner of the window to close it.
+25. Once the **Link copied** message appears at the bottom of the **Share "ProtectedDocument1"** window, then select the X in the upper-right corner of the window to close it.
 
 26. Leave the **ProtectedDocument1** tab open displaying the document. You may need to reference this document in the next exercise if you need to recopy its link.
 
@@ -259,7 +259,7 @@ You have just successfully created a Word document that is read-only protected u
 
 ### Task 4 – Verify the pre-existing sensitivity label policy
 
-In the prior task, you created a Word document and protected it with the **Project - Falcon** sensitivity label. This label should have inserted a watermark in the document, and it should have restricted permissions on the document. To verify whether the protection that you assigned to the document works, you will first email the document to Joni Sherman and to your own personal email address. You will then test what functionality is possible for both Joni and Alex Wilber.
+In the prior task, you created a Word document and protected it with the **Project - Falcon** sensitivity label. This label inserted a watermark in the document, and you restricted permissions on the document. To verify whether the protection that you assigned to the document works, you will first email the document to two persons - to Joni Sherman and to your own personal email address. You will then test what functionality is possible for Joni Sherman, Alex Wilber, and yourself.
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Alex Wilber** from the prior task with the **Word** tab open. 
 

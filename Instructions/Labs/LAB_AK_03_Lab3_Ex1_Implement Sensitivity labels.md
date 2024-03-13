@@ -283,7 +283,7 @@ In the prior task, you created a Word document and protected it with the **Proje
 
 	**Note**: If the copied link from the prior exercise is no longer in your clipboard, you will need to re-copy the link. To do so, perform the following steps: <br/>
 
-	- Select the **ProtectedDocument1** tab, and then on the right-side of the menu bar select the **Share** button. In the drop-down menu that appears, select **Share**. 
+	- Select the **ProtectedDocument1** tab in your browser and then on the right-side of the menu bar select the **Share** button. In the drop-down menu that appears, select **Share**. 
 	- In the **Share "ProtectedDocument1"** window, enter **Joni** in the **Add a name, group, or email** field and then select **Joni Sherman**. 
 	- At the bottom of the window, select the **Gear icon** (Link settings) next to the **Copy link** button. 
 	- On the **Link settings** window that appears, select the **People you choose** option. 
@@ -323,13 +323,13 @@ In the prior task, you created a Word document and protected it with the **Proje
 
 21. Since you don't have permission to access to the document, a **Pick an account** window should appear. In a real-world scenario, you could optionally sign in with an account that has permission to access the file, or request access from the **AlexW@xxxxxZZZZZZ.onmicrosoft.com** account. <br/>
 
-	At this point, you have verified that you can't access the file. You also verified that Joni was only able to view the file, but not edit it. You will now change the Share permissions by allowing Joni to edit the file. You will do so to see how this experience differs from the one you just completed. 
+	At this point, you verified that you can't access the file because it was only shared with Joni Sherman. You also verified that Joni was only able to view the file, but not edit it. You will now change the Share permissions on the file by allowing Joni to edit it. You will do so to see how this experience differs from the one you just completed. 
 
 22. Switch to **LON-CL1**. 
 
-23. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Alex Wilber**, and you should have tabs open for both **Word** and **Outlook**.
+23. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Alex Wilber**, and you should have tabs open for both **Word** and **Outlook**. Select the **Mail - Alex Wilber - Outlook** tab. 
 
-24. Select the **Mail - Alex Wilber - Outlook** tab. In Alex's mailbox, create another email to Joni Sherman. Do NOT include your personal email address in the CC line. Enter the following information in the email form:
+24. In Alex's mailbox, create another email to Joni Sherman. Do NOT include your personal email address in the CC line. Enter the following information in the email form:
 
 	- To: Enter **Joni** and then select **Joni Sherman** from the user list. 
 
@@ -341,7 +341,7 @@ In the prior task, you created a Word document and protected it with the **Proje
 
 25. Before you copy in the link to the document, you should change the permission by sharing it to Joni, but this time with Edit permission. To do so, perform the following steps: <br/>
 
-	- Select the **ProtectedDocument1** tab, and then on the right-side of the menu bar select the **Share** button. In the drop-down menu that appears, select **Share**. 
+	- Select the **ProtectedDocument1** tab in your browser and then on the right-side of the menu bar select the **Share** button. In the drop-down menu that appears, select **Share**. 
 	- In the **Share "ProtectedDocument1"** window, enter **Joni** in the **Add a name, group, or email** field and then select **Joni Sherman**. 
 	- At the bottom of the window, select the **Gear icon** (Link settings) next to the **Copy link** button. 
 	- On the **Link settings** window that appears, select the **People you choose** option. 
@@ -357,9 +357,9 @@ In the prior task, you created a Word document and protected it with the **Proje
 
 29. In the email, select the attached file to open it.
 
-30. When Joni had View only permission, the document opened in the Reading View pane. As such, Joni could not edit the document. This document provides Joni with Edit permission, so this time the document should open in Word in normal edit mode. Verify that you can enter something into the document. 
+30. When Joni had View only permission, the document opened in the Reading View pane. As such, Joni could not edit the document. This version of the document provides Joni with Edit permission, so this time the document should open in Word in normal edit mode. Verify that you can enter something into the document. 
 
-	**Note:**  In this task, you just verified that Microsoft Entra ID Protection protected the document based on the PII policy parameters that you configured. When Joni was assigned View only permission, the document opened in the Reading view and she was unable to change it. When Joni was assigned Edit permission, the document opened in Word and she was able to change it. And since Alex didn't share the document with you, you couldn't open it when Alex sent the document to you in an email. 
+	**Note:**  In this task, you just verified that Microsoft Entra ID Protection protected the document based on the PII policy parameters that you configured. When Joni was assigned View only permission, the document opened in the Reading view and she was unable to change it. When Joni was assigned Edit permission, the document opened in Word and she was able to change it. And since Alex didn't share the document with you, you couldn't open it when Alex sent the document in an email to your personal mailbox. 
 
 
 ## Congratulations! You have just completed the final lab in this course.

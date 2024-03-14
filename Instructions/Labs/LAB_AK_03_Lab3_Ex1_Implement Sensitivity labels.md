@@ -195,15 +195,17 @@ Instead, you will test one of Microsoft 365's pre-existing sensitivity labels. F
 
 5. If the Word ribbon displays icons for each feature but does not break the icons out by group, then select the down-arrow on the far right-side of the ribbon, and then under **Ribbon layout**, select **Classic ribbon**. This will switch the ribbon to the traditional ribbon style that is broken out by feature group (such as Undo, Clipboard, Font, Paragraph, Styles, and so forth).
 
-6. In the **Word** document, type **Testing a sensitivity label on a document with personally identifiable information (PII).**
+6. In the **Word** document, type **Testing a sensitivity label on a document with personally identifiable information (PII); in this case, a U.S Social Security Number: 111-11-1111.**
 
 7. Because you enabled Sensitivity labels at the start of this exercise, **Word** should display a **Sensitivity** group on the ribbon at the top of the page. Select the down arrow in the **Sensitivity** group. In the drop-down menu that appears, it should display the list of sensitivity label types. Select **Highly Confidential**, and then in the sub-menu that appears, select **Project - Falcon**. <br/>
 
 	**Note:** After 24 hours, the label that you created in the prior task will appear in the Highly Confidential sub-manu, next to the Project-Falcon label. But for now, you will use the **Project - Falcon** label in its place.
 
-8. In the document, note how the label applied a **CONFIDENTIAL - ProjectFalcon** watermark across the top of the document. </br>
+8. In the document, note how the label applied a **CONFIDENTIAL - ProjectFalcon** watermark across the top of the document. The Project - Falcon label was configured just like the label that you created, where the watermark was supposed to appear diagonally across the middle of the page. So why does it appear towards the top of the page? The answer is that you are using **Word for the Web**, which by default displays it as you see here. To see how it will appear to someone reading the document, you must view the document in the **Reading View**, which you'll do now. <br/>
 
-	**Note:** This watermark is displayed at the top of the document while you're editing the document. This is not the official watermark that appears when the document is viewed in "Reading View" (i.e. as it would appear to a person reading the document). You will test how this watermark appears in Reading View in a later step. 	
+	Select the **View** tab and then in the Word ribbon, select **Reading View**. Note how the watermark appears diagonally across the middle of the document. This is how the watermark will appear to someone reading the document. Note that if you use the Word desktop app, it displays the watermark as designated by the label, which in this case would be just as you see it here in the Reading View. <br/>
+
+	To exit Reading View, select **Edit Document** on the menu bar at the top of the page. In the drop-down menu that appears, select **Edit**.
 
 9. In this first validation test, you're going to remove this sensitivity label from being applied to this document. One of the label policy options requires users to provide justification to remove a label or to select a lower classification label. You will now verify whether this setting is functioning properly. <br/>
 
@@ -217,39 +219,21 @@ Instead, you will test one of Microsoft 365's pre-existing sensitivity labels. F
 
 12. To re-apply the sensitivity label to the document, select **Highly Confidential** > **Project - Falcon** in the drop-down menu. Note how the watermark reappears in the document.
 
-13. In the Word document, enter **111-11-1111** below the previous line of text that you entered. This number is the same format as a U.S. Social Security Number. <br/>
-
-	**Note**: You're using **Word for the Web**, which does not display the custom watermark specificed in the **Project - Falcon** policy by default. To view the custom watermark, select the **View** tab and then in the Word ribbon, select **Reading View**. Note how the watermark appears diagonally across the middle of the document. This is how the watermark will appear to someone reading the document. Alternatively, in the real world, you could use the Word Desktop App which would display the watermark in this format by default. <br/>
-
-	To exit Reading View, select **Edit Document** on the menu bar at the top of the page. In the drop-down menu that appears, select **Edit**.
-
-14. You will now save the document so that you can email it to Joni Sherman and yourself. A document name field that contains a drop-down arrow appears at the top-left corner of the page, to the right of the Word icon (Word may display **Document** or **Document1** as the temporary file name). Select the drop-down arrow. In the drop-down menu that appears, confirm the file **Location** says **Holly Dickson > Documents**. <br/>
+13. You will now save the document so that you can share it in the next task. A document name field that contains a drop-down arrow appears at the top-left corner of the page, to the right of the Word icon (Word may display **Document** or **Document1** as the temporary file name). Select the drop-down arrow. In the drop-down menu that appears, confirm the file **Location** says **Holly Dickson > Documents**. <br/>
 
 	In the **File Name** field, rename the file to **ProtectedDocument1** and then select outside of this file name menu (select inside the document). Note the new name assigned to the file appears in the title bar. 
 
-15. At the top-right side of the page, below Holly Dickson's name and initials, select the **Share** button. In the drop-down menu that appears, select **Share**.
+14. Leave the **ProtectedDocument1** tab open displaying the document. You will return to this document in the next task to share the document with Joni Sherman.
 
-16. In the **Share "ProtectedDocument1"** window that appears, select the **Gear icon** (Link settings) next to the **Copy link** button. 
+You have just successfully created a Word document containing the Highly Confidential label policy titled Project - Falcon. 
 
-17. On the **Link settings** window that appears, select **People you choose**. <br/>
-	
-	Under **More settings**, the current option is **Can edit**. You plan to share this document with Joni Sherman, but you only want Joni to be able to view the document. To make this permissions change, select **Can edit**. In the menu that appears, you can see that **Can edit** has a check mark next to it, which indicates this is the current setting. To limit Joni to read-only permission, select **Can view** and then select **Apply**.
+### Task 4 – Protect a document using Microsoft Entra ID Protection
 
-18. Back on the **Share "ProtectedDocument1"** window, enter **Joni** in the **Add a name, group, or email** Field. A list of users whose name starts with **joni** should appear. Select **Joni Sherman**.
+In the prior task, you created a Word document and protected it with the **Project - Falcon** sensitivity label. This label inserted a watermark in the document. In this task, you will share the document you created with Joni Sherman, and you will restrict Joni to "View only" permission. This will allow you to see how Microsoft Entra ID Protection protects the document based on the parameters that you configure.
 
-19. On the **Share "ProtectedDocument1"** window, hover your mouse over the "eye" icon that appears to the right of Joni's name. Doing so should display **Can view**, which is the current setting that you assigned to her for this document. The "eye" icon is the designation for "Can view". Select the **Copy link** button. 
+To verify whether the protection that you assigned to the document works, you will first email the document to two persons - to Joni Sherman and to your own personal email address. You will then verify that Joni can only view the document and not edit it, and you will verify that can't access the document since it was not shared with you. Finally, you will change permission on the document so that Joni can edit it, and you will email this updated document to her for testing. The purpose of the two emails to Joni, one with a document link that provides read-only access and another with a document link that provides the ability to edit the document, is to see how Microsoft Entra ID Protection can provide various levels of document protection. 
 
-20. Once the **Link copied** message appears at the bottom of the **Share "ProtectedDocument1"** window, then select the X in the upper-right corner of the window to close it.
-
-21. Leave the **ProtectedDocument1** tab open displaying the document. You may need to reference this document in the next exercise if you need to recopy its link.
-
-You have just successfully created a Word document that is read-only protected using Microsoft Entra ID Protection. The document is accessible only by its creator, Holly Dickson, and by Joni Sherman (with Read-only permission), to whom the document was shared.
-
-### Task 4 – Verify the pre-existing sensitivity label policy
-
-In the prior task, you created a Word document and protected it with the **Project - Falcon** sensitivity label. This label inserted a watermark in the document, and you restricted permissions on the document to Joni Sherman. To verify whether the protection that you assigned to the document works, you will first email the document to two persons - to Joni Sherman and to your own personal email address. Note that you will send a second email to Joni that includes a link to the document that allows Joni to edit it. The purpose of the two emails, one with document link that provides read-only access and another with a document link that provides the ability to edit the document, is to allow you to see how the functionality differs depending on the permissions assigned to the link. You will then test what functionality is possible for Joni Sherman and yourself. 
-
-1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson** from the prior task with the **Word** tab open. 
+1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson** from the prior task with the **Word** tab open.
 
 2. In your Edge browser, select the **Apps | Microsoft 365** tab. 
 
@@ -265,59 +249,65 @@ In the prior task, you created a Word document and protected it with the **Proje
 
 	- Add a subject: **Protected Document Test - View only permission**
 
-	- Body of the message: enter **If you can open the protected and restricted document attached to this email, then try to change it.**
+	- Body of the message: enter **Open the protected document attached to this email and try to change it.**
 
-6. In the body of the message, under the text you added in the previous step, paste the link copied to your clipboard from the prior task. A link for the file named **ProtectedDocument1.docx** should appear. <br/>
+6. In the body of the message, under the text you added in the previous step, you will attach the document that you created in the prior task. However, to do so, you must first share the document with Joni Sherman, and when doing so, you will apply restricted **View only** permissions. You will leave this email message now and return to your document and share it with Joni. Once you copy the link that is created, you will return to this email and paste in the link. <br/>
 
-	**Note**: If the copied link from the prior exercise is no longer in your clipboard, you will need to re-copy the link. To do so, perform the following steps: <br/>
+	In your Edge browser, select the **ProtectedDocument1** tab displaying the document that you created in the prior task. At the top-right side of the page, below Holly Dickson's name and initials, select the **Share** button. In the drop-down menu that appears, select **Share**.
 
-	- Select the **ProtectedDocument1** tab in your browser and then on the right-side of the menu bar select the **Share** button. In the drop-down menu that appears, select **Share**. 
-	- In the **Share "ProtectedDocument1"** window, enter **Joni** in the **Add a name, group, or email** field and then select **Joni Sherman**. 
-	- At the bottom of the window, select the **Gear icon** (Link settings) next to the **Copy link** button. 
-	- On the **Link settings** window that appears, select the **People you choose** option. 
-	- Under **More settings**, select **Can edit**. In the menu that appears, select **Can view** and then select **Apply**.
-	- In the **Share "ProtectedDocument1"** window, select the **Copy link** button.
-	- Select the **Mail - Holly Dickson - Outlook** tab in your browser and then paste the link into the body of the email message. 
+7. In the **Share "ProtectedDocument1"** window that appears, select the **Gear icon** (Link settings) next to the **Copy link** button. 
 
-7. Select **Send**.
+8. On the **Link settings** window that appears, select **People you choose**. <br/>
+	
+	Under **More settings**, the current option is **Can edit**. You plan to share this document with Joni Sherman, but you only want Joni to be able to view the document. To make this permissions change, select **Can edit**. In the menu that appears, you can see that **Can edit** has a check mark next to it, which indicates this is the current setting. To limit Joni to read-only permission, select **Can view** and then select **Apply**.
 
-8. A **Recipients can't access links** message should appear. This is due to the fact that you CC'd your personal email address in the email, but you don't have permission to access the document. Let's continue testing the permissions, so select **Send anyway**.
+9. Back on the **Share "ProtectedDocument1"** window, enter **Joni** in the **Add a name, group, or email** Field. A list of users whose name starts with **joni** should appear. Select **Joni Sherman**.
 
-9. Select **Send**.
+10. On the **Share "ProtectedDocument1"** window, hover your mouse over the "eye" icon that appears to the right of Joni's name. Doing so should display **Can view**, which is the current setting that you assigned to her for this document. The "eye" icon is the designation for "Can view". Select the **Copy link** button. 
 
-10. Switch to **LON-CL2**. 
+11. Once the **Link copied** message appears at the bottom of the **Share "ProtectedDocument1"** window, then select the X in the upper-right corner of the window to close it.
 
-11. On **LON-CL2**, you should be logged into **Outlook on the Web** as **Lynne Robbins** from the previous lab exercise. Sign out as Lynne.
+12. Select the **Outlook** tab to return back to your email message. In the body of the message, under the text you added earlier, paste in the link to the shared document that you just copied to your clipboard. A link for the file named **ProtectedDocument1.docx** should appear. 
 
-12. In your Edge browser, close all tabs except for the **Sign out** tab. In this tab, enter the following URL in the address bar: **https://outlook.office365.com** 
+13. Select **Send**.
 
-13. In the **Pick an account** window, select **Use another account**.
+14. A **Recipients can't access links** message should appear. This is due to the fact that you CC'd your personal email address in the email, but you don't have permission to access the document. Let's continue testing the permissions, so select **Send anyway**.
 
-14. In the **Sign in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**.
+15. Select **Send**.
 
-15. On the **Enter password** window, enter the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in**.
+16. Switch to **LON-CL2**. 
 
-16. If a **Welcome** window appears, select the X to close it.
+17. On **LON-CL2**, you should be logged into **Outlook on the Web** as **Lynne Robbins** from the previous lab exercise. Sign out as Lynne.
 
-17. In Joni’s **Inbox** in **Outlook on the Web**, you should see the email that Holly sent whose Subject line indicates the document has View only permission. Open this email.
+18. In your Edge browser, close all tabs except for the **Sign out** tab. In this tab, enter the following URL in the address bar: **https://outlook.office365.com** 
 
-18. In the email, select the attached file to open it.
+19. In the **Pick an account** window, select **Use another account**.
 
-19. In the **Your privacy option** dialog box that appears, select **Close**. The document opens in **Word on the Web** in a new browser tab titled **ProtectedDocument1** tab. Note how the document appears in the Reading View in **Word on the Web**. This is Joni's indication that she has View only permission and can't edit the document. Review the document, noting the watermark specificed in the **Project - Falcon** policy. <br/>
+20. In the **Sign in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**.
+
+21. On the **Enter password** window, enter the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in**.
+
+22. If a **Welcome** window appears, select the X to close it.
+
+23. In Joni’s **Inbox** in **Outlook on the Web**, you should see the email that Holly sent whose Subject line indicates the document has View only permission. Open this email.
+
+24. In the email, select the attached file to open it.
+
+25. In the **Your privacy option** dialog box that appears, select **Close**. The document opens in **Word on the Web** in a new browser tab titled **ProtectedDocument1** tab. Note how the document appears in the Reading View in **Word on the Web**. This is Joni's indication that she has View only permission and can't edit the document. Review the document, noting the watermark specificed in the **Project - Falcon** policy. <br/>
 
 	Once you have finished reviewing the document, close the **ProtectedDocument1** tab. 
 
-20. You will now test what happens when you attempt to open the document that was sent to your personal email address. Use your phone or classroom PC to access your personal email address. Open the email that Holly just sent to your personal email address, and then attempt to open the attached file. 
+26. You will now test what happens when you attempt to open the document that was sent to your personal email address. Use your phone or classroom PC to access your personal email address. Open the email that Holly just sent to your personal email address, and then attempt to open the attached file. 
 
-21. Since you don't have permission to access to the document, a **Pick an account** window should appear. In a real-world scenario, you could optionally sign in with an account that has permission to access the file, or request access from the **Holly@xxxxxZZZZZZ.onmicrosoft.com** account. <br/>
+27. Since you don't have permission to access to the document, a **Pick an account** window should appear. In a real-world scenario, you could optionally sign in with an account that has permission to access the file, or request access from the **Holly@xxxxxZZZZZZ.onmicrosoft.com** account. <br/>
 
 	At this point, you verified that you can't access the file because it was only shared with Joni Sherman. You also verified that Joni was only able to view the file, but not edit it. You will now change the Share permissions on the file by allowing Joni to edit it. You will do so to see how this experience differs from the one you just completed. 
 
-22. Switch to **LON-CL1**. 
+28. Switch to **LON-CL1**. 
 
-23. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**, and you should have tabs open for both **Word** and **Outlook**. Select the **Mail - Holly Dickson - Outlook** tab. 
+29. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**, and you should have tabs open for both **Word** and **Outlook**. Select the **Mail - Holly Dickson - Outlook** tab. 
 
-24. In Holly's mailbox, create another email to Joni Sherman. Do NOT include your personal email address in the CC line. Enter the following information in the email form:
+30. In Holly's mailbox, create another email to Joni Sherman. Do NOT include your personal email address in the CC line. Enter the following information in the email form:
 
 	- To: Enter **Joni** and then select **Joni Sherman** from the user list. 
 
@@ -327,7 +317,7 @@ In the prior task, you created a Word document and protected it with the **Proje
 
 	- Body of the message: enter **If you can open the protected and restricted document attached to this email, then try to change it.**
 
-25. Before you copy in the link to the document, you should change the permission by sharing it to Joni, but this time with Edit permission. To do so, perform the following steps: <br/>
+31. Before you copy in the link to the document, you should change the permission by sharing it to Joni, but this time with Edit permission. To do so, perform the following steps: <br/>
 
 	- Select the **ProtectedDocument1** tab in your browser and then on the right-side of the menu bar select the **Share** button. In the drop-down menu that appears, select **Share**. 
 	- In the **Share "ProtectedDocument1"** window, enter **Joni** in the **Add a name, group, or email** field and then select **Joni Sherman**. 
@@ -337,15 +327,15 @@ In the prior task, you created a Word document and protected it with the **Proje
 	- In the **Share "ProtectedDocument1"** window, select the **Copy link** button.
 	- Select the **Mail - Holly Dickson - Outlook** tab in your browser and then paste the link into the body of the email message. 
 
-26. Select **Send**.
+32. Select **Send**.
 
-27. Switch to **LON-CL2**. 
+33. Switch to **LON-CL2**. 
 
-28. On **LON-CL2**, you should still be logged into **Outlook on the Web** as **Joni Sherman**. In Joni’s **Inbox**, you should see the email that Holly just sent whose Subject line indicates the document has Edit permission. Open this email.
+34. On **LON-CL2**, you should still be logged into **Outlook on the Web** as **Joni Sherman**. In Joni’s **Inbox**, you should see the email that Holly just sent whose Subject line indicates the document has Edit permission. Open this email.
 
-29. In the email, select the attached file to open it.
+35. In the email, select the attached file to open it.
 
-30. When Joni had View only permission, the document opened in the Reading View pane. As such, Joni could not edit the document. This version of the document provides Joni with Edit permission, so this time the document should open in Word in normal edit mode. Verify that you can enter something into the document. 
+36. When Joni had View only permission, the document opened in the Reading View pane. As such, Joni could not edit the document. This version of the document provides Joni with Edit permission, so this time the document should open in Word in normal edit mode. Verify that you can enter something into the document. 
 
 	**Note:**  In this task, you just verified that Microsoft Entra ID Protection protected the document based on the PII policy parameters that you configured. When Joni was assigned View only permission, the document opened in the Reading view and she was unable to change it. When Joni was assigned Edit permission, the document opened in Word and she was able to change it. And since Holly didn't share the document with you, you couldn't open it when she sent the document in an email to your personal mailbox. 
 

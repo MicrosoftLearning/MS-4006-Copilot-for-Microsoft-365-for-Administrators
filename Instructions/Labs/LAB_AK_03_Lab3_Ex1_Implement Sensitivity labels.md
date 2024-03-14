@@ -183,11 +183,7 @@ Instead, you will test one of Microsoft 365's pre-existing sensitivity labels. F
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
 
-2. To validate the **Project-Falcon** sensitivity label, you must first assign it to a document. Select the **Home | Microsoft 365** tab in your browser to return to the Microsoft 365 home page. <br/>
-
-	If a column of app icons appears on the left-side of the screen, right-click on the **Word** icon and select **Open in new tab**. This will open a new tab titled **Word | Microsoft 365**. <br/>
-
-	However, if a column of app icons doesn't appear, then select the **Apps** icon on the left-side of the screen, and on the **Apps** page that appears, right-click on the **Word** tile and select **Open in new tab**. 
+2. To validate the **Project-Falcon** sensitivity label, you must first assign it to a document. Select the **Home | Microsoft 365** tab in your browser to return to the Microsoft 365 home page. Select the **Apps** icon on the left-side of the screen. On the **Apps** page that appears, right-click on the **Word** tile and select **Open in new tab**. 
 
 3. In the **Word | Microsoft 365** tab, under the **Create new** section at the top of the page, select **Blank document**.
 

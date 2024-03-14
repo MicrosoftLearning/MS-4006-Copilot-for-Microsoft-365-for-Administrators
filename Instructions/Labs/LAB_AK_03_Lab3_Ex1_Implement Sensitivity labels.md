@@ -235,7 +235,7 @@ To verify whether the protection that you assigned to the document works, you wi
 
 3. In the **Apps** page, right-click on the **Outlook** tile and select **Open in new tab**. This opens Holly's mailbox in Outlook on the web in a new browser tab. 
 
-4. In **Outlook on the Web**, select **New Mail** in the upper left part of the screen.
+4. In **Outlook on the Web**, select **New mail** in the upper left part of the screen.
 
 5. In the right-hand pane, enter the following information in the email form:
 
@@ -249,27 +249,25 @@ To verify whether the protection that you assigned to the document works, you wi
 
 6. In the body of the message, under the text you added in the previous step, you will attach a link to the document that you created in the prior task. However, to do so, you must first share the document with Joni Sherman, and when doing so, you will apply restricted **View only** permissions. To do so, you must leave this email and return to your document and share it with Joni. Once you copy the link that's created during the sharing process, you will return to this email and paste in the link. <br/>
 
-	In your Edge browser, select the **ProtectedDocument1** tab displaying the document that you created in the prior task. At the top-right side of the page, below Holly Dickson's name and initials, select the **Share** button. In the drop-down menu that appears, select **Share**.
+	In your Edge browser, select the **ProtectedDocument1** tab, which should still be displaying the document that you created in the prior task. At the top-right side of the page, below Holly Dickson's name and initials, select the **Share** button. In the drop-down menu that appears, select **Share**.
 
-7. In the **Share "ProtectedDocument1"** window that appears, select the **Gear icon** (Link settings) next to the **Copy link** button. 
+7. In the **Share "ProtectedDocument1"** window that appears, select the gear (**Link settings**) icon that appears next to the **Copy link** button. 
 
-8. On the **Link settings** window that appears, select **People you choose**. <br/>
+8. On the **Link settings** window that appears, select the **People you choose** option.
 	
-	Under **More settings**, the current option is **Can edit**. You plan to share this document with Joni Sherman, but you only want Joni to be able to view the document. To make this permissions change, select **Can edit**. In the menu that appears, you can see that **Can edit** has a check mark next to it, which indicates this is the current setting. To limit Joni to read-only permission, select **Can view** and then select **Apply**.
+9. Under **More settings**, the current option is **Can edit**. You plan to share this document with Joni Sherman, but you only want Joni to be able to view the document. To make this permissions change, select **Can edit**. In the menu that appears, review the available options. You can see that **Can edit** has a check mark next to it, which indicates this is the current setting. To limit Joni to read-only permission, select **Can view** and then select **Apply**.
 
-9. Back on the **Share "ProtectedDocument1"** window, enter **Joni** in the **Add a name, group, or email** Field. A list of users whose name starts with **joni** should appear. Select **Joni Sherman**.
+10. This returns you to the **Share "ProtectedDocument1"** window. Enter **Joni** in the **Add a name, group, or email** Field. A list of users whose name starts with **Joni** should appear. Select **Joni Sherman**.
 
-10. On the **Share "ProtectedDocument1"** window, hover your mouse over the "eye" icon that appears to the right of Joni's name. Doing so should display **Can view**, which is the current setting that you assigned to her for this document. The "eye" icon is the designation for "Can view". Select the **Copy link** button. 
+11. On the **Share "ProtectedDocument1"** window, hover your mouse over the "eye" icon that appears to the right of Joni's name. Doing so should display **Can view**, which is the current setting that you assigned to her for this document. The "eye" icon is the designation for "Can view". Select the **Copy link** button. 
 
-11. Once the **Link copied** message appears at the bottom of the **Share "ProtectedDocument1"** window, then select the X in the upper-right corner of the window to close it.
+12. Once the **Link copied** message appears at the bottom of the **Share "ProtectedDocument1"** window, then select the X in the upper-right corner of the window to close it.
 
-12. In your Edge browser, select the **Mail - Holly Dickson -Outlook** tab to return back to your email message. In the body of the message, under the text you added earlier, paste in the link to the shared document that you just copied to your clipboard. A link for the file named **ProtectedDocument1.docx** should appear. 
+13. In your Edge browser, select the **Mail - Holly Dickson -Outlook** tab to return back to your email message. In the body of the message, under the text you added earlier, paste (Ctrl+V) in the link to the shared document that you just copied to your clipboard. A link for the file named **ProtectedDocument1.docx** should appear. 
 
-13. Select **Send**.
+14. Select **Send**.
 
-14. A **Recipients can't access links** message should appear. This message is a result of Microsoft Entra ID Protection recognizing the fact that you included your personal email address in the email, which doesn't have permission to access the document. For the purpose of this lab test, select **Send anyway**.
-
-15. Select **Send**.
+15. A **Recipients can't access links** message should appear. This message is a result of Microsoft Entra ID Protection recognizing the fact that you included your personal email address in the email, which doesn't have permission to access the document. For the purpose of this lab test, select **Send anyway**.
 
 16. Switch to **LON-CL2**. 
 
@@ -289,9 +287,9 @@ To verify whether the protection that you assigned to the document works, you wi
 
 24. In the email, select the attached file to open it.
 
-25. In the **Your privacy option** dialog box that appears, select **Close**. The document opens in **Word on the Web** in a new browser tab titled **ProtectedDocument1** tab. Note how the document appears in the Reading View in **Word on the Web**. This is Joni's indication that she has View only permission and can't edit the document. Review the document, noting the watermark specified in the **Project - Falcon** policy. <br/>
+25. In the **Your privacy option** window that appears, select **Close**. The document opens in **Word on the Web** in a new browser tab titled **ProtectedDocument1.docx** tab. Note how the document appears in the Reading View in **Word on the Web**. This is Joni's indication that she has View only permission and can't edit the document. To verify this, try to select into the the document. Note the message that appears indicating: **Read only. This document is read-only.** Note the watermark specified in the **Project - Falcon** policy. <br/>
 
-	Once you have finished reviewing the document, close the **ProtectedDocument1** tab. 
+	Once you have finished reviewing the document, close the **ProtectedDocument1.docx** tab. 
 
 26. You will now test what happens when you attempt to open the document that was sent to your personal email address. Use your mobile phone or classroom PC to access your personal mailbox. Open the email that Holly just sent to your personal email address, and then attempt to open the attached file. 
 
@@ -316,11 +314,13 @@ To verify whether the protection that you assigned to the document works, you wi
 31. Just as with the prior email, you must now share the document with Joni, but this time with Edit permission. To do so, perform the following steps: <br/>
 
 	- Select the **ProtectedDocument1** tab in your browser and then on the right-side of the menu bar select the **Share** button. In the drop-down menu that appears, select **Share**. 
-	- In the **Share "ProtectedDocument1"** window, enter **Joni** in the **Add a name, group, or email** field and then select **Joni Sherman**. 
-	- At the bottom of the window, select the **Gear icon** (Link settings) next to the **Copy link** button. 
-	- On the **Link settings** window that appears, select the **People you choose** option. 
-	- Under **More settings**, if **Can edit** appears, then select **Apply**. However, if **Can view** appears, then select **Can view**, and in the menu that appears, select **Can edit** and then select **Apply**.
+	- In the **Share "ProtectedDocument1"** window, enter **Joni** in the **Add a name, group, or email** field and then select **Joni Sherman**.
+ 	- To the right of Joni's name is a pencil (**Can edit**) icon. This is the default permission when sharing a document. Select the **Copy link** button to see what happens.
+ 	- Note the **Link copied** message that appears. The message indicates that anyone can edit the document, even though you specifed Joni's name. This isn't what you want, which is to limit Joni as the only person who can edit it. To put that restriction in place, select the gear (**Link settings**) icon next to the **Copy link** button. 
+	- On the **Link settings** window that appears, select the **People you choose** option. This option is the key to limiting the permission to selected users. 
+	- Under **More settings**, if **Can edit** appears, then select **Apply**. However, if **Can view** appears, then select **Can view**, and in the menu that appears, select **Can edit** and then select **Apply**. 
 	- In the **Share "ProtectedDocument1"** window, select the **Copy link** button.
+	- Note the **Link copied** message that appears. This time the message indicates that only the people that you specify can edit the document. In this case, editing will be limited to Joni, since she's the only person that you specified. 
 	- Select the **Mail - Holly Dickson - Outlook** tab in your browser and then paste the link into the body of the email message. 
 
 32. Select **Send**.

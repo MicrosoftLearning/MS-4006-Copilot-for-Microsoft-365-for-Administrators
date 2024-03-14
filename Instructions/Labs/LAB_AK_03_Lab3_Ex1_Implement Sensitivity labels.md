@@ -179,7 +179,7 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 As outlined in the instructions at the start of this lab, it isn't possible to immediately test the sensitivity label and label policy that you created in the previous task. This is because it takes up to 24 hours for a new label policy to propagate through Microsoft 365 and for its label to become visible in applications like Microsoft Word and Outlook.
 
-Instead, you will test one of Microsoft 365's pre-existing sensitivity labels. For this lab, you will use the **Project - Falcon** sensitivity label, which is a Highly Confidential label. This label is similar to the label that you created in the prior task - the one exception being that it doesn't include a header or footer. Using this pre-exsiting label will give you a good idea as to how the label that you created would work at Adatum.
+Instead, you will test one of Microsoft 365's pre-existing sensitivity labels. For this lab, you will use the **Project - Falcon** sensitivity label, which is a Highly Confidential label. This label is similar to the label that you created in the prior task - the one exception being that it doesn't include a header or footer. Using this pre-existing label will give you a good idea as to how the label that you created would work at Adatum.
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
 
@@ -195,7 +195,7 @@ Instead, you will test one of Microsoft 365's pre-existing sensitivity labels. F
 
 5. If the Word ribbon displays icons for each feature but does not break the icons out by group, then select the down-arrow on the far right-side of the ribbon, and then under **Ribbon layout**, select **Classic ribbon**. This will switch the ribbon to the traditional ribbon style that is broken out by feature group (such as Undo, Clipboard, Font, Paragraph, Styles, and so forth).
 
-6. In the **Word** document, type **Testing a sensitivity label on a document with personally identifiable information (PII); in this case, a U.S Social Security Number: 111-11-1111.**
+6. In the **Word** document, type the following text: **Testing a sensitivity label on a document with personally identifiable information (PII); in this case, a U.S Social Security Number: 111-11-1111.**
 
 7. Because you enabled Sensitivity labels at the start of this exercise, **Word** should display a **Sensitivity** group on the ribbon at the top of the page. Select the down arrow in the **Sensitivity** group. In the drop-down menu that appears, it should display the list of sensitivity label types. Select **Highly Confidential**, and then in the sub-menu that appears, select **Project - Falcon**. <br/>
 
@@ -293,13 +293,13 @@ To verify whether the protection that you assigned to the document works, you wi
 
 24. In the email, select the attached file to open it.
 
-25. In the **Your privacy option** dialog box that appears, select **Close**. The document opens in **Word on the Web** in a new browser tab titled **ProtectedDocument1** tab. Note how the document appears in the Reading View in **Word on the Web**. This is Joni's indication that she has View only permission and can't edit the document. Review the document, noting the watermark specificed in the **Project - Falcon** policy. <br/>
+25. In the **Your privacy option** dialog box that appears, select **Close**. The document opens in **Word on the Web** in a new browser tab titled **ProtectedDocument1** tab. Note how the document appears in the Reading View in **Word on the Web**. This is Joni's indication that she has View only permission and can't edit the document. Review the document, noting the watermark specified in the **Project - Falcon** policy. <br/>
 
 	Once you have finished reviewing the document, close the **ProtectedDocument1** tab. 
 
 26. You will now test what happens when you attempt to open the document that was sent to your personal email address. Use your mobile phone or classroom PC to access your personal mailbox. Open the email that Holly just sent to your personal email address, and then attempt to open the attached file. 
 
-27. Since you don't have permission to access to the document, a **Pick an account** window should appear. In a real-world scenario, you could optionally sign in with an account that has permission to access the file, or request access from the **Holly@xxxxxZZZZZZ.onmicrosoft.com** account. <br/>
+27. Since you don't have permission to access the document, a **Pick an account** window should appear. In a real-world scenario, you could optionally sign in with an account that has permission to access the file, or request access from the **Holly@xxxxxZZZZZZ.onmicrosoft.com** account. <br/>
 
 	For the purpose of this test, you just verified that you can't access the file because it wasn't shared with you. You also verified that Joni was only able to view the file, but not edit it. You will now change the Share permissions on the file by allowing Joni to edit it. You will do so to see how this experience differs from the one you just completed. 
 
@@ -315,9 +315,9 @@ To verify whether the protection that you assigned to the document works, you wi
 
 	- Add a subject: **Protected Document Test - Edit permission**
 
-	- Body of the message: enter **If you can open the protected and restricted document attached to this email, then try to change it.**
+	- Body of the message: enter **Open the protected document attached to this email and try to change it.**
 
-31. Before you copy in the link to the document, you should change the permission by sharing it to Joni, but this time with Edit permission. To do so, perform the following steps: <br/>
+31. Just as with the prior email, you must now share the document with Joni, but this time with Edit permission. To do so, perform the following steps: <br/>
 
 	- Select the **ProtectedDocument1** tab in your browser and then on the right-side of the menu bar select the **Share** button. In the drop-down menu that appears, select **Share**. 
 	- In the **Share "ProtectedDocument1"** window, enter **Joni** in the **Add a name, group, or email** field and then select **Joni Sherman**. 

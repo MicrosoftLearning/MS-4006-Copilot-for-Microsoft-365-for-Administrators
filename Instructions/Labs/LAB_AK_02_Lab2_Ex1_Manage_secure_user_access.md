@@ -92,7 +92,7 @@ That being said, you will not turn on MFA for Holly's account because time is li
 
 After completing the previous task, you should still be signed into the **Microsoft 365 admin center** as the **MOD Administrator** account. In this task, you will begin implementing Adatum’s Microsoft 365 pilot project as Holly Dickson, Adatum’s new Microsoft 365 Administrator. Therefore, you will begin this task by logging out of Microsoft 365 as the MOD Administrator and you will log back in using Holly's new Microsoft 365 account. 
 
-In the prior task, you noticed that your Microsoft 365 trial tenant came equipped with a list of active users. As Holly Dickson, Adatum's Microsoft 365 Administrator, you have selected the following members of the Microsoft 365 pilot project team to assist with the initial phase of the deployment: Alex Wilber, Joni Sherman, Lynne Robbins, and Patti Fernandez. 
+In the prior task, you noticed that your Microsoft 365 trial tenant came equipped with a list of active users. As Holly Dickson, Adatum's Microsoft 365 Administrator, you have selected the following members of the Microsoft 365 pilot project team to assist with the initial phase of the deployment: Joni Sherman, Lynne Robbins, and Patti Fernandez. 
 
 Each user is a key member of your pilot project team. While their user accounts are already present in Microsoft 365, you want to configure their passwords so they can more easily sign into Microsoft 365 when needed in the upcoming lab exercises. You will also change the password for Adele Vance. Adele is not a member of the Microsoft 365 pilot project team, but she is used for testing MFA implementation in a later lab. You will assign the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) as their user password, just as you did when you created Holly's account.  
 
@@ -138,7 +138,7 @@ Each user is a key member of your pilot project team. While their user accounts 
 
 16. In the **Microsoft 365 admin center**, select **Users** in the navigation pane, and then under it, select **Active users**.
 
-17. In the **Active Users** window, when you hover your mouse over a user's **Display name**, a **key icon** appears to the right of the user's name. By selecting the key icon, you can reset a user's password. You must reset the passwords for Adele Vance, Alex Wilber, Joni Sherman, Lynne Robbins, and Patti Fernandez to the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and that you previously assigned to Holly Dickson.<br/>
+17. In the **Active Users** window, when you hover your mouse over a user's **Display name**, a **key icon** appears to the right of the user's name. By selecting the key icon, you can reset a user's password. You must reset the passwords for Adele Vance, Joni Sherman, Lynne Robbins, and Patti Fernandez to the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and that you previously assigned to Holly Dickson.<br/>
 
     Hover your mouse over **Adele Vance** and select the key icon that appears.
 
@@ -150,7 +150,7 @@ Each user is a key member of your pilot project team. While their user accounts 
 
 21. Select **Reset Password**. If a **Save password** dialog box appears at the top of the screen, select **Never**. Then select **Close** on the **Password has been reset** pane.
 
-22. Repeat steps 17-21 for **Alex Wilber**, **Joni Sherman**, **Lynne Robbins**, and **Patti Fernandez**. Reset each of their passwords to the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account). In step 19, don't forget to show the password you entered to verify it's the correct value.
+22. Repeat steps 17-21 for **Joni Sherman**, **Lynne Robbins**, and **Patti Fernandez**. Reset each of their passwords to the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account). In step 19, don't forget to show the password you entered to verify it's the correct value.
 
 23. Remain logged into LON-CL1 with the **Microsoft 365 admin center** open in your browser for the next task.
 

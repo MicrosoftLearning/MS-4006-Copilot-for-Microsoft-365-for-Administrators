@@ -179,7 +179,7 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 As outlined in the instructions at the start of this lab, it isn't possible to immediately test the sensitivity label and label policy that you created in the previous task. This is because it takes up to 24 hours for a new label policy to propagate through Microsoft 365 and for its label to become visible in applications like Microsoft Word and Outlook.
 
-Instead, you will test one of Microsoft 365's pre-existing sensitivity labels. For this lab, you will use the **Project - Falcon** sensitivity label, which is a Highly Confidential label. In fact, this label is similar to the label that you created in the prior task - the one exception being that it doesn't include a header or footer. Using this pre-exsiting label will give you a good idea as to how the label that you created would work at Adatum.
+Instead, you will test one of Microsoft 365's pre-existing sensitivity labels. For this lab, you will use the **Project - Falcon** sensitivity label, which is a Highly Confidential label. This label is similar to the label that you created in the prior task - the one exception being that it doesn't include a header or footer. Using this pre-exsiting label will give you a good idea as to how the label that you created would work at Adatum.
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
 
@@ -231,7 +231,7 @@ You have just successfully created a Word document containing the Highly Confide
 
 In the prior task, you created a Word document and protected it with the **Project - Falcon** sensitivity label. This label inserted a watermark in the document. In this task, you will share the document you created with Joni Sherman, and you will restrict Joni to "View only" permission. This will allow you to see how Microsoft Entra ID Protection protects the document based on the parameters that you configure.
 
-To verify whether the protection that you assigned to the document works, you will first email the document to two persons - to Joni Sherman and to your own personal email address. You will then verify that Joni can only view the document and not edit it, and you will verify that can't access the document since it was not shared with you. Finally, you will change permission on the document so that Joni can edit it, and you will email this updated document to her for testing. The purpose of the two emails to Joni, one with a document link that provides read-only access and another with a document link that provides the ability to edit the document, is to see how Microsoft Entra ID Protection can provide various levels of document protection. 
+To verify whether the protection that you assigned to the document works, you will first email the document to two persons - to Joni Sherman and to your own personal email address. You will then verify that Joni can only view the document and not edit it, and you will verify that you can't access the document since it was not shared with you. Finally, you will change permission on the document so that Joni can edit it, and you will email this updated document to her for testing. The purpose of the two emails to Joni, one with a document link that provides read-only access and another with a document link that provides the ability to edit the document, is to see how Microsoft Entra ID Protection can provide various levels of document protection. 
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson** from the prior task with the **Word** tab open.
 
@@ -251,7 +251,7 @@ To verify whether the protection that you assigned to the document works, you wi
 
 	- Body of the message: enter **Open the protected document attached to this email and try to change it.**
 
-6. In the body of the message, under the text you added in the previous step, you will attach the document that you created in the prior task. However, to do so, you must first share the document with Joni Sherman, and when doing so, you will apply restricted **View only** permissions. You will leave this email message now and return to your document and share it with Joni. Once you copy the link that is created, you will return to this email and paste in the link. <br/>
+6. In the body of the message, under the text you added in the previous step, you will attach a link to the document that you created in the prior task. However, to do so, you must first share the document with Joni Sherman, and when doing so, you will apply restricted **View only** permissions. To do so, you must leave this email and return to your document and share it with Joni. Once you copy the link that's created during the sharing process, you will return to this email and paste in the link. <br/>
 
 	In your Edge browser, select the **ProtectedDocument1** tab displaying the document that you created in the prior task. At the top-right side of the page, below Holly Dickson's name and initials, select the **Share** button. In the drop-down menu that appears, select **Share**.
 
@@ -267,11 +267,11 @@ To verify whether the protection that you assigned to the document works, you wi
 
 11. Once the **Link copied** message appears at the bottom of the **Share "ProtectedDocument1"** window, then select the X in the upper-right corner of the window to close it.
 
-12. Select the **Outlook** tab to return back to your email message. In the body of the message, under the text you added earlier, paste in the link to the shared document that you just copied to your clipboard. A link for the file named **ProtectedDocument1.docx** should appear. 
+12. In your Edge browser, select the **Mail - Holly Dickson -Outlook** tab to return back to your email message. In the body of the message, under the text you added earlier, paste in the link to the shared document that you just copied to your clipboard. A link for the file named **ProtectedDocument1.docx** should appear. 
 
 13. Select **Send**.
 
-14. A **Recipients can't access links** message should appear. This is due to the fact that you CC'd your personal email address in the email, but you don't have permission to access the document. Let's continue testing the permissions, so select **Send anyway**.
+14. A **Recipients can't access links** message should appear. This message is a result of Microsoft Entra ID Protection recognizing the fact that you included your personal email address in the email, which doesn't have permission to access the document. For the purpose of this lab test, select **Send anyway**.
 
 15. Select **Send**.
 
@@ -289,7 +289,7 @@ To verify whether the protection that you assigned to the document works, you wi
 
 22. If a **Welcome** window appears, select the X to close it.
 
-23. In Joni’s **Inbox** in **Outlook on the Web**, you should see the email that Holly sent whose Subject line indicates the document has View only permission. Open this email.
+23. In Joni’s **Inbox** in **Outlook on the Web**, you should see the email that Holly just sent whose Subject line indicates the document has View only permission. Open this email.
 
 24. In the email, select the attached file to open it.
 
@@ -297,11 +297,11 @@ To verify whether the protection that you assigned to the document works, you wi
 
 	Once you have finished reviewing the document, close the **ProtectedDocument1** tab. 
 
-26. You will now test what happens when you attempt to open the document that was sent to your personal email address. Use your phone or classroom PC to access your personal email address. Open the email that Holly just sent to your personal email address, and then attempt to open the attached file. 
+26. You will now test what happens when you attempt to open the document that was sent to your personal email address. Use your mobile phone or classroom PC to access your personal mailbox. Open the email that Holly just sent to your personal email address, and then attempt to open the attached file. 
 
 27. Since you don't have permission to access to the document, a **Pick an account** window should appear. In a real-world scenario, you could optionally sign in with an account that has permission to access the file, or request access from the **Holly@xxxxxZZZZZZ.onmicrosoft.com** account. <br/>
 
-	At this point, you verified that you can't access the file because it was only shared with Joni Sherman. You also verified that Joni was only able to view the file, but not edit it. You will now change the Share permissions on the file by allowing Joni to edit it. You will do so to see how this experience differs from the one you just completed. 
+	For the purpose of this test, you just verified that you can't access the file because it wasn't shared with you. You also verified that Joni was only able to view the file, but not edit it. You will now change the Share permissions on the file by allowing Joni to edit it. You will do so to see how this experience differs from the one you just completed. 
 
 28. Switch to **LON-CL1**. 
 
@@ -335,7 +335,7 @@ To verify whether the protection that you assigned to the document works, you wi
 
 35. In the email, select the attached file to open it.
 
-36. When Joni had View only permission, the document opened in the Reading View pane. As such, Joni could not edit the document. This version of the document provides Joni with Edit permission, so this time the document should open in Word in normal edit mode. Verify that you can enter something into the document. 
+36. When Joni had View only permission, the document opened in the Reading View pane. As such, Joni couldn't edit the document. This version of the document provides Joni with Edit permission, so this time the document should open in Word in normal edit mode. Verify that you can enter text in the document. 
 
 	**Note:**  In this task, you just verified that Microsoft Entra ID Protection protected the document based on the PII policy parameters that you configured. When Joni was assigned View only permission, the document opened in the Reading view and she was unable to change it. When Joni was assigned Edit permission, the document opened in Word and she was able to change it. And since Holly didn't share the document with you, you couldn't open it when she sent the document in an email to your personal mailbox. 
 

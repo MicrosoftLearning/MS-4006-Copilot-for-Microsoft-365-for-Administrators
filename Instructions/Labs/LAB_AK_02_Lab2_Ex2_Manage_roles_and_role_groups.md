@@ -309,5 +309,5 @@ In this task, you will begin by examining the administrative properties of two u
 48. On LON-CL1, leave your browser and all tabs open and proceed to the next exercise. 
 
 
-# Proceed to Lab 2 - Exercise 3
+# End of Lab 2
 

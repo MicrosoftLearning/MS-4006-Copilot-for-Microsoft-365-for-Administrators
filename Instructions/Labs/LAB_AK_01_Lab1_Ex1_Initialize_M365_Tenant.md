@@ -207,39 +207,7 @@ Microsoft Graph PowerShell is required to perform several configuration tasks wh
 
 	‎If you are prompted to verify that you want to change the execution policy, enter **A** to select **[A] Yes to All.** 
 
-7. Leave your PowerShell window open as you will use it in the next task.
-
-### Task 5 – Turn on Audit Logging to enable Alert Policies
-
-In Lab 2, Exercise 3, you will create Alert Policies using the Microsoft Defender portal. However, before you can implement alerts, an administrator must first turn on Audit Logging for the organization. Since it can take an hour or so for audit logging to become fully enabled once you turn it on, you will turn it on in this lab so that it's fully enabled by the time you get to Lab 2, Exercise 3.
-
-1. You should still be logged into LON-CL1 as the local **adatum\administrator** account, and you should still have Windows PowerShell open from the prior task. If you closed PowerShell at the end of the prior task, then open it again using the **Run as administrator** option. 
-
-2. In your PowerShell window, run the following command to install the Exchange Online Management module, which contains the cmdlet to turn on audit logging:
-
-		Install-Module ExchangeOnlineManagement
-
-3. You will be prompted to confirm whether you want to install the module from an untrusted repository (PSGallery). Enter **A** to select **[A] Yes to All** and then press Enter.
-
-4. A command prompt will appear once the Exchange Online Management module has been installed. Run the following command to connect to the module:
-
-		Connect-ExchangeOnline
-
-5. A **Sign in** window will appear requesting your credentials. Enter the MOD Administrator account provided by your lab hosting provider (**admin@xxxxxZZZZZZ.onmicrosoft.com**; where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**. On the **Enter password** window, enter the tenant admin password provided by your lab hosting provider and then select **Sign in**.
-
-6. At the command prompt, run the following command to turn on audit logging:
-
-		Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true
-
-    **Note:** A warning message will be displayed indicating the admin audit log configuration change that you requested could take up to 60 minutes to take effect throughout the system. This is why you're enabling this feature now rather than waiting for the Alert Policy labs later in this course. 
-
-7. At the command prompt, run the following command to confirm that audit logging is enabled:
-
-		AdminAuditLogConfig 
-
-    In the list of properties that's displayed, verify the **UnifiedAuditLogIngestionEnabled** property is set to  **True**.
-
-8. Do **NOT** close your PowerShell window. Leave the Windows PowerShell window open but minimize it for now. Remain logged into LON-CL1 and keep your Edge browser open.
+7. Leave your PowerShell window open but minimize it. You will use it in a later lab exercise.
 
 
 **Congratulations! You have completed all the steps to initialize your lab tenant. You are now ready to perform the remaining lab exercises.**

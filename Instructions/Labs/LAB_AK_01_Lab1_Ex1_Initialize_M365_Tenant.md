@@ -8,9 +8,9 @@ Tenants must not be converted to a paid subscription. Tenants obtained as a part
 
 # Learning Path 1 - Lab 1 - Exercise 1 - Initialize your Microsoft 365 Tenant 
 
-Adatum Corporation is a subsidiary of Contoso Electronics. Adatum runs its legacy applications (such as Microsoft Exchange Server 2019) in an on-premises deployment. As Adatum's new Microsoft 365 administrator, Holly Dickson, you have been tasked with preparing Adatum's Microsoft 365 deployment for Copilot for Microsoft 365. 
+Adatum Corporation is a subsidiary of Contoso Electronics. Adatum runs its legacy applications (such as Microsoft Exchange Server 2019) in an on-premises deployment. However, it recently subscribed to Microsoft 365, thereby creating a hybrid deployment in which it must synchronize its on-premises and cloud deployments. 
 
-In this exercise, you will set up Adatum's Microsoft 365 trial tenant, and your instructor will guide you on how to obtain your Microsoft 365 credentials in your lab-hosted environment. You will use these credentials throughout the remaining labs in this course. 
+As Adatum's Microsoft 365 administrator, you have been tasked with deploying Microsoft 365 in Adatum’s hybrid deployment using a virtualized lab environment. In this exercise, you will set up Adatum's Microsoft 365 trial tenant, and your instructor will guide you on how to obtain your Microsoft 365 credentials in your lab-hosted environment. You will use these credentials throughout the remaining labs in this course. 
 
 In your lab environment, your lab hosting provider has already obtained a Microsoft 365 trial tenant for you. Your lab provider has also created two admin accounts that you will use in your VM lab environment: 
 
@@ -18,6 +18,8 @@ In your lab environment, your lab hosting provider has already obtained a Micros
 - A default tenant admin account in Microsoft 365 (the display name for this user account is MOD Administrator). 
 
 You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator account. When you access Microsoft 365 for the first time, you will initially log in using the Microsoft 365 tenant admin account (MOD Administrator). You will then prepare Adatum's Microsoft 365 tenant for Microsoft Entra ID and for later labs using audit alerts and Microsoft Graph PowerShell.
+
+**Important MFA Announcement:** Microsoft Security has recently employed a new security hack in the trial tenants that are used in its training courses. This feature requires that all trial tenants used by Microsoft World-Wide Learning employ Multifactor Authentication (MFA) each time a user signs into Microsoft 365. Microsoft World-Wide Learning can NOT turn off this security requirement in its training labs. In addition, we can't use Conditional Access to turn MFA on or off for selected groups of users. MFA will be turned on for everyone and can never be turned off. Any time you sign in to Microsoft 365 in this trial tenant as one of the fictitious users, you must sign in with the user's account and password AND with a second form of authentication. Your instructor will guide you through the MFA process that's currently employed in the tenant.
 
 
 ### Task 1 - Obtain Your Microsoft 365 Credentials

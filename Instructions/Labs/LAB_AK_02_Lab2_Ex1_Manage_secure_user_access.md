@@ -6,11 +6,17 @@ In the following lab exercise, you will continue in your role as Holly Dickson, 
 
 **Note:** The VM environment provided by your lab hosting provider comes with over 20 existing Microsoft 365 user accounts, as well as a large number of existing on-premises user accounts. Several of the existing Microsoft 365 user accounts will be used throughout the labs in this course. Even though the MOD Administrator account has been created by your lab hosting provider, you will still create Holly Dickson's user account, since having more than one user who's assigned the Microsoft 365 Global Administrator role is a best practice. It will also provide you with the experience of creating a Microsoft 365 user account in case you're not familiar with the process.
 
-Holly has then been asked by Adatum’s CTO to deploy Microsoft Entra Multifactor Authentication (MFA), Pass-through Authentication (PTA), and Microsoft Entra Smart Lockout. These three features will help strengthen password management throughout the organization in preparation for Copilot for Microsoft 365. For PTA, you will deploy it using Microsoft Entra Cloud Sync. And for Smart Lockout, you will deploy it using Group Policy Management. 
+Holly has then been asked by Adatum’s CTO to deploy Microsoft Entra Multifactor Authentication (MFA) and Microsoft Entra Smart Lockout. These features will help strengthen password management throughout the organization in preparation for Copilot for Microsoft 365. For Smart Lockout, you will deploy it using Group Policy Management. 
 
-For MFA, you will create a Conditional Access policy to deploy MFA for all of Adatum's users. You will then modify it to exclude Holly and the selected members of her Microsoft 365 pilot project team. That will save you from having to use MFA when signing in with them, as well as provide you with experience on how to exclude users in a Conditional Access policy. 
+**IMPORTANT MFA NOTIFICATION:** Due to a recent change by Microsoft to the Microsoft 365 trial tenants used in this course, we had to make a corresponding change to this lab. <br/>
 
-**Note:** Excluding specific users from using MFA is not something you would normally do in a real-world scenario. However, for the purpose of saving time in this classroom training lab, we will disable MFA for the test users. 
+**Original lab design:** This lab exercise was originally designed so that as Holly Dickson, you created a Conditional Access policy that enabled MFA at Adatum in Task 3. This is the recommended method of enabling MFA, as you learned in the lecture portion of this training. In task 3, you created a Conditional Access policy that enabled MFA for all users, EXCEPT for those who were members of the Microsoft 365 pilot project group that you created in an earlier exercise. To test your policy in Task 4, it then had you log in as a Adele Vance. Because Adele was not a member of the pilot project group, you had to complete the MFA process to sign-in to Microsoft 365. You then signed out as Adele and signed back in as Holly Dickson. Since Holly is a member of the Microsoft 365 pilot project group, she only had to enter her username and password. She did not have to perform a second form of authentication using MFA. These two steps in Task 4 verified your Conditional Access policy - i.e.  only users who were not part of the pilot project group had to use MFA. 
+
+The other ramification of this policy is that you didn't have to use MFA when signing in to the remainder of the labs as the other test users who were also members of the Microsoft 365 pilot project group. While exclusions from MFA can be set for practical reasons depending on a company's business needs, companies should carefully assess the associated risks and apply exclusions sparingly, always aiming to align with security best practices. This lab had you create the pilot project group exclusion for two reasons - so that you could learn how to build an exclusion into a Conditional Access policy, but also as a means of saving time in the training labs when signing in as each test user. <br/>
+
+**Microsoft tenant change:** That being said, Microsoft has since created a Conditional Access policy in the Microsoft 365 trial tenant used in this lab that requires MFA for all user accounts. Unfortunately, Microsoft's Conditional Access policy takes precedence over the Conditional Access policy that you will create in this lab that excludes a specific group. Conditional Access policies in Microsoft Entra are evaluated together, and the highest priority policy that applies to a user is enforced. If there are multiple policies with the same priority, which is the case here, the most restrictive policy applies. In this case, Microsoft's policy is more restrictive than the policy you create, since yours includes user exceptions. <br/>
+
+**Impact on this lab exercise:** Even though Microsoft enforces MFA in this trial tenant through a Conditional Access policy, you will still create your own Conditional Access policy as originally designed in Task 3. The task has been modified slightly from its original version so that you can see the policy that Microsoft built into the trial tenant. But other than that, the policy that you will create has not changed from its original design - it requires MFA for all users, except for the members of the Microsoft 365 pilot project group. However, since the policy that Microsoft built into the lab's trial tenant is the more restrictive of the two policies, that policy takes precedence during enforcement. There are two implications of this scenario. First, Microsoft's policy requires you to use MFA when signing in as each test user through the remainder of these labs. Second, because Microsoft Entra will ignore your policy, there's no point in testing it. As such, we removed the original Task 4 that tested the Conditional Access policy that you created. Now even though you can't test your policy, we still want you to create it in Task 3 so that you gain that experience for your real-world deployments. 
 
 ### Task 1 - Create a User Account for Adatum's Microsoft 365 Administrator
 
@@ -88,7 +94,7 @@ That being said, you will not turn on MFA for Holly's account because time is li
 
 19. Remain logged into the Client 1 VM (LON-CL1) with the Microsoft 365 admin center open in your browser for the next task.
 
-### Task 2 – Set up Microsoft 365 User Accounts
+### Task 2 – Create a Microsoft 365 group for the pilot project users
 
 After completing the previous task, you should still be signed into the **Microsoft 365 admin center** as the **MOD Administrator** account. In this task, you will begin implementing Adatum’s Microsoft 365 pilot project as Holly Dickson, Adatum’s new Microsoft 365 Administrator. Therefore, you will begin this task by logging out of Microsoft 365 as the MOD Administrator and you will log back in using Holly's new Microsoft 365 account. 
 
@@ -112,7 +118,9 @@ Each user is a key member of your pilot project team. While their user accounts 
 
 4. In the **Sign in** window, enter **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). Select **Next**.
 
-5. In the **Enter password** window, enter the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in**.
+5. In the **Enter password** window, enter the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) that you also assigned to Holly's account, and then select **Sign in**. If required, complete the MFA sign-in process.  <br/>
+
+	**Note:** From this point forward, Holly and the MOD Admin will be the only users who are assigned the **Administrative Password** provided by your lab-hosting provider. All other users are assigned the **User Password** provided by your lab-hosting provider.
 
 6. If a **Welcome to Microsoft 365** dialog box appears in the middle of the screen, there's no option to close it. Instead, to the right of the window, select the forward arrow icon (**>**) two times and then select the check mark icon to advance through the slides in this messaging window. 
 
@@ -157,115 +165,84 @@ Each user is a key member of your pilot project team. While their user accounts 
 
 ### Task 3: Deploy MFA using a Conditional Access policy
 
-As your training indicated, there are three ways to implement MFA - with Conditional Access policies, with security defaults, and with legacy per-user MFA (not recommended for larger organizations). In this exercise, you'll enable MFA through a Conditional Access policy, which is the method that Microsoft recommends. Adatum has directed Holly to enable MFA for all of its Microsoft 365 users - both internal and external. However, for the purpose of testing Adatum's Microsoft 365 pilot project implementation, Holly wants to exclude the members of the M365 pilot project group from having to use MFA to sign in. Once the pilot project is complete, Holly will update the policy by removing the exclusion of this group from the MFA requirement. The policy will also include two other requirements. It will require MFA for all cloud apps, and it will require MFA even if a user signs in from a trusted location. 
+As your training indicated, there are three ways to implement MFA - with Conditional Access policies, with security defaults, and with legacy per-user MFA (not recommended for larger organizations). In this exercise, you'll enable MFA through a Conditional Access policy, which is the method that Microsoft recommends. Adatum has directed Holly to enable MFA for all its Microsoft 365 users - both internal and external. However, for the purpose of testing Adatum's Microsoft 365 pilot project implementation, Holly wants to exclude the members of the M365 pilot project group from having to use MFA to sign in. Once the pilot project is complete, Holly will update the policy by removing the exclusion of this group from the MFA requirement. The policy will also include two other requirements. It will require MFA for all cloud apps, and it will require MFA even if a user signs in from a trusted location. 
 
 1. On the LON-CL1 VM, the **Microsoft 365 admin center** should still be open in your Microsoft Edge browser from the prior task. You should be signed into Microsoft 365 as **Holly Dickson**.
    
-2. In the **Microsoft 365 admin center**, under the **Admin centers** section in the navigation pane, select **Identity**. Doing so opens the Microsoft Entra admin center in a new browser tab. 
+2. In the **Microsoft 365 admin center**, under the **Admin centers** section in the navigation pane, select **Identity**. Doing so opens the Microsoft Entra admin center in a new browser tab. If a **Pick an account** window appears, select **Holly Dickson's account**.
 
 3. In the **Microsoft Entra admin center**, select **Protection** in the navigation pane, and then select **Conditional Access**.
 
-4. On the **Conditional Access | Overview** page, select **Policies**.
+4. On the **Conditional Access | Overview** page, select **Policies** in the middle navigation pane.
 
-5. On the **Conditional Access | Policies** page, review the default policies available with your Microsoft 365 subscription. On the menu bar at the top of the page, select **+New policy**.
+5. On the **Conditional Access | Policies** page, review the default policies available with your Microsoft 365 subscription. Note the policy titled **Multifactor authentication for Microsoft partners and vendors**. This is the Conditional Access policy that Microsoft created that requires MFA for all users on all cloud apps. Select this policy so that you can see how Microsoft is enforcing MFA for all users in this trial tenant.
 
-6. On the **New Conditional Access policy** window, enter **MFA for all Microsoft 365 users** in the **Name** field.
+6. On the **Multifactor authentication for Microsoft partners and vendors** page, under the **Users** group, select **All users included and specific users excluded**. Doing so displays two tabs - **Include** and **Exclude**.
 
-7. You will begin by defining the MFA requirement for users. Under the **Users** group, select **0 users and groups selected**. Doing so displays two tabs - **Include** and **Exclude**.
+7. Under the **Include** tab, note that **All users** is selected. Just to satisfy your curiosity, let's try changing this policy by turning off MFA. Select **None** and then select the **Save** button. <br/>
 
-8. Under the **Include** tab, select **All users**. Note the warning message that appears. You will address this in the next two steps.
+	**Note what happened:** A message box briefly appeared at the top of the page indicating **Failed to update Multifactor authentication for Microsoft partners and vendors**. The system then returned you to the **Conditional Access | Policies** page. If you didn't see this message, then repeat this step again.  <br/>
 
-9. Select the **Exclude** tab. To avoid system lockout, as the prior warning message indicated, you want to exclude your Global administrators - in this case, Holly. Holly also wants to exclude the other Microsoft 365 pilot project group members for the sake of expediency when testing. Once Microsoft 365 goes live, Holly will remove the pilot project group from the Exclude list in this Conditional Access policy and simply exclude herself and several other Global admins. But for now, Holly wants to exclude the entire group. <br/>
+	The same thing happens if, under the **Include** tab, you select **Users and groups** and you select specific users or groups rather than all users. In fact, Microsoft has built in a security firewall so that if you try to make any change to this policy, it will fail when you attempt to save the policy. 
+
+8. Microsoft did build one exclusion into this policy. Let's take a look at it. On the **Policies** page, select the **Multifactor authentication for Microsoft partners and vendors** policy again, and then select **All users included and specific users excluded**. This time select the **Exclude** tab. 
+
+9. Note that Microsoft selected the **Directory roles** checkbox. Select the field below this option. In the menu of roles that you can choose to exclude from MFA, the only role that Microsoft selected is **Directory Synchronization Accounts**. This role is automatically assigned to the Microsoft Entra Connect Sync service account and is not meant to be used otherwise. It's a special role that has permissions only to perform directory synchronization tasks. This role is crucial for synchronizing a local Active Directory Domain Services (AD DS) to Microsoft Entra ID, providing identity coexistence. Microsoft doesn't require MFA for this role because the synchronization service needs to run continuously without any interruptions that could be caused by MFA prompts. Additionally, this service account is configured with very limited permissions, and it isn't used for interactive sign-ins, which reduces the security risk.   <br/>
+
+	As with the prior step where you tried to change the MFA setting to include no users or selected users, if you try to select other roles to get around the MFA setting, you will experience the same error indicating **Failed to update Multifactor authentication for Microsoft partners and vendors** when you try to save the policy. Microsoft's security firewall doesn't allow any change to this Conditional Access policy that affects those who must use MFA.
+
+10. If you still have the **Multifactor authentication for Microsoft partners and vendors** page open, then select the **X** in the upper corner to close it and return back to the **Conditional Access | Policies** page. Or if you tried saving a change to the policy, your attempt will have failed, and you should already be back on the **Conditional Access | Policies** page.
+
+11. On the **Conditional Access | Policies** page, on the menu bar at the top of the page, select **+New policy**.
+
+12. On the **New Conditional Access policy** window, enter **MFA for all Microsoft 365 users** in the **Name** field.
+
+13. You will begin by defining the MFA requirement for users. Under the **Users** group, select **0 users and groups selected**. Doing so displays two tabs - **Include** and **Exclude**.
+
+14. Under the **Include** tab, select **All users**. Note the warning message that appears. You will address this in the next two steps.
+
+15. Select the **Exclude** tab. To avoid system lockout, as the prior warning message indicated, you want to exclude your Global administrators - in this case, Holly. Holly also wants to exclude the other Microsoft 365 pilot project group members for the sake of expediency when testing. Once Microsoft 365 goes live, Holly will remove the pilot project group from the Exclude list in this Conditional Access policy and simply exclude herself and several other Global admins. But for now, Holly wants to exclude the entire group. <br/>
 
 	To do so, select **Users and groups**. 
 
-10. On the **Select excluded users and groups** window that appears, you want to select the Microsoft 365 pilot project group. The **All** tab is displayed by default. To quickly find the pilot project group, select the **Groups** tab. In the list of active groups, select the check box next to the **M365 pilot project** group, and then select the **Select** button at the bottom of the window. Back on the **New Conditional Access policy** window, note the message that appears under the **Users** section. 
+16. On the **Select excluded users and groups** window that appears, you want to select the Microsoft 365 pilot project group. The **All** tab is displayed by default. To quickly find the pilot project group, select the **Groups** tab. In the list of active groups, select the check box next to the **M365 pilot project** group, and then select the **Select** button at the bottom of the window. Back on the **New Conditional Access policy** window, note the message that appears under the **Users** section. 
 
-11. You will now define the MFA requirement for all cloud apps. Under the **Target resources** section, select **No target resources selected**. Doing so displays two tabs - **Include** and **Exclude**.
+17. You will now define the MFA requirement for all cloud apps. Under the **Target resources** section, select **No target resources selected**. Doing so displays two tabs - **Include** and **Exclude**.
 
-12. Under the **Include** tab, note that the default setting is **None**. If you did not update this setting, then no cloud apps would require MFA - and that includes Microsoft 365. So even if you created this policy and selected the option to require MFA in step 17 but you left this **Target resources** setting to **None**, then any user signing into Microsoft 365 would not have to use MFA. <br/>
+18. Select the **Select what this policy applies to** drop-down field to see the various options in the drop-down menu. Select **Cloud apps**. 
 
-	Select the **Select apps** option. Under the **Select** group, select **None**. In the **Select Cloud apps** pane that appears, scroll down through the list of apps to see all the different apps that you could require MFA for. **Do NOT select any of the apps.** We're having you scroll through this list just to get a feel for how granular you can get when requiring MFA should you decide to limit MFA to certain apps.  <br/>
+19. Under the **Include** tab, note that the default setting is **None**. If you did not change this setting, then no cloud apps would require MFA - and that includes Microsoft 365. So even if you created this policy and selected the option to require MFA for all users, but you left this **Target resources** setting to **None**, then any user signing into Microsoft 365 would not have to use MFA. <br/>
 
-	For Adatum, Holly wants to require MFA for all cloud apps, which is typically a more common business scenario than selecting specific apps. Under the **Include** tab, select the **All cloud apps** option. Adatum will not exclude any cloud apps from MFA authentication. You can select the **Exclude** tab if you want to see the options it provides, but do NOT select any cloud apps for exclusion. 
+	Under the **Include** tab, select the **Select apps** option. Doing so displays two sections - **Edit filter** and **Select**. Under the **Select** section, select **None**. In the **Select Cloud apps** pane that appears, scroll down through the list of apps to see all the different apps that you could require MFA for. **Do NOT select any of the apps.** We're having you scroll through this list just to get a feel for how granular you can get when requiring MFA should you decide to limit MFA to certain apps.  <br/>
 
-13. Finally, you will define the MFA requirement for all user sign-in locations. In some scenarios, organizations may only require MFA if a user signs-in from an untrusted location. However, Adatum will require MFA for all included users, regardless from where they sign in. <br/>
+	For Adatum, Holly wants to require MFA for all cloud apps, which is typically a more common business scenario than selecting specific apps. Under the **Include** tab, select the **All cloud apps** option. Adatum will not exclude any cloud apps from MFA authentication. You can select the **Exclude** tab if you want to see the options it provides. It works basically the same as the **Include** tab. You can view this tab, but do NOT select any cloud apps for exclusion. 
 
-	Under **Conditions**, select **0 conditions selected**. Doing so displays a list of potential conditions the policy will check for. For this lab exercise, under the **Locations** condition, select **Not configured**. Doing so displays a **Configure** toggle switch and two tabs - **Include** and **Exclude**.
+20. Finally, you will define the MFA requirement for all user sign-in locations. In some scenarios, organizations may only require MFA if a user signs-in from an untrusted location. However, Adatum wants to require MFA for all included users, regardless of where they sign in. <br/>
 
-14. Set the **Configure** toggle switch to **Yes**, which enables the two tabs. 
+	Under **Conditions**, select **0 conditions selected**. Doing so displays a list of potential conditions the policy will check for. For this lab exercise, under the **Locations** condition, select **Not configured**. Doing so displays a **Configure** toggle switch and two tabs - **Include** and **Exclude**. Both tabs are currently disabled.
 
-15. Under the **Include** tab, verify **Any location** is selected (select it if necessary). Select the **Exclude** tab. If your organization recognizes specific IP addresses or ranges of addresses as "trusted", you can exclude the MFA requirement if a user signs in from one of those locations. However, Adatum wants to require MFA for all include user sign-in, regardless of their location. This will include both internal and external user sign-ins. Verify the **Selected locations** option is selected, and under the **Select** section, verify it says **None**. By not specifying any selected locations, this setting ensures that no locations are excluded from MFA. 
+21. Set the **Configure** toggle switch to **Yes**, which enables the two tabs. 
 
-16. Under the **Access controls** section, under the **Grant** group, select **0 controls selected**. Doing so displays a **Grant** pane.
+22. Under the **Include** tab, verify **Any location** is selected (select it if necessary). Select the **Exclude** tab. If your organization recognizes specific IP addresses or ranges of addresses as "trusted", you can exclude the MFA requirement if a user signs in from one of those locations. However, Adatum wants to require MFA for all user sign-in attempts, regardless of their location. This will include both internal and external user sign-ins. Verify the **Selected locations** option is selected, and under the **Select** section, verify it says **None**. By not specifying any selected locations, this setting ensures that no locations are excluded from MFA. 
 
-17. In the **Grant** pane that appears, verify the **Grant access** option is selected (select it if necessary). Then select the **Require multifactor authentication** check box. Note all the other access controls that are available that can be enabled with this policy. For this policy, you will only require MFA. Select the **Select** button at the bottom of the **Grant** pane, which closes the pane. 
+23. Under the **Access controls** section, under the **Grant** group, select **0 controls selected**. Doing so displays a **Grant** pane.
 
-18. At the bottom of the **New** window, in the **Enable policy** field, select **On**.
+24. In the **Grant** pane that appears, verify the **Grant access** option is selected (select it if necessary). Then select the **Require multifactor authentication** check box. Note all the other access controls that are available that can be enabled with this policy. For this policy, you will only require MFA. Select the **Select** button at the bottom of the **Grant** pane, which closes the pane. 
 
-19. Note the option that appears at the bottom of the page that warns you not to lock yourself out. Select the option **I understand that my account will be impacted by this policy. Proceed anyway.** In fact, Holly won't be impacted since she's a member of the M365 pilot project group that is excluded from this policy.
+25. At the bottom of the **New** window, in the **Enable policy** field, select **On**.
 
-20. Select the **Create** button to create the policy.
+26. Note the option that appears at the bottom of the page that warns you not to lock yourself out. Select the option **I understand that my account will be impacted by this policy. Proceed anyway.** In fact, Holly won't be impacted since she's a member of the M365 pilot project group that is excluded from this policy.
 
-21. On the **Conditional Access | Policies** window that appears, verify the **MFA for all Microsoft 365 users** policy appears and that its **State** is set to **On**.
+27. Select the **Create** button to create the policy.
 
-22. Remain logged into LON-CL1 with all your Microsoft Edge browser tabs open for the next task.
+28. On the **Conditional Access | Policies** window that appears, verify the **MFA for all Microsoft 365 users** policy appears and that its **State** is set to **On**.
 
-### Task 4: Test MFA for both an included and excluded user
+29. Remain logged into LON-CL1 with all your Microsoft Edge browser tabs open for the next task.
 
-To test the Conditional Access policy that you just created, you will sign-out of Microsoft 365 as Holly, and then you'll sign back in as Adele Vance. Adele is not a member of the M365 pilot project group, so Microsoft Entra should require that she use MFA when signing in. Once you sign-in as Adele and verify that MFA works, you will sign-out as Adele and then sign back in as Holly. Since Holly is a member of the M365 pilot project group that was excluded from using MFA in the Conditional Access policy, you should not have to use MFA when signing in as Holly. 
+**Note:** As per the earlier discussion, there's no way to test your Conditional Access policy in the current Microsoft 365 trial tenant. Microsoft's Conditional Access policy requires MFA for all users. When you have multiple policies requiring MFA, the most restrictive policy applies. In this case, Microsoft's policy is more restrictive than the one you just created that included exceptions for the pilot project group members. Even though you can't test your policy using this trial tenant, we encourage you to use this experience of creating a Conditional Access policy to require MFA in your real-world Microsoft 365 deployments.
 
-**Important:** To implement MFA, you will need to use your mobile phone to receive a verification code so that you can enter it into your tenant as a second form of authentication. If you do not have a phone, you can still test your Conditional Access policy. When signing in as Adele Vance, the system will require you to sign in with a second form of authentication. At that point, you can simply cancel out of your sign-in and then sign back in as Holly, who will not require MFA. While you will not complete the MFA sign-in, you will still verify that the system forces you to use it when attempting to sign-in as Adele.
 
-1. On the LON-CL1 VM, the **Microsoft 365 admin center** should still be open in your Microsoft Edge browser from the prior task. You should be signed into Microsoft 365 as **Holly Dickson**. You will begin by signing out of Microsoft 365. On the **Microsoft 365 admin center** tab, select Holly's name in the upper right corner of your browser. In the **Holly Dickson** window that appears, select **Sign out.** <br/>
-	
-	**Important:** Once you are signed out, close your browser session to clear your cache, and then open a new Microsoft Edge browser session. 
-	
-2. Select the **Edge** icon on your taskbar to open a new browser session. In your browser go to the **Microsoft Office Home** page by entering the following URL in the address bar: **https://portal.office.com/** 
-
-3. In the **Pick an account** window, select **Use another account**. 
-
-4. In the **Sign in** window, enter **AdeleV@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**. In the **Enter password** window, enter the Administrative Password provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and select **Sign in**.
-
-5. Because MFA is enabled for all users except for the M365 pilot project group members (of which, Adele is not a member), a **More information required** window appears. Select **Next**. This returns the **Microsoft Authenticator** page, which is the starting point for signing in with MFA. <br/>
-
-	**Important:** If you do not have a phone, then this is as far as you can go when attempting to sign-in as Adele. Even though you can't complete the sign-in, you have verified that the first part of your Conditional Access policy is working, since it requires Adele to sign-in using MFA. At this point, close your Edge browser session, and then skip to step #15, at which point you will sign back in as Holly.
-
-6. On the **Microsoft Authenticator** page that appears, you can download this mobile app or use a different method for MFA verification. For the purposes of this lab, we recommend you use your mobile phone so that you do not have to take time installing the Microsoft Authenticator app that you may not use again after this training class. Select the **I want to set up a different method** option at the bottom of the page (**Important:** Do NOT confuse this link with the **I want to use a different authenticator app** that appears above it). 
-
-7. On the **Choose a different method** dialog box that appears, select the drop-down arrow in the **Which method would you like to use?** field, select **Phone**, and then select **Confirm**. 
-
-8. In the **Phone** window that appears, under **What phone number would you like to use?** field, select your country or region, and then in the field next to it, enter your phone number (in the format **nnn-nnn-nnnn**). Verify the **Receive a code** option is selected and then select **Next**.
-
-9. Retrieve the verification code from the text message that is sent to your phone.
-
-10. In the **Phone** window, enter the 6-digit verification code in the code field and then select **Next**. When the **Phone** window displays a message indicating your phone was registered successfully, select **Next**.
-
-11. On the **Success!** page, select **Done**.
-
-12. If a **Stay signed in?** dialog box appears, select the **Don’t show this again** check box and then select **Yes.** 
-
-13. On the **Home | Microsoft 365** tab, select the **Word** icon that appears in the column of app icons on the left-side of the screen. This opens **Microsoft Word** in a new browser tab. Doing so validates that you can access a Microsoft 365 app after signing in using MFA.  <br/>
-
-	**Important:** You have now verified that the first part of the Conditional Access policy that you created works. The policy requires that a user who is not a member of the Microsoft 365 pilot project team must sign-in using MFA. You verified this works when you signed in as Adele. You will now sign out as Adele and sign back in as Holly, during which you will verify that the second part of the Conditional Access policy also works. You should NOT have to use MFA when signing in as Holly, since she's a member of the M365 pilot project group, which is excluded from the MFA requirement in the Conditional Access policy.
-
-14. On the **Microsoft 365 admin center** tab, select the icon for Adele's account in the upper right corner of your browser. In the **Adele Vance** window that appears, select **Sign out.** <br/>
-	
-	**Important:** Once you are signed out, close your browser session to clear your cache, and then open a new Microsoft Edge browser session. 
-	
-15. Select the **Edge** icon on your taskbar to open a new browser session. In your browser go to the **Microsoft Office Home** page by entering the following URL in the address bar: **https://portal.office.com/** 
-
-16. In the **Pick an account** window, select **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**. In the **Enter password** window, enter the same Administrative Password provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and select **Sign in**.
-
-17. Because MFA is required for all users except for the M365 pilot project team members (of which, Holly is a member), MFA will not be required. Since MFA is not required, the system displays the **Microsoft 365 Home** page. Select the **Admin** icon to navigate to the **Microsoft 365 admin center**. <br/>
-
-	**Important:** You have now verified that the second part of the Conditional Access policy that you created works. The policy excludes members of the Microsoft 365 pilot project group from signing-in using MFA. Holly is a member of this group, and she did not have to sign in using MFA.
-
-18. Remain logged into LON-CL1 with the **Microsoft 365 admin center** open in your browser.
-
-  
-
-### Task 5: Deploy Microsoft Entra Smart Lockout
+### Task 4: Deploy Microsoft Entra Smart Lockout
 
 Adatum’s CTO has asked you to deploy Microsoft Entra Smart Lockout, which assists in locking out bad actors who are trying to guess your users’ passwords or use brute-force methods to get admitted into your network. Smart Lockout can recognize sign-ins coming from valid users and treat them differently than sign-ins from attackers and other unknown sources. 
 
@@ -301,7 +278,7 @@ The CTO is anxious to implement Smart Lockout because it will lock out the attac
 
 10. In the **Sign in** dialog box, you must sign in as Holly Dickson. Enter **Holly@xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider. Select **Next**. <br/>
 
-11. In the **Enter password** dialog box, enter the unique **Administrative Password** provided by your lab hosting provider and then select **Sign in**.
+11. In the **Enter password** dialog box, enter the unique **Administrative Password** provided by your lab hosting provider and then select **Sign in**. If required, complete the MFA sign-in process.
 
 12. On the **Stay signed in?** dialog box, select the **Don’t show this again** check box and then select **Yes.** On the **Save password** dialog box that appears, select **Never**.
 
@@ -361,7 +338,7 @@ The CTO is anxious to implement Smart Lockout because it will lock out the attac
 
 27. In the **Sign in** window, you're going to sign in as Patti Fernandez. Enter **pattif@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix assigned to you by your lab hosting provider), and then select **Next**. 
 
-28. On the **Enter password** window, enter any random mix of letters and then select **Sign in**. Note the invalid password error message that appears. 
+28. On the **Enter password** window, enter any random mix of letters and numbers and then select **Sign in**. Note the invalid password error message that appears. 
 
 	Repeat this step 2 more times. 
 	
@@ -371,7 +348,7 @@ The CTO is anxious to implement Smart Lockout because it will lock out the attac
 
 29. You will be prohibited from logging in again as Patti until after the **90 second lockout duration** that you set earlier. <br/>
 
-	Once you've been locked out, wait 90 seconds and then sign back in as **pattif@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix assigned to you by your lab hosting provider). In the **Password** field, enter Patti's password, which is the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account). Verify that you are able to successfully sign-in as Patti.
+	Once you've been locked out, wait 90 seconds and then sign back in as **pattif@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix assigned to you by your lab hosting provider). In the **Password** field, enter Patti's password, which is the **User Password** provided by your lab hosting provider. If required, complete the MFA sign-in process. Verify that you are able to successfully sign-in as Patti.
 
 30. Once your log-in is successful, you can close all open applications. This will be your last lab exercise using the LON-DC1 domain controller.
  

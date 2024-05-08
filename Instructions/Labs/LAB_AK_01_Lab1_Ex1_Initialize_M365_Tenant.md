@@ -53,11 +53,11 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
 4. In your Edge browser, go to the **Microsoft 365 Home** page by entering the following URL in the address bar: **https://portal.office.com** 
 
-5. In the **Sign in** dialog box that appears, enter the **Microsoft 365 Tenant Username** provided by your lab hosting provider (this is the MOD Administrator account). The username should be in the form of **admin@xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider. Select **Next**. <br/>
+5. In the **Sign in** dialog box that appears, enter the **Administrative Username** provided by your lab hosting provider (this is the MOD Administrator account). The username should be in the form of **admin@xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider. Select **Next**. <br/>
 
 	**Note:** Your lab hosting provide may provide the ability to select a **Type text** (or equivalent) button next to resource data such as usernames, passwords, PowerShell commands, and other data that must be entered throughout the course of these labs. Other lab hosting providers may provide an alternative method, such as the ability to copy and paste in this information. Take advantage of this functionality to save yourself from having to manually enter this information. 
 
-6. In the **Enter password** dialog box, enter the unique **Microsoft 365 Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+6. In the **Enter password** dialog box, enter the unique **Administrative Password** provided by your lab hosting provider and then select **Sign in**. If required, complete the MFA sign-in process.
 
 7. On the **Stay signed in?** dialog box, select the **Don’t show this again** check box and then select **Yes.** On the **Save password** dialog box that appears, select **Never**.
 
@@ -107,7 +107,7 @@ In the prior task, you learned that when someone is signed into Microsoft 365, t
 
 Custom themes must be associated with one or more Microsoft 365 groups. Therefore, to implement this change, Holly must first create a Microsoft 365 group for the members of the pilot project team. She can then create a custom theme associated with this group that enables the setting to display the signed-in user's name. In this task, you will create a Microsoft 365 group for the members of Adatum's Microsoft 365 pilot project team. You will then create a custom theme that displays the signed-in user's name, and you will assign the pilot project team to this theme. You will also review other options that can be configured with custom themes, and you can make any color changes that you wish.
 
-**Note:** The team record that you create for the Microsoft 365 pilot project team will also be used in a later lab exercises in which you create a Conditional Access policy to enable Multifactor Authentication. You will enable MFA for all users except for those members of the pilot project team.
+**Important:** At the end of this task, you will attempt to save the custom theme that you created. There is a known platform issue in the Microsoft 365 admin center where sometimes it saves the custom theme just fine, and other times it returns a message that says "Sorry, we couldn't save your theme. Please try again later." If you receive this message, there's nothing you can do but move on. Trying to save the theme at a later time never seems to work. This issue won't affect any future labs, other than it won't display the user's name next to their user icon or initials on the heading line. You are still asked to do this task to gain the experience of creating a theme such as this, even though it may not get saved.
 
 1. You should still be logged into LON-CL1 as the local **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as the **MOD Administrator**. 
 
@@ -143,13 +143,13 @@ Custom themes must be associated with one or more Microsoft 365 groups. Therefor
 
 	Select **Close**. This returns you to the **Active teams and groups** page, which should display the **Teams & Microsoft 365 groups** tab. Since the M365 pilot project group was a Microsoft 365 group, it should eventually display on this tab. If necessary, select the **Refresh** option on the menu bar until you see the M365 pilot project group in the list of Teams and Microsoft 365 groups.
 
-14. In the **Microsoft 365 admin center**, under the **Settings** group in the navigation pane, select **Org settings**. 
+14. In the **Microsoft 365 admin center**, select **Settings** in the navigation pane and then select **Org settings**. 
 
-15. On the **Org settings** page, select the **Organization profile** tab.
+15. On the **Org settings** page, the **Services** tab is displayed by default. Select the **Organization profile** tab.
 
-16. In the list of organization profile data, select **Custom themes**.
+16. The **Organization profile** tab displays the list of organization profile data. In the list of data, select **Custom themes**.
 
-17. In the **Customize Microsoft 365 for your organization** pane that appears, you can customize the default theme that users see when signed into Microsoft 365, and you can add additional custom themes. Select the **+Add theme** option.
+17. In the **Customize Microsoft 365 for your organization** pane that appears, you can customize the default theme that users see when signed into Microsoft 365, and you can add additional custom themes. You want to create a new custom theme that applies only to the members of the **M365 pilot project** group that you previously created, so select the **+Add theme** option.
 
 18. In the **New group theme** pane that appears, the **General** tab is displayed by default. Enter **M365 pilot project theme** in the **Name** field.
 
@@ -157,21 +157,33 @@ Custom themes must be associated with one or more Microsoft 365 groups. Therefor
 
 	**Note:** If **M365 pilot project** doesn't appear in the list of groups, then enter **M365** in the **Groups** field. A search results box should appear that displays the **M365 pilot project** group. Select **M365 pilot project**. 
 
-20. Select the **Show the user's display name** check box. This is the setting that Holly wants to customize for the M365 pilot project team members. This option displays the users name next to their initials in each window heading.
+20. Select the **Show the user's display name** check box. This is the setting that Holly wants to customize for the M365 pilot project team members. This option displays the signed-in user's name next to their initials in each window heading.
  
-21. Select **Save**. Close the **M365 pilot project theme** pane once your changes are saved. 
+21. Select the **Logos** tab and take some time to review its options. Do the same for the **Colors** tab. Note the various theme and branding options that are available for you to update. <br/>
 
-22. Select the **Refresh** icon at the top of the screen, to the left of the address bar. Once the screen refreshes, note how the **MOD Administrator** name appears to the left of the circle with the megaphone icon. When members of the Microsoft 365 pilot project team sign in to Microsoft 365, their username now appears to the left of their profile picture (or in this case, an icon of a megaphone) or initials due to the custom theme that you just created.
+	For the purpose of this lab, you can change any of the options or leave the default values as is. For example, in your real-world environment, you can add the logo of your company and set the background image as the default for all your users. For this lab, feel free to change the colors for your navigation pane, text color, icon color, and accent color. <br/>
 
-23. In the list of organization profile data, select **Custom themes**.
+	**Go ahead and explore the different options for this theme that will be used by the Microsoft 365 pilot project team members. Make any changes that you wish.** <br/>
 
-24. In the **Customize Microsoft 365 for your organization** pane that appears, notice how it displays the **Default theme** and the **M365 pilot project theme**. Select the **Default theme**. 
+	**Tip:** Some color patterns aesthetically distract users. If you do change any of the colors, it's recommended that you avoid using high contrasting colors together, such as neon colors and high-resolution colors like bright pink and white.
 
-25. On the **Default theme** pane, notice how the **Show the user's display name** option is not selected for the default theme. If Holly later decides to make the **Show the user's display name** option a permanent feature, she will select this option in the **Default theme** pane so that it applies to all Adatum users, and she will delete the **M365 Pilot project theme**. <br/>
+22. Select **Save**. 
 
-	Close the **Custom theme** pane.
+	**Note:** As previously mentioned at the start of this task, there's a known platform issue in the Microsoft 365 admin center where sometimes it saves a new custom theme, and other times it returns a message that says "Sorry, we couldn't save your theme. Please try again later." If you receive this message, it won't affect any future labs. Since your custom theme didn't get save, the system simply won't display the user's name next to their user icon or initials on the heading line (plus any color changes you may have made won't appear). We still asked you to do this task even though you may receive this message in order to gain the experience of creating a theme such as this. So if you get this error, skip the next step, which tests the custom theme. However, you can still perform the remaining steps following the next step in order to learn about the Default theme. Whether or not your custom theme was saved, close the **M365 pilot project theme** pane.
 
-26. Remain logged into **LON-CL1** with Microsoft Edge open to the **Microsoft 365 admin center** for the next task.
+23. If your custom theme did not get saved, then skip to the next step. However, if your custom theme was saved, then select the **Refresh** icon at the top of the screen, to the left of the address bar. Once the screen refreshes, note how the **MOD Administrator** name appears to the left of either the circle with the MA initials or the icon selected for this account by your lab-hosting provider. When members of the Microsoft 365 pilot project team sign in to Microsoft 365, this custom theme will display their username, just as the MOD Administrator name appears here. 
+
+24. In the list of organization profile data, select **Custom themes**.
+
+25. In the **Customize Microsoft 365 for your organization** pane that appears, notice how it displays the **Default theme** and the **M365 pilot project theme** (if the theme was saved in the previous step). Select the **Default theme**. 
+
+26. On the **Default theme** pane, notice how the **Show the user's display name** option is not selected for the default theme. If Holly later decides to make the **Show the user's display name** option a permanent feature, she will select this option in the **Default theme** pane so that it applies to all Adatum users, and she will delete the **M365 Pilot project theme**. <br/>
+
+	**Note:** If you received the "Sorry, we couldn't save your theme. Please try again later." error message when you previously tried to save your custom theme, then select this **Show the user's display name** option on the Default theme, and then select **Save**. We want you to see what happens when this option is selected, even if you couldn't save your custom theme. If you set this option on the Default theme, then select the **Refresh** icon at the top of the screen, to the left of the address bar. Once the screen refreshes, note how the **MOD Administrator** name appears to the left of either the circle with the MA initials or the icon selected for this account by your lab-hosting provider.
+ 
+27. Close the **Default theme** pane.
+
+28. Remain logged into **LON-CL1** with Microsoft Edge open to the **Microsoft 365 admin center** for the next task.
 
 ### Task 4 – Install Microsoft Graph PowerShell 
 

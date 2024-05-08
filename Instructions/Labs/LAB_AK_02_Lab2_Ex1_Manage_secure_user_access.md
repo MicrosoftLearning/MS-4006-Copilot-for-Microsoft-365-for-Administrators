@@ -94,13 +94,9 @@ Holly Dickson is Adatum’s new Microsoft 365 Administrator. Since a Microsoft 3
 
 ### Task 2 – Create a Microsoft 365 group for the pilot project users
 
-After completing the previous task, you should still be signed into the **Microsoft 365 admin center** as the **MOD Administrator** account. In this task, you will begin implementing Adatum’s Microsoft 365 pilot project as Holly Dickson, Adatum’s new Microsoft 365 Administrator. Therefore, you will begin this task by logging out of Microsoft 365 as the MOD Administrator and you will log back in using Holly's new Microsoft 365 account. 
+After completing the previous task, you should still be signed into the **Microsoft 365 admin center** as the **MOD Administrator** account. In this task, you will begin implementing Adatum’s Microsoft 365 pilot project as Holly Dickson, Adatum’s new Microsoft 365 Administrator. Therefore, you will begin this task by logging out of Microsoft 365 as the MOD Administrator and you will log back in as Holly. 
 
-In the prior task, you noticed that your Microsoft 365 trial tenant came equipped with a list of active users. As Holly Dickson, Adatum's Microsoft 365 Administrator, you have selected the following members of the Microsoft 365 pilot project team to assist with the initial phase of the deployment: Alex Wilber, Joni Sherman, Lynne Robbins, and Patti Fernandez. 
-
-Each user is a key member of your pilot project team. While their user accounts are already present in Microsoft 365, you want to configure their passwords so they can more easily sign into Microsoft 365 when needed in the upcoming lab exercises. You will also change the password for Adele Vance. Adele is not a member of the Microsoft 365 pilot project team, but she is used for testing MFA implementation in a later lab. You will assign the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) as their user password, just as you did when you created Holly's account.  
-
-**IMPORTANT:** Using the same password for multiple users should obviously never be done in the real-world. However, we're doing it here in your training environment to simply make things easier for students as they progress through the labs. That being said, this task will also provide you with experience in how to change a user password.
+In the prior task, you noticed that your Microsoft 365 trial tenant came equipped with a list of active users. As Holly Dickson, Adatum's Microsoft 365 Administrator, you have selected the following members of the Microsoft 365 pilot project team to assist with the initial phase of the deployment: Alex Wilber, Joni Sherman, Lynne Robbins, and Patti Fernandez. You will begin by creating an M365 pilot project group consisting of these key user accounts, each of which will be used throughout the remaining lab exercises.
 
 1. On the LON-CL1 VM, the **Microsoft 365 admin center** should still be open in your Microsoft Edge browser from the prior task. You should be signed into Microsoft 365 as the **MOD Administrator**. <br/>
 

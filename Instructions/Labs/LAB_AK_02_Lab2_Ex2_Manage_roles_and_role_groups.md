@@ -75,7 +75,7 @@ In the prior task, you assigned an administrator role directly to Diego Sicilian
 
 20. To verify that Lynne inherited the roles that were assigned to the User management role group, select **Lynne Robbins** from the list of active users. 
 
-21. In the **Lynne Robbins** pane that appears, in the **Account** tab that is displayed by default, you should see the three User management roles that were assigned to the Lynne. Under the **Roles** section**, select **Manage roles**.
+21. In the **Lynne Robbins** pane that appears, in the **Account** tab that is displayed by default, you should see the three User management roles that were assigned to the Lynne. Under the **Roles** section, select **Manage roles**.
 
 22. In the **Manage admin roles** pane that appears, under the **Admin center access** option, note the three roles that are selected and the name of the group from which they were assigned to Lynne. Also note how the three roles are grayed out. This indicates that you can't unselect the roles from this window. Because the roles were assigned to Lynne from a role group that contained these roles, you can only unassign the roles by removing Lynne as a member of the role group. You have just verified that Lynne is assigned these roles. Close this **Manage admin roles** pane.
 

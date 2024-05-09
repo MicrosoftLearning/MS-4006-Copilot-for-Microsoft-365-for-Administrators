@@ -36,7 +36,7 @@ Holly Dickson is Adatum’s new Microsoft 365 Administrator. Since a Microsoft 3
 
 5. On the **Active users** page, in the list of users, select **Christie Cline** (select Christie's hyperlinked name and not the check box next to her name).
 
-6. In the **Christie Cline** pane that appears, the **Account** tab is displayed by default. Select the **Licenses and apps** tab. Under **Licenses (2)**, select the check boxes next to **Enterprise Mobility + Security E5** and **Microsoft 365 E5** to clear them, and then select **Save changes**. Once the changes are saved, close the **Christie Cline** pane. 
+6. In the **Christie Cline** pane that appears, the **Account** tab is displayed by default. Select the **Licenses and apps** tab. Under **Licenses (2)**, select the check boxes next to **Enterprise Mobility + Security E5** and **Microsoft 365 E5** to clear them, and then select **Save changes**. Once the changes are saved, close the **Christie Cline** pane.
 
 7. You're now ready to create a user account for Holly Dickson, who is Adatum's new Microsoft 365 Administrator. In doing so, you will assign Holly the Microsoft 365 Global Administrator role, which gives Holly global access to most management features and data across Microsoft online services. You will also assign Holly the two licenses that you just unassigned from Christie Cline. <br/>
 
@@ -159,7 +159,11 @@ In a previous task, you created a Microsoft 365 group for the members of Adatum'
 
 ### Task 3: Create a Conditional Access policy to implement MFA
 
+**IMPORTANT:** This task begins by examining the Conditional Access policy that Microsoft created to implement MFA for all users. However, your Learning Partner may be using trial tenants that precede the recent MFA policy change. If you haven't been asked to perform MFA after each user sign-in, then your trial tenant doesn't require MFA. In this case, the MFA policy that Microsoft created won't appear in your policies list. If that's the case with your tenant, then you will skip the steps that review this policy. 
+
 As your training indicated, there are three ways to implement MFA - with Conditional Access policies, with security defaults, and with legacy per-user MFA (not recommended for larger organizations). In this exercise, you'll enable MFA through a Conditional Access policy, which is the method that Microsoft recommends. Adatum has directed Holly to enable MFA for all its Microsoft 365 users - both internal and external. However, for the purpose of testing Adatum's Microsoft 365 pilot project implementation, Holly wants to exclude the members of the M365 pilot project group from having to use MFA to sign in. Once the pilot project is complete, Holly will update the policy by removing the exclusion of this group from the MFA requirement. The policy will also include two other requirements. It will require MFA for all cloud apps, and it will require MFA even if a user signs in from a trusted location. 
+
+**Note:** While you will create a Conditional Access policy in this task that enables MFA, you will NOT enable it. Some students may have a tenant that requires MFA, in which case this policy will not be applied. And even if every student in your class has a tenant that doesn't require MFA, you will still not enable your policy. The point of this exercise is to provide you with experience on creating a policy to enable MFA and not actually authenticating with MFA, which we assume you know how to do. So we have chosen not to have students enable their policy, which provides the best compromise given the potential tenant situation in your class. 
 
 1. On the LON-CL1 VM, the **Microsoft 365 admin center** should still be open in your Microsoft Edge browser from the prior task. You should be signed into Microsoft 365 as **Holly Dickson**.
    
@@ -169,7 +173,9 @@ As your training indicated, there are three ways to implement MFA - with Conditi
 
 4. On the **Conditional Access | Overview** page, select **Policies** in the middle navigation pane.
 
-5. On the **Conditional Access | Policies** page, review the default policies available with your Microsoft 365 subscription. Note the policy titled **Multifactor authentication for Microsoft partners and vendors**. This is the Conditional Access policy that Microsoft created that requires MFA for all users on all cloud apps. Select this policy so that you can see how Microsoft is enforcing MFA for all users in this trial tenant.
+5. On the **Conditional Access | Policies** page, review the default policies available with your Microsoft 365 subscription. Note the policy titled **Multifactor authentication for Microsoft partners and vendors**. This is the Conditional Access policy that Microsoft created that requires MFA for all users on all cloud apps. Select this policy so that you can see how Microsoft is enforcing MFA for all users in this trial tenant.   <br/>
+
+	**IMPORTANT:** Your Learning Partner may be using trial tenants that precede this recent MFA change. If you haven't been asked to perform MFA after each user sign-in, then your trial tenant doesn't require MFA. In this case, the policy titled **Multifactor authentication for Microsoft partners and vendors** won't appear in your policies list, in which case you should skip to step 11 to begin creating your own Conditional Access policy. 
 
 6. On the **Multifactor authentication for Microsoft partners and vendors** page, under the **Users** group, select **All users included and specific users excluded**. Doing so displays two tabs - **Include** and **Exclude**.
 
@@ -223,17 +229,15 @@ As your training indicated, there are three ways to implement MFA - with Conditi
 
 24. In the **Grant** pane that appears, verify the **Grant access** option is selected (select it if necessary). Then select the **Require multifactor authentication** check box. Note all the other access controls that are available that can be enabled with this policy. For this policy, you will only require MFA. Select the **Select** button at the bottom of the **Grant** pane, which closes the pane. 
 
-25. At the bottom of the **New** window, in the **Enable policy** field, select **On**.
-
-26. Note the option that appears at the bottom of the page that warns you not to lock yourself out. Select the option **I understand that my account will be impacted by this policy. Proceed anyway.** In fact, Holly won't be impacted since she's a member of the M365 pilot project group that is excluded from this policy.
+25. **IMPORTANT:** At this point, you would normally set the **Enable policy** field to **On**. However, since some students may have older trial tenants that do not require MFA while others may have the new tenants that require it, you will NOT enable the policy that you just created. As such, set the **Enable policy** field to **Off**.
 
 27. Select the **Create** button to create the policy.
 
-28. On the **Conditional Access | Policies** window that appears, verify the **MFA for all Microsoft 365 users** policy appears and that its **State** is set to **On**.
+28. On the **Conditional Access | Policies** window that appears, verify the **MFA for all Microsoft 365 users** policy appears and that its **State** is set to **Off**.
 
 29. Remain logged into LON-CL1 with all your Microsoft Edge browser tabs open for the next task.
 
-**Note:** As per the earlier discussion, there's no way to test your Conditional Access policy in the current Microsoft 365 trial tenant. Microsoft's Conditional Access policy requires MFA for all users. When you have multiple policies requiring MFA, the most restrictive policy applies. In this case, Microsoft's policy is more restrictive than the one you just created that included exceptions for the pilot project group members. Even though you can't test your policy using this trial tenant, we encourage you to use this experience of creating a Conditional Access policy to require MFA in your real-world Microsoft 365 deployments.
+**Note:** As per the earlier discussion, there's no way to test your Conditional Access policy if you have a Microsoft 365 trial tenant that requires MFA. Microsoft's Conditional Access policy requires MFA for all users. When you have multiple policies requiring MFA, the most restrictive policy applies. In this case, Microsoft's policy is more restrictive than the one you just created that included exceptions for the pilot project group members, so there would be no way of testing your policy. If your tenant is an older one that doesn't require MFA, you will not test it since other students in your class may have tenants that already require them to use MFA. In lieu of having you test your policy while others can't, we have chosen not to test your policy. Even though you can't test your policy using this trial tenant, we encourage you to use this experience of creating a Conditional Access policy to require MFA in your real-world Microsoft 365 deployments.
 
 
 ### Task 4: Deploy Microsoft Entra Smart Lockout

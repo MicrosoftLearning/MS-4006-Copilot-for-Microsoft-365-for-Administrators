@@ -157,7 +157,7 @@ In a previous task, you created a Microsoft 365 group for the members of Adatum'
 23. Remain logged into LON-CL1 with the **Microsoft 365 admin center** open in your browser for the next task.
 
 
-### Task 3: Deploy MFA using a Conditional Access policy
+### Task 3: Create a Conditional Access policy to implement MFA
 
 As your training indicated, there are three ways to implement MFA - with Conditional Access policies, with security defaults, and with legacy per-user MFA (not recommended for larger organizations). In this exercise, you'll enable MFA through a Conditional Access policy, which is the method that Microsoft recommends. Adatum has directed Holly to enable MFA for all its Microsoft 365 users - both internal and external. However, for the purpose of testing Adatum's Microsoft 365 pilot project implementation, Holly wants to exclude the members of the M365 pilot project group from having to use MFA to sign in. Once the pilot project is complete, Holly will update the policy by removing the exclusion of this group from the MFA requirement. The policy will also include two other requirements. It will require MFA for all cloud apps, and it will require MFA even if a user signs in from a trusted location. 
 

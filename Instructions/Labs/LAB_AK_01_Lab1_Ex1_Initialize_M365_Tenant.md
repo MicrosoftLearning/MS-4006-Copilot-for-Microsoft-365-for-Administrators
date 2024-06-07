@@ -42,13 +42,13 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
 8. If a **Welcome to Microsoft 365** dialog box appears in the middle of the screen, there's no option to close it. Instead, to the right of the window, select the forward arrow icon (**>**) two times and then select the check mark icon to advance through the slides in this messaging window. 
 
-9. If a **Find more apps** window or a **Create with Microsoft 365** window appears, select the **X** in the upper right-hand corner of the windows to close them. 
+9. If a **Find more apps** window or a **Create with Microsoft 365** window appears, select the **X** in the top corner of the windows to close them. 
 
 10. The **Welcome to Microsoft 365** page appears in your Edge browser in the **Home | Microsoft 365** tab. This is the MOD Administrator's Microsoft 365 home page. <br/>
 
 	Notice the icon that appears in the top-right corner of the screen. This icon represents the **MOD Administrator** account, which is the tenant admin account created by your lab hosting provider that you just signed in as. The other existing Microsoft 365 user accounts that were created by your lab hosting provider have a picture associated with each of their accounts; therefore, when you sign in as any of those users in later labs, the user's picture will be displayed rather than the user's initials. However, when a user such as the MOD Administrator has no picture assigned to it, either the user's initials are displayed in place of the picture, or as in this case, an icon that was assigned to the account. <br/>
 
-	On the **Welcome to Microsoft 365** page, in the list of application icons that appear in the left-hand pane, select **Admin**; this opens the **Microsoft 365 admin center** in a new browser tab. 
+	On the **Welcome to Microsoft 365** page, in the list of application icons that appear in the side window pane, select **Admin**; this opens the **Microsoft 365 admin center** in a new browser tab. 
 
 11. In the **Microsoft 365 admin center**, select **Show all** in the navigation pane and then select **Settings**. In the **Settings** group, select **Org settings**. 
 
@@ -76,7 +76,7 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
 15. Select **Save**.
 
-16. At the top of the **Organization information** pane, note the message indicating the changes have been saved. Select the **X** in the upper right-hand corner to close the pane.
+16. At the top of the **Organization information** pane, note the message indicating the changes have been saved. Select the **X** in the top corner of the pane to close it.
 
 17. Remain logged into **LON-CL1** with Microsoft Edge open to the **Microsoft 365 admin center** for the next task.
 

@@ -122,7 +122,7 @@ In a previous task, you created a Microsoft 365 group for the members of Adatum'
 
 8. The **Welcome to Microsoft 365** page appears in your Edge browser in the **Home | Microsoft 365** tab. This is Holly's Microsoft 365 home page. Note that Holly's initials appear in the upper-right corner of the screen; however, Holly's name is not displayed. This is because Holly's account did not exist at the time you added the Microsoft 365 pilot project users to the group that was associated with the custom theme in the prior lab exercise. Since Holly wants to see her name at the top of each Microsoft 365 window when she's logged into the system, she first wants to add her account to the group of Microsoft 365 pilot project users. <br>
 
-	In the column of application icons that appears on the far left-side of the screen, select **Admin**. This opens the **Microsoft 365 admin center** in a new browser tab. 
+	In the column of application icons that appears in the navigation pane on the side of the screen, select **Admin**. This opens the **Microsoft 365 admin center** in a new browser tab. 
 
 9. In the **Microsoft 365 admin center**, select **Teams & groups** in the navigation pane, and then under it, select **Active teams & groups**. 
 
@@ -130,7 +130,7 @@ In a previous task, you created a Microsoft 365 group for the members of Adatum'
 
 11. In the **M365 pilot project** pane that appears, the **General** tab is displayed by default. Select the **Membership** tab.
 
-12. In the **Membership** tab, the **Owners** sub-tab is displayed by default in the navigation pane that appears on the left-side of the pane. Select the **Members** sub-tab that appears below it.
+12. In the **Membership** tab, the **Owners** sub-tab is displayed by default in the navigation pane that appears on the side of the pane. Select the **Members** sub-tab that appears below it.
 
 13. In the **Members** sub-tab, select **+Add members**.
 

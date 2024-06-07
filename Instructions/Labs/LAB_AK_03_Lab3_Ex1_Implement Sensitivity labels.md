@@ -183,7 +183,7 @@ Instead, you will test one of Microsoft 365's pre-existing sensitivity labels. F
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
 
-2. You will first review the **Project-Falcon** sensitivity label that you'll be applying to a document in this task.  In your Edge browser, you should still have a tab open for the **Microsoft Purview** portal from the prior task. In the **Microsoft Purview** portal, under the **Information protection** group in the left-hand navigation pane, select **Labels**. 
+2. You will first review the **Project-Falcon** sensitivity label that you'll be applying to a document in this task.  In your Edge browser, you should still have a tab open for the **Microsoft Purview** portal from the prior task. In the **Microsoft Purview** portal, under the **Information protection** group in the navigation pane, select **Labels**. 
 
 3. On the **Labels** page, in the list of labels, select the right arrow (**>**) next to **Highly Confidential** to show the sub-labels under this label. Doing so displays the pre-existing **Project - Falcon** label.
 
@@ -244,7 +244,7 @@ To verify whether the protection that you assigned to the document works, you wi
 
 4. In **Outlook on the Web**, select **New mail** in the upper left part of the screen.
 
-5. In the right-hand pane, enter the following information in the email form:
+5. Enter the following information in the email form:
 
 	- To: Enter **Joni** and then select **Joni Sherman** from the user list. 
 

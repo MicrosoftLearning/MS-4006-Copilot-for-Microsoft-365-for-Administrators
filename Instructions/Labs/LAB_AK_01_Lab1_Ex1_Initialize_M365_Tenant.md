@@ -48,7 +48,7 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
 	Notice the icon that appears in the top-right corner of the screen. This icon represents the **MOD Administrator** account, which is the tenant admin account created by your lab hosting provider that you just signed in as. The other existing Microsoft 365 user accounts that were created by your lab hosting provider have a picture associated with each of their accounts; therefore, when you sign in as any of those users in later labs, the user's picture will be displayed rather than the user's initials. However, when a user such as the MOD Administrator has no picture assigned to it, either the user's initials are displayed in place of the picture, or as in this case, an icon that was assigned to the account. <br/>
 
-	On the **Welcome to Microsoft 365** page, in the list of application icons that appear in the side window pane, select **Admin**; this opens the **Microsoft 365 admin center** in a new browser tab. 
+	On the **Welcome to Microsoft 365** page, in the list of application icons that appear in the navigation pane, select **Admin**; this opens the **Microsoft 365 admin center** in a new browser tab. 
 
 11. In the **Microsoft 365 admin center**, select **Show all** in the navigation pane and then select **Settings**. In the **Settings** group, select **Org settings**. 
 

@@ -52,7 +52,7 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
 7. In the **Enter password** dialog box, enter the predefined **Administrative Password** provided by your lab hosting provider and then select **Sign in**. 
 
-8. Your lab hosting provider may or may not have configured the MOD Admin account to require a new password at sign-in. If they did, then an **Update your password** dialog box will appear. If this occurs, enter the **Administrative Password** provided by your lab hosting provider in the **Current password** field, and then enter the New Administrative Password in the **New password** and **Confirm password** fields.
+8. Your lab hosting provider may or may not have configured the MOD Admin account to require a new password at sign-in. If they did, then an **Update your password** dialog box will appear. If this occurs, enter the **Administrative Password** provided by your lab hosting provider in the **Current password** field, and then enter the New Administrative Password in the **New password** and **Confirm password** fields and select **Sign in**.
 
 9. If a **Stay signed in?** dialog box appears, select the **Don’t show this again** check box and then select **Yes.** 
 

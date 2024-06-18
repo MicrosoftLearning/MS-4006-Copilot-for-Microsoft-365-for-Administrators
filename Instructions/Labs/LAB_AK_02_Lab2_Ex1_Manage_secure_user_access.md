@@ -22,21 +22,21 @@ The other ramification of this policy is that you didn't have to use MFA when si
 
 Holly Dickson is Adatum’s new Microsoft 365 Administrator. Since a Microsoft 365 user account has not been set up for her, she initially signed into Microsoft 365 as the MOD Administrator account (the default Global administrator) in the previous lab. In this task, you will continue to be logged in as the MOD Administrator, during which you will create a Microsoft 365 user account for Holly. You will also assign the Microsoft 365 Global Administrator role to Holly's account. This role will provide Holly with the permissions needed to perform all administrative functions within Microsoft 365. Following this task, you will log in using Holly's new account and you will perform all remaining labs using Holly's persona. 
 
-**License Note:** Before creating Holly's account, you will first verify the number of available licenses. In doing so, you will note that while your lab tenant provides 20 Microsoft 365 E5 licenses and 20 Enterprise Mobility + Security E5 licenses, all those licenses have already been assigned to the existing user accounts created by your lab hosting provider. As such, you must first unassign one of each license from an existing user so that you can assign them to Holly.
+**License Note:** Before creating Holly's account, you will first verify the number of available licenses. In doing so, you will note that while your lab tenant provides 20 Microsoft 365 E5 (no Teams) licenses and 20 Microsoft Teams Enterprise licenses, all those licenses have already been assigned to the existing user accounts created by your lab hosting provider. As such, you must first unassign one of each license from an existing user so that you can assign them to Holly.
 
-**Important:** As a best practice in your real-world deployment, you should always write down the credentials of the first Global administrator account (in this lab, it's the MOD Administrator account, whose username is admin@xxxxxZZZZZZ.onmicrosoft.com, where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider). You should store away this account information for security reasons. **This account should be a NON-personalized identity** that owns the highest privileges possible in a tenant. It should **not** be MFA activated because it is not personalized. Because the username and password for this first Global admin account are typically shared among several users, this account is a perfect target for attacks; therefore, it's always recommended that organizations create personalized service admin accounts (for example, an Exchange admin, SharePoint admin, and so on) and keep as few personal Global admins as possible. For those personal Global admins that you do create in your real-world deployment, they should each be mapped to a single user (such as Holly Dickson), and they should each have Microsoft Entra Multi-Factor Authentication (MFA) enforced. That being said, Microsoft has already turned on MFA by default for all users in your Microsoft 365 trial tenant.
+**Important:** As a best practice in your real-world deployment, you should always write down the credentials of the first Global administrator account (in this lab, it's the MOD Administrator account, whose username is admin@xxxxxZZZZZZ.onmicrosoft.com, where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider). You should store away this account information for security reasons. **This account should be a NON-personalized identity** that owns the highest privileges possible in a tenant. It should **not** be MFA activated because it is not personalized. Because the username and password for this first Global admin account are typically shared among several users, this account is a perfect target for attacks; therefore, it's always recommended that organizations create personalized service admin accounts (for example, an Exchange admin, SharePoint admin, and so on) and keep as few personal Global admins as possible. For those personal Global admins that you do create in your real-world deployment, they should each be mapped to a single user (such as Holly Dickson), and they should each have Microsoft Entra Multi-Factor Authentication (MFA) enforced. That being said, Microsoft has already turned on MFA by default for all users in your Microsoft 365 trial tenant. 
 
 1. On the **LON-CL1** VM, the **Microsoft 365 admin center** should still be open in your Microsoft Edge browser from the prior lab exercise. You should be signed into Microsoft 365 as the **MOD Administrator**. 
 
 2. Since you are adding a new user, you should begin by checking license availability before adding the user account. In the **Microsoft 365 admin center** navigation pane, select **Billing** to expand the Billing group, and then select **Licenses**. 
 
-3. On the **Licenses** page, the **Subscriptions** tab is displayed by default. In the list of subscriptions, note the **Enterprise Mobility + Security E5** and **Microsoft 365 E5** subscriptions don't have any available licenses. Your lab tenant provides 20 licenses for each subscription, but all 40 licenses have been assigned. Since you must assign Holly both an **Enterprise Mobility + Security E5** license and a **Microsoft 365 E5** license, you must first unassign the licenses from an existing user account to make them available for Holly. 
+3. On the **Licenses** page, the **Subscriptions** tab is displayed by default. In the list of subscriptions, note the **Microsoft 365 E5 (no Teams)** and **Microsoft Teams Enterprise** subscriptions don't have any available licenses. Your lab tenant provides 20 licenses for each subscription, but all 40 licenses have been assigned. Since you must assign Holly both a **Microsoft 365 E5 (no Teams)** license and a **Microsoft Teams Enterprise** license, you must first unassign the licenses from an existing user account to make them available for Holly. 
 
-4. In the **Microsoft 365 admin center** navigation pane, select **Users** and then select **Active users**. In the **Active users** list, you will see the list of existing user accounts that were created by your lab hosting provider. Since Christie Cline will be moving to a new role in the company and will no longer be part of the Microsoft 365 pilot project, you will unassign the **Enterprise Mobility + Security E5** and **Microsoft 365 E5** licenses from her account so that you can reassign them to Holly Dickson's new account.
+4. In the **Microsoft 365 admin center** navigation pane, select **Users** and then select **Active users**. In the **Active users** list, you will see the list of existing user accounts that were created by your lab hosting provider. Since Christie Cline will be moving to a new role in the company and will no longer be part of the Microsoft 365 pilot project, you will unassign the **Microsoft 365 E5 (no Teams)** and **Microsoft Teams Enterprise** licenses from her account so that you can reassign them to Holly Dickson's new account.
 
 5. On the **Active users** page, in the list of users, select **Christie Cline** (select Christie's hyperlinked name and not the check box next to her name).
 
-6. In the **Christie Cline** pane that appears, the **Account** tab is displayed by default. Select the **Licenses and apps** tab. Under **Licenses (2)**, select the check boxes next to **Enterprise Mobility + Security E5** and **Microsoft 365 E5** to clear them, and then select **Save changes**. Once the changes are saved, close the **Christie Cline** pane.
+6. In the **Christie Cline** pane that appears, the **Account** tab is displayed by default. Select the **Licenses and apps** tab. Under **Licenses (2)**, select the check boxes next to **Microsoft 365 E5 (no Teams)** and **Microsoft Teams Enterprise** to clear them, and then select **Save changes**. Once the changes are saved, close the **Christie Cline** pane. 
 
 7. You're now ready to create a user account for Holly Dickson, who is Adatum's new Microsoft 365 Administrator. In doing so, you will assign Holly the Microsoft 365 Global Administrator role, which gives Holly global access to most management features and data across Microsoft online services. You will also assign Holly the two licenses that you just unassigned from Christie Cline. <br/>
 
@@ -56,7 +56,7 @@ Holly Dickson is Adatum’s new Microsoft 365 Administrator. Since a Microsoft 3
 	
 	- Clear (uncheck) the **Automatically create a password** check box, which will display a new field for entering an administrator defined password.
 
-	- In the new **Password** field that appears, enter the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account)
+	- Enter the New Administrative Password in the new **Password** field that appears 
 
 	- Clear (uncheck) the **Require this user to change their password when they first sign in** check box 
 
@@ -66,7 +66,7 @@ Holly Dickson is Adatum’s new Microsoft 365 Administrator. Since a Microsoft 3
 
 	- Select location: **United States**
 
-	- Licenses: Under the **Assign user a product license** option, select the **Enterprise Mobility + Security E5** and **Microsoft 365 E5** check boxes
+	- Licenses: Under the **Assign user a product license** option, select the **Microsoft 365 E5 (no Teams)** and **Microsoft Teams Enterprise** check boxes
 
 11. Select **Next**.
 
@@ -91,6 +91,7 @@ Holly Dickson is Adatum’s new Microsoft 365 Administrator. Since a Microsoft 3
 18. Select **Close.**
 
 19. Remain logged into the Client 1 VM (LON-CL1) with the Microsoft 365 admin center open in your browser for the next task.
+
 
 ### Task 2 – Add Holly to the Microsoft 365 pilot project group
 

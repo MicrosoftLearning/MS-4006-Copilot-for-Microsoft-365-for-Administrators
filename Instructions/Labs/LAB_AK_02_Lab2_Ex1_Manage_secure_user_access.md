@@ -291,7 +291,7 @@ The CTO is anxious to implement Smart Lockout because it will lock out the attac
 
 10. In the **Sign in** dialog box, you must sign in as Holly Dickson. Enter **Holly@xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider. Select **Next**. <br/>
 
-11. In the **Enter password** dialog box, enter the unique **Administrative Password** provided by your lab hosting provider and then select **Sign in**. If required, complete the MFA sign-in process.
+11. In the **Enter password** dialog box, enter the New Administrative Password that you assigned to Holly's account and then select **Sign in**. 
 
 12. On the **Stay signed in?** dialog box, select the **Don’t show this again** check box and then select **Yes.** On the **Save password** dialog box that appears, select **Never**.
 
@@ -337,7 +337,7 @@ The CTO is anxious to implement Smart Lockout because it will lock out the attac
 
 22. In the **My account** window that appears, in the **Password** tile, select **CHANGE PASSWORD**.
 
-23. A new tab will open displaying the **Change password** window. In the **Old password** field, enter Holly's existing password, which is the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account). <br/>
+23. A new tab will open displaying the **Change password** window. In the **Old password** field, enter Holly's existing password, which is the New Administrative Password. <br/>
 
 	Enter **Never4get!!** in the **Create new password** and **Confirm new password** fields, and then select **Submit**. Note the error message that you receive.
 
@@ -361,8 +361,10 @@ The CTO is anxious to implement Smart Lockout because it will lock out the attac
 
 29. You will be prohibited from logging in again as Patti until after the **90 second lockout duration** that you set earlier. <br/>
 
-	Once you've been locked out, wait 90 seconds and then sign back in as **pattif@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix assigned to you by your lab hosting provider). In the **Password** field, enter Patti's password, which is the **User Password** provided by your lab hosting provider. If required, complete the MFA sign-in process. Verify that you are able to successfully sign-in as Patti.
+	Once you've been locked out, wait 90 seconds and then sign back in as **pattif@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix assigned to you by your lab hosting provider). In the **Password** field, enter Patti's password, which is the **User Password** provided by your lab hosting provider. 
+ 
+30. As you recall, all of the predefined test user accounts in your trial tenant are configured so that students must change their initial password at their next sign-in. When the **Update your password** window appears, that is your verification that your sign-in attempt using Patti's actual password was successful. <br>
 
-30. Once your log-in is successful, you can close all open applications. This will be your last lab exercise using the LON-DC1 domain controller.
+	**Note:** You do NOT need to complete the sign-in process for Patti, since this is your last lab exercise using the LON-DC1 domain controller. You can close all applications on LON-DC1.
  
 # Proceed to Lab 2 - Exercise 2

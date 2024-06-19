@@ -11,30 +11,61 @@ To implement Sensitivity labels as part of your pilot project at Adatum, you mus
 
 **Note:** While the Azure AD to Microsoft Entra ID rebranding is still ongoing, the Azure Information Protection client has not been rebranded as of this writing. It will eventually be rebranded to Microsoft Entra ID Protection client.
 
-1. At the end of the prior lab, you were on LON-CL2. Switch to **LON-CL1**.  <br/>
-
-	You should still be logged into LON-CL1 as the local **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
+1. You should still be logged into LON-CL1 as the local **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
 
 2. In **Microsoft Edge**, open a new tab and enter (or copy and paste) the following URL in the address bar: **https://www.microsoft.com/en-us/download/confirmation.aspx?id=53018** <br/>
 
-	This will start the download for the Azure Information Protection Unified Label client.
+	This will start the download for the **Microsoft Purview Information Protection client**.
 
-3. In the **Downloads** window that appears at the top right of the page, you will see the **AzInfoProtection_UI.exe** file being downloaded. Once the file has finished downloading, select the **Open file** link that appears below the file name.  <br/>
+3. In the **Downloads** window that appears at the top right of the page, you will see the **PurviewInfoProtection.exe** file being downloaded. Once the file has finished downloading, select the **Open file** link that appears below the file name.
 
-	**Note:** Testing has shown that it can sometimes take up to 10-15 seconds for the **Microsoft Azure Information Protection** wizard to open. Refrain from selecting **Open file** a second time until you're sure that the wizard was not initiated.
+4. The **Microsoft Azure Information Protection** wizard will open. If the wizard does not display on the desktop, select the icon for the wizard on the taskbar to display the wizard.
 
-4. The **Microsoft Azure Information Protection** wizard will (eventually) open. If the wizard does not display on the desktop, select the icon for the wizard on the taskbar to display the wizard.
-
-5. On the **Install the Azure Information Protection client** window that appears, clear (uncheck) the **Help improve Azure Information Protection by send usage statistics to Microsoft** check box and then select the **I agree** button.
+5. In the wizard, on the **Install the **Microsoft Purview Information Protection client**** window that appears, select the **I acknowledge that the AIP Add-in for Office will be uninstalled (required)** check, and clear (uncheck) the **Help improve Microsoft Purview Information Protection by sending usage statistics to Microsoft** check box. Then select the **I agree** button.
 
 6. Once the installation is complete, select **Close**.
 
-7. In your Edge browser, close the **Download** tab was opened in this task to download the Azure Information Protection client.
-
 You have successfully installed the Azure Information Protection Unified Label client on the LON-CL1 VM.
 
+### Task 2 – Enable sensitivity labels for files in SharePoint and OneDrive
 
-### Task 2 – Create a Sensitivity Label
+In this exercise you will enable sensitivity labels for supported Office files and PDF files in SharePoint and OneDrive. When this feature is enabled, users see the **Sensitivity** button on the ribbon so they can apply labels. They also see any applied label name on the status bar. For SharePoint, users can also see and apply sensitivity labels from the details pane.
+
+Enabling this feature also results in SharePoint and OneDrive being able to process the contents of Office files and optionally, PDF documents that have been encrypted by using a sensitivity label. The label can be applied in Office for the web, or in Office desktop apps, and uploaded or saved in SharePoint and OneDrive. Until you enable this feature, these services can't process encrypted files, which means that coauthoring, eDiscovery, data loss prevention, search, and other collaborative features won't work for these files.
+
+You will first enable sensitivity labels for Office online files that are stored in SharePoint and OneDrive. You'll then enable support for PDFs.
+
+**Note:** As with all tenant-level configuration changes for SharePoint and OneDrive, it takes about 15 minutes for the change to take effect.
+
+1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
+
+2. In your Edge browser, you should still have a tab open for the **Microsoft 365 admin center**. If not, open a new tab and enter the following URL: **https://admin.microsoft.com**.
+
+3. On the **Microsoft 365 admin center**, if necessary, select **... Show all**. Select **Compliance** under the **Admin centers** group. This opens the Microsoft Purview portal in a new tab.
+
+4. You will begin by enabling sensitivity labels for Office online files that are stored in SharePoint and OneDrive. <br/>
+
+	In the **Microsoft Purview** portal, under the **Solutions** section in the navigation pane, select **Information protection**, and then select **Labels**.
+
+5. On the **Labels** page, the following message should appear in the middle of the page: **Your organization has not turned on the ability to process content in Office online files that have encrypted sensitivity labels applied and are stored in OneDrive and SharePoint. You can turn on here, but note that additional configuration is required for Multi-Geo environments.** <br/>
+
+	Below this message is a **Turn on now** button. Select this button.  <br/>
+
+	**Note:** The command runs immediately and when the page is next refreshed, you no longer see the message or button.
+
+6. You will now enable PDF protection for files in SharePoint and OneDrive. <br/>
+
+	In the **Microsoft Purview** portal, under **Information protection** in the navigation pane, select **Auto-labeling**.
+
+7. On the **Auto-labeling** page, you should see a **Protect PDFs with Auto-labeling** banner in the middle of the page. Select the **Protect PDFs with Auto-labeling** heading to turn on PDF protection for files in SharePoint and OneDrive. 
+
+8. In the **Auto-labeling** dialog box that appears, select **Confirm** to confirm that you want to turn on PDF protection for files in SharePoint and OneDrive. 
+
+	**Note:** The command runs immediately and when the page is next refreshed, you no longer see the **Protect PDFs with Auto-labeling** banner.
+
+9. Leave your Edge browser open along with all the tabs. 
+
+### Task 3 – Create a Sensitivity Label
 
 In this exercise you will create a Sensitivity Label and add it to the default policy so that it’s valid for all users of the Adatum tenant.
 
@@ -175,7 +206,7 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 45. On the **New policy created** page, select **Done**.
 
 
-### Task 3 – Assign a pre-existing sensitivity label to a document
+### Task 4 – Assign a pre-existing sensitivity label to a document
 
 As outlined in the instructions at the start of this lab, it isn't possible to immediately test the sensitivity label and label policy that you created in the previous task. This is because it takes up to 24 hours for a new label policy to propagate through Microsoft 365 and for its label to become visible in applications like Microsoft Word and Outlook.
 
@@ -230,9 +261,9 @@ Instead, you will test one of Microsoft 365's pre-existing sensitivity labels. F
 You have just successfully created a Word document containing the Highly Confidential label titled **Project - Falcon**. 
 
 
-### Task 4 – Protect a document using Microsoft Entra ID Protection
+### Task 5 – Protect a document using Microsoft Purview Information Protection
 
-In the prior task, you created a Word document and protected it with the **Project - Falcon** sensitivity label. This label inserted a watermark in the document. In this task, you will share the document you created with Joni Sherman, and you will restrict Joni to "View only" permission. This will allow you to see how Microsoft Entra ID Protection protects the document based on the parameters that you configure.
+In the prior task, you created a Word document and protected it with the **Project - Falcon** sensitivity label. This label inserted a watermark in the document. In this task, you will share the document you created with Joni Sherman, and you will restrict Joni to "View only" permission. This will allow you to see how Microsoft Purview Information Protection protects the document based on the parameters that you configure.
 
 To verify whether the protection that you assigned to the document works, you will first email the document to two persons - to Joni Sherman and to your own personal email address. You will then verify that Joni can only view the document and not edit it, and you will verify that you can't access the document since it was not shared with you. Finally, you will change permission on the document so that Joni can edit it, and you will email this updated document to her for testing. The purpose of the two emails to Joni, one with a document link that provides read-only access and another with a document link that provides the ability to edit the document, is to see how Microsoft Entra ID Protection can provide various levels of document protection. 
 
@@ -242,7 +273,7 @@ To verify whether the protection that you assigned to the document works, you wi
 
 3. In the **Apps** page, right-click on the **Outlook** tile and select **Open in new tab**. This opens Holly's mailbox in Outlook on the web in a new browser tab. 
 
-4. In **Outlook on the Web**, select **New mail** in the upper left part of the screen.
+4. In **Outlook on the Web**, select **New mail** at the top of the screen.
 
 5. Enter the following information in the email form:
 
@@ -286,7 +317,7 @@ To verify whether the protection that you assigned to the document works, you wi
 
 20. In the **Sign in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**.
 
-21. On the **Enter password** window, enter the **User Password** provided by your lab hosting provider and then select **Sign in**. If required, complete the MFA sign-in process.
+21. On the **Enter password** window, enter the New User Password that you previously assigned to Joni's account and then select **Sign in**. 
 
 22. If a **Welcome** window appears, select the X to close it.
 
@@ -340,7 +371,7 @@ To verify whether the protection that you assigned to the document works, you wi
 
 36. When Joni had View only permission, the document opened in the Reading View pane. As such, Joni couldn't edit the document. This version of the document provides Joni with Edit permission, so this time the document should open in Word in normal edit mode. Verify that you can enter text in the document. 
 
-	**Note:**  In this task, you just verified that Microsoft Entra ID Protection protected the document based on the PII policy parameters that you configured. When Joni was assigned View only permission, the document opened in the Reading view and she was unable to change it. When Joni was assigned Edit permission, the document opened in Word and she was able to change it. And since Holly didn't share the document with you, you couldn't open it when she sent the document in an email to your personal mailbox. 
+	**Note:**  In this task, you just verified that Microsoft Purview Information Protection protected the document based on the PII policy parameters that you configured. When Joni was assigned View only permission, the document opened in the Reading view and she was unable to change it. When Joni was assigned Edit permission, the document opened in Word and she was able to change it. And since Holly didn't share the document with you, you couldn't open it when she sent the document in an email to your personal mailbox. 
 
 ## End of Lab 3
 

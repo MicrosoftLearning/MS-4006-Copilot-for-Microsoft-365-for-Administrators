@@ -363,7 +363,7 @@ The CTO is anxious to implement Smart Lockout because it will lock out the attac
 
 	Once you've been locked out, wait 90 seconds and then sign back in as **pattif@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix assigned to you by your lab hosting provider). In the **Password** field, enter Patti's password, which is the **User Password** provided by your lab hosting provider. 
  
-30. As you recall, all of the predefined test user accounts in your trial tenant are configured so that students must change their initial password at their next sign-in. When the **Update your password** window appears, that is your verification that your sign-in attempt using Patti's actual password was successful. <br>
+30. As you recall, all of the predefined test user accounts in your trial tenant are configured so that students must change their initial password at their next sign-in. When the **Update your password** window appears, that is verification that your sign-in attempt using Patti's actual password was successful. <br>
 
 	**Note:** You do NOT need to complete the sign-in process for Patti, since this is your last lab exercise using the LON-DC1 domain controller. You can close all applications on LON-DC1.
  

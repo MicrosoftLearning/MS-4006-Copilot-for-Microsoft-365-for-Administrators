@@ -343,13 +343,13 @@ The CTO is anxious to implement Smart Lockout because it will lock out the attac
 
 24. In your browser, close the **Change password** tab. 
 
-25. You should now test the lockout threshold functionality. Select Holly Dickson's user icon in the upper right corner of the screen, and in the menu that appears select **Sign out**.  
+25. You're now going to test the lockout threshold functionality. You're going to do so using Patti Fernandez's account. Select Holly Dickson's user icon in the upper right corner of the screen, and in the menu that appears select **Sign out**.  
 
 26. Once you are signed out as Holly, the **Pick an account** window will appear in the **Sign in to Microsoft Entra** tab. As a best practice when signing out from a Microsoft online service as one user and signing back in as another, close all your browser tabs except for the **Sign out** or **Sign in** tab. In this case, close the other tabs now and leave the **Sign in** tab open.  <br/>
 
 	In the **Pick an account** window, select **Use another account**. 
 
-27. In the **Sign in** window, you're going to sign in as Patti Fernandez. Enter **pattif@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix assigned to you by your lab hosting provider), and then select **Next**. 
+27. In the **Sign in** window, enter **pattif@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix assigned to you by your lab hosting provider), and then select **Next**. 
 
 28. On the **Enter password** window, enter any random mix of letters and numbers and then select **Sign in**. Note the invalid password error message that appears. 
 
@@ -363,7 +363,7 @@ The CTO is anxious to implement Smart Lockout because it will lock out the attac
 
 	Once you've been locked out, wait 90 seconds and then sign back in as **pattif@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix assigned to you by your lab hosting provider). In the **Password** field, enter Patti's password, which is the **User Password** provided by your lab hosting provider. 
  
-30. As you recall, all of the predefined test user accounts in your trial tenant are configured so that students must change their initial password at their next sign-in. When the **Update your password** window appears, that is verification that your sign-in attempt using Patti's actual password was successful. <br>
+30. As you recall, all the predefined test user accounts in your trial tenant are configured so that you must change their initial password at their next sign-in. When the **Update your password** window appears, that is verification that your sign-in attempt using Patti's actual password was successful. <br>
 
 	**Note:** You do NOT need to complete the sign-in process for Patti, since this is your last lab exercise using the LON-DC1 domain controller. You can close all applications on LON-DC1.
  
